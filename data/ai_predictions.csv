@@ -1,5 +1,5 @@
 investor_id,ai_prediction,reason,supporting_evidence_ids,prediction_date,human_review_status
-czvc001,include,Official VC investment terms and named portfolio,E001;E006,2026-10-09,not_reviewed
+czvc001,include,Official VC investment terms and named portfolio,E001;E006,2026-10-09,reviewed
 czvc002,include,Association portfolio and 2026 press interview support direct investing; financial figures historical,E007;E012,2026-10-09,not_reviewed
 czvc003,include,Official site lists seed/Series A investment and portfolio; Luxembourg fund structure,E013;E016,2026-10-09,not_reviewed
 czvc004,review,Historical investor but current N1 brand/entity and legal continuity unresolved,E018;E022,2026-10-09,not_reviewed
