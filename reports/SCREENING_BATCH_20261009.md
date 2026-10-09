@@ -1,6 +1,6 @@
 # AI screening of 20 Czech-connected VC candidates — 2026-10-09
 
-**Status: frozen provisional AI predictions; no independent investor-level inclusion/exclusion audit of the 20 yet.** The project author has checked individual StartupYard FAQ statements and the Purple Ventures investment-strategy screenshot, but this is a field-level source check only, **not** a completed organization-classification audit.
+**Status: original AI predictions frozen; one completed investor-level human audit among these 20 (Purple Ventures `include`).** The project author also checked individual StartupYard FAQ statements, but the StartupYard organization-level status remains unresolved.
 
 | AI decision | Count |
 |---|---:|
@@ -46,14 +46,14 @@
 
 ## Limits of the source checking
 
-The model consulted public investor sites, a government-backed directory, and a small number of independently reported investment announcements. These are **screening-stage source observations**, not manually verified facts. Every new evidence row uses `ai_source_checked_pending_human`; no entity-level judgement has been retrospectively changed after an author's audit.
+The model consulted public investor sites, a government-backed directory, and a small number of independently reported investment announcements. These are **screening-stage source observations**, not manually verified facts. Most newly sourced claims remain `ai_source_checked_pending_human`; fields checked by the author are marked `human_verified`, and the Purple Ventures investor-level label is now recorded separately. Original AI predictions have not been retrospectively changed.
 
 This deliberately mixed sample and the earlier seven were selected purposively, so even a successful later sample accuracy score **cannot be presented as the worldwide precision**. Report TP/FP/FN/TN with denominators and the number of abstentions; measure per-field accuracy and missingness independently.
 
 ## Prioritised manual audit
 
 1. [StartupYard FAQ](https://startupyard.com/faq/): **terms checked by author**; still determine who legally invests the optional €25k and whether StartupYard is eligible as a VC manager. Partner-controlled follow-on financing must not be assigned to StartupYard.
-2. [Purple Ventures](https://www.purple-ventures.com/): author confirmed initial €250k–€400k, minority equity and pre-seed/seed via screenshot; independently verify [Delta Green investee funding announcement](https://www.deltagreen.cz/press-releases/cesti-energeticti-inovatori-v-centru-zajmu-delta-green-ziskava-2-2-milionu-eur-od-tilia-impact-ventures-credo-ventures-a-purple-ventures) to complete investor-level classification audit.
+2. [Purple Ventures](https://www.purple-ventures.com/): **investor-level audit completed (include)**. Author independently checked initial €250k–€400k, minority equity and pre-seed/seed on primary website and verified its participation in [Delta Green's 2024 announcement](https://www.deltagreen.cz/press-releases/cesti-energeticti-inovatori-v-centru-zajmu-delta-green-ziskava-2-2-milionu-eur-od-tilia-impact-ventures-credo-ventures-a-purple-ventures). The round total (€2.2m) is not Purple's individual investment.
 3. [Presto Ventures](https://www.prestoventures.com/): direct investment activity, €500k–5m tickets and the *target* of a separate new fund.
 4. [JIC Ventures](https://www.jic.cz/cz/o-nas/pro-media/prvni-investice-noveho-fondu-jic-ventures-miri-do): verify FaceUp transaction and fund manager identity.
 5. [Garage Angels](https://g-angels.cz/): distinguish genuine angel group from VC funds.

@@ -70,3 +70,15 @@ It shows direct **minority equity stakes**, **pre-seed and seed** stages, **EUR 
 Updated E053, E077, E078 as `human_verified`; added E092–E095 as author-verified statements with links to the primary site. Independently consulted the [Delta Green 2024 investee announcement](https://www.deltagreen.cz/press-releases/cesti-energeticti-inovatori-v-centru-zajmu-delta-green-ziskava-2-2-milionu-eur-od-tilia-impact-ventures-credo-ventures-a-purple-ventures), which explicitly names Purple Ventures as a member of the **three-investor EUR 2.2m total round**; stored as E096, pending **specific user confirmation** of Purple's participation. None of EUR 2.2m should be attributed to Purple individually.
 
 No human investor-level label has been recorded for Purple, and its frozen AI decision remains `include` but `human_review_status=not_reviewed`. The seven previous independent investor classifications remain unchanged.
+
+## Purple Ventures: completed independent investor classification audit
+
+User independently opened [Delta Green's public announcement of the 2024 financing round](https://www.deltagreen.cz/press-releases/cesti-energeticti-inovatori-v-centru-zajmu-delta-green-ziskava-2-2-milionu-eur-od-tilia-impact-ventures-credo-ventures-a-purple-ventures), uploaded a screenshot highlighting **Purple Ventures** in the article title and lead, and wrote verbatim:
+
+> «есть»
+
+The screenshot states Delta Green received a total EUR 2.2 million from **Tilia Impact Ventures, Credo Ventures and Purple Ventures**; it does not say Purple contributed EUR 2.2m individually. The author earlier checked Purple's own website: pre-seed/seed, minority equity, initial ticket EUR 250k–400k and investment strategy.
+
+**Audit recorded:** `cznew010` = `include`, reviewer `project_author`, access/review date 2026-10-09, duration unknown (left empty, not invented), two source URLs, decision rationale. E096 marked `human_verified`. Frozen model prediction `include` is unchanged; only `human_review_status` switched to `reviewed`.
+
+After this manual check, there are 8 human-audited candidates (6 investors and 2 excluded entities). The original model's Nation1 `review` is still an abstention. Thus, among the 7 binary predictions evaluated: TP=5, TN=2, FP=0, FN=0. Precision on these **selected cases** is 5/(5+0) = 100%, but this does **not** estimate production accuracy or generalizability, and most required per-field capital figures remain unavailable.

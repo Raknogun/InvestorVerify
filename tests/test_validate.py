@@ -15,13 +15,13 @@ class ValidationTests(unittest.TestCase):
         self.assertTrue(is_public_url("https://example.org/portfolio"))
         self.assertFalse(is_public_url("http://localhost/a"))
         self.assertFalse(is_public_url("file:///etc/passwd"))
-    def test_seven_reviewed_one_ai_abstention(self):
+    def test_eight_reviewed_one_ai_abstention(self):
         result=measure(ROOT/"data")
         self.assertEqual(result["status"],"preliminary_small_sample")
-        self.assertEqual(result["audited"],7)
-        self.assertEqual(result["evaluated"],6)
+        self.assertEqual(result["audited"],8)
+        self.assertEqual(result["evaluated"],7)
         self.assertEqual(result["ambiguous_or_deferred"],1)
-        self.assertEqual(result["TP"],4)
+        self.assertEqual(result["TP"],5)
         self.assertEqual(result["TN"],2)
         self.assertEqual(result["FP"],0)
         self.assertEqual(result["precision"],1.0)
@@ -90,7 +90,8 @@ class ValidationTests(unittest.TestCase):
                          for label in ["include","review","exclude"]},
                          {"include":13,"review":5,"exclude":2})
         self.assertTrue(all(r["status"]=="ai_screened_pending_human" for r in new.values()))
-        self.assertTrue(all(r["human_review_status"]=="not_reviewed" for r in newer))
+        self.assertEqual([r["investor_id"] for r in newer if r["human_review_status"]=="reviewed"],["cznew010"])
+        self.assertEqual(sum(r["human_review_status"]=="not_reviewed" for r in newer),19)
         owner={r["evidence_id"]:r["investor_id"] for r in evidence}
         self.assertTrue(all(all(owner.get(x)==r["investor_id"] for x in
                             r["supporting_evidence_ids"].split(";")) for r in newer))
@@ -122,12 +123,12 @@ class ValidationTests(unittest.TestCase):
         evidence={r["evidence_id"]:r for r in load_rows(ROOT/"data"/"evidence.csv")}
         for key in ["E053","E077","E078","E092","E093","E094","E095"]:
             self.assertEqual(evidence[key]["verification_status"],"human_verified")
-        self.assertEqual(evidence["E096"]["verification_status"],"ai_source_checked_pending_human")
+        self.assertEqual(evidence["E096"]["verification_status"],"human_verified")
         self.assertIn("financing rounds",evidence["E095"]["value"])
         predictions={r["investor_id"]:r for r in load_rows(ROOT/"data"/"ai_predictions.csv")}
         self.assertEqual(predictions["cznew010"]["ai_prediction"],"include")
-        self.assertEqual(predictions["cznew010"]["human_review_status"],"not_reviewed")
-        self.assertEqual(measure(ROOT/"data")["audited"],7)
+        self.assertEqual(predictions["cznew010"]["human_review_status"],"reviewed")
+        self.assertEqual(measure(ROOT/"data")["audited"],8)
 
     def test_bad_evidence_reference(self):
         with tempfile.TemporaryDirectory() as tmp:
