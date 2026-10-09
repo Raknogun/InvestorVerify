@@ -117,3 +117,15 @@ The visible portfolio detail for **Neuronix AI Labs** said: founded 2020; **TV I
 Human audit result: Tensor classified `include` (`czvc003`), with the two source URLs; minutes not measured. `E033` marked `human_verified` for Tatum investment participation, `E034` added as `human_verified` for the official 2021 Neuronix investment claim. The acquisition/exiting 2024 was visible on the site but **not independently verified** and is not used as required proof. The EUR 41.5m represents the entire Tatum funding round, not Tensor's contribution.
 
 State: four confirmed positives; no manually reviewed negative examples yet. Sample size is too small and selected for confirmed investors, so the resulting 4/4 is **not** representative accuracy.
+
+## CVCA negative control — independently checked by project author
+
+User was asked to locate the text "CVCA represents the interests" on the [CVCA About Us page](https://cvca.cz/en/about-us/) and responded verbatim:
+
+> «Да, в слайдере есть эта надпись»
+
+The author independently confirmed the association's self-description as representing PE and VC funds. Our pilot classifies **organizations making direct VC investments**, not associations representing members. Human label for `czneg001`: **exclude**. This is a classification under project eligibility rules, not absolute proof that CVCA has never made any investment.
+
+Changes: record human-reviewed `exclude` in `manual_audit.csv` with blank duration (not measured); mark CVCA prediction reviewed; update E028 to a narrowly scoped description of the association and mark the confirmed text `human_verified`.
+
+Confusion-matrix state at this point: 4 TP, 0 FP, 0 FN, 1 TN in the **five author-audited records**. The sample is deliberately selected and far below the target of 20 audited records; not suitable to estimate population precision or recall. The separate `CzechStartups` negative control remains unaudited.
