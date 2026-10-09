@@ -1,6 +1,6 @@
 # AI screening of 20 Czech-connected VC candidates — 2026-10-09
 
-**Status: original AI predictions frozen; five completed VC-scope reviews among these 20 (Purple, Presto, JIC Ventures `include`; Garage Angels as an angel group and JIC Starcube as an accelerator `exclude` from VC fund managers only).** The project author also checked individual StartupYard FAQ statements, but the StartupYard organization-level status remains unresolved.
+**Status: original AI predictions frozen; six completed VC-scope reviews among these 20 (Purple, Presto, JIC Ventures and J&T Ventures `include`; Garage Angels and Starcube `exclude` from VC managers only).** The project author also checked individual StartupYard FAQ statements, but the StartupYard organization-level status remains unresolved.
 
 | AI decision | Count |
 |---|---:|
@@ -61,3 +61,6 @@ This deliberately mixed sample and the earlier seven were selected purposively, 
 7. Review at least 20 records in total, including other straightforward and edge-case predictions.
 
 **Next:** author independently reviews original sources and records decisions and actual review minutes. Report global volume and cost scenarios once review timings are measured.
+
+## Follow-up audit: J&T Ventures
+Project author checked Forbes Cesko (12 February 2025) naming J&T Ventures among investors in Grid.online together with Reflex Capital and Grid Invest. EUR 1.5 million is total round funding. Reflex Capital provided EUR 1m; J&T individual amount remains undisclosed. Original model include label preserved. Source: https://forbes.cz/miliony-na-revoluci-cesky-logisticky-startup-grid-online-ziskal-investici-15-milionu-eur/
