@@ -146,3 +146,13 @@ AI independently opened JIC's older [2 Jun 2015 benefits article](https://www.ji
 **Audit:** `cznew011` = `exclude` for **VC-only fund-manager eligibility**, not proven incapable of taking equity. One project-author review dated 2026-10-09; minutes not measured and left blank. Original frozen AI `exclude` unchanged; human-review status updated. E054 and E108–E110 author verified; E111 and E112 remain AI-screened.
 
 Now 12 VC-scope reviews (8 included VC funds, 4 excluded: two non-investor portals/association, one angel group, one accelerator). Among 11 determinate frozen AI decisions: TP=7, TN=4, FP=0, FN=0, with one Nation1 abstention. This purposively assembled pilot cannot estimate true general investor authenticity accuracy.
+
+## J&T Ventures author verification of Grid.online financing
+
+User uploaded a screenshot of Forbes Cesko's 2025-02-12 report and wrote: "вот". Source: https://forbes.cz/miliony-na-revoluci-cesky-logisticky-startup-grid-online-ziskal-investici-15-milionu-eur/
+
+The article names Reflex Capital, J&T Ventures and Grid Invest as providers of EUR 1.5m overall funding to Grid.online. EUR 1m is explicitly attributed to Reflex Capital. The remaining EUR 0.5m is not assignable entirely to J&T because Grid Invest also invested and their split is unpublished.
+
+Decision: author verified J&T as include for VC-only pilot, saved as cznew006 in manual_audit.csv. Review duration was not measured. E113-E115 record participation, total round and another investor's known amount, all checked by the author. Original AI prediction include remains frozen. The primary portfolio listings E049 and E086 remain only AI-screened.
+
+Current author audits: 13 candidates: 9 VC includes and 4 VC exclusions. One AI abstention, 12 evaluated determinate decisions: TP=8, TN=4, FP=0, FN=0. Purpose-selected evidence sample cannot establish overall accuracy.
