@@ -2,7 +2,7 @@
 
 A small, reproducible Python research pilot for **Assignment A: Reliable Investor Database**.
 
-**Pilot:** venture capital organizations with a Czech market or office connection (not necessarily Czech legal domicile). **Status:** first AI-assisted web screening, **two investor-level records independently audited; remaining candidates pending**.
+**Pilot:** venture capital organizations with a Czech market or office connection (not necessarily Czech legal domicile). **Status:** first AI-assisted web screening, **three investor-level records independently audited; remaining candidates pending**.
 
 ## Why this project exists
 
@@ -12,14 +12,14 @@ Investor directories frequently mix actual funds with advisers, associations and
 
 - [Research design and inclusion/exclusion rules](docs/PLAN.md)
 - [Candidate registry](data/candidates.csv): 7 candidates, including negative controls (not a market census)
-- [Claim-level evidence](data/evidence.csv): 32 claims with URLs, accessed date and verification stage
+- [Claim-level evidence](data/evidence.csv): 33 claims with URLs, accessed date and verification stage
 - [Frozen preliminary AI predictions](data/ai_predictions.csv): 4 include, 2 exclude, 1 review
-- [Independent audit register](data/manual_audit.csv): 2 independently reviewed candidates (Credo Ventures and Tilia Impact Ventures; author inspected portfolio information and investee announcements)
+- [Independent audit register](data/manual_audit.csv): 3 independently reviewed candidates (Credo Ventures, Tilia Impact Ventures, DEPO Ventures; author inspected portfolio information and investee announcements)
 - [Initial screening report](reports/INITIAL_SCREENING.md)
 - [AI collaboration log](ai-log/): source and code work, actual issues and corrections; uses ChatGPT **not Claude Code**
 - [Python data validator](src/investorverify/validate.py), [precision measurement](src/investorverify/quality.py) and [unit tests](tests/test_validate.py)
 
-**Two manually confirmed inclusions are not enough to estimate general accuracy.** The calculator currently returns `preliminary_small_sample` and displays sample size. Our target is about 30 candidates and at least 20 independently audited entries; these are targets, not achievements.
+**Three manually confirmed inclusions are not enough to estimate general accuracy.** The calculator currently returns `preliminary_small_sample` and displays sample size. Our target is about 30 candidates and at least 20 independently audited entries; these are targets, not achievements.
 
 ## Setup and checks
 
@@ -32,7 +32,7 @@ python -m unittest discover -s tests -v
 python -m investorverify.quality
 ```
 
-A clean run should show structural validation passing, tests passing and quality status `preliminary_small_sample` (2 reviewed investors). GitHub Actions runs the same checks on push. **Passing code tests does not verify real-world investor assertions.**
+A clean run should show structural validation passing, tests passing and quality status `preliminary_small_sample` (3 reviewed investors). GitHub Actions runs the same checks on push. **Passing code tests does not verify real-world investor assertions.**
 
 ## Data definitions
 
@@ -59,7 +59,7 @@ Precision is meaningful only for the **audited candidate sample**, not all inves
 
 ## Known limitations and next work
 
-- Audit sample currently has 2 independently reviewed investors; other candidates are pending.
+- Audit sample currently has 3 independently reviewed investors; other candidates are pending.
 - No empirically supported worldwide investor count or costs yet.
 - Some disclosed capital figures are historical; there is not enough public evidence to infer current available capital.
 - Nation1/N1 naming and fund-manager continuity require identity checking.
