@@ -94,3 +94,15 @@ Author-observed strategy: **seed to Series A**, mostly post-revenue startups, **
 Verified screenshot claims are E068, E069, E097–E101, marked `human_verified` for the precise statements present; the current managed-capital/fund-vehicle claim E070 is still AI-screened, not author-audited.
 
 Model researched a [Silicon Canals January 22 2024 funding report](https://siliconcanals.com/outkept-secures-500k/) naming **Presto Ventures** among investors in Belgian startup **OutKept's total €500k seed round**, with BAN Flanders business angels. This is an **independent media source**, *not* investee's own announcement. Individual Presto contribution not known. Staged as E102, `ai_source_checked_pending_human`, pending the author's independent source review. No investor-level manual audit row was added. The model's frozen `include` prediction remains unchanged.
+
+## Presto Ventures: completed independent investor-level audit
+
+The project author supplied a screenshot from [Silicon Canals' public January 2024 article](https://siliconcanals.com/outkept-secures-500k/) with Presto Ventures highlighted and asked verbatim:
+
+> «это?»
+
+The article states that Belgian cybersecurity startup OutKept received **EUR 500,000 in a Seed funding round led by Presto Ventures and BAN Flanders business angels**. It also prints a comment from **Eduard Kucera, Partner at Presto Ventures**. This constitutes independent media evidence of participation, supplementing the earlier manually reviewed official investment strategy.
+
+**Audit result:** `cznew004` = `include`, reviewer `project_author`, date 2026-10-09, review duration not measured (empty), supporting URLs the official Presto site and Silicon Canals. E102 became `human_verified` for the source's exact assertion. The **EUR 500,000 is the total OutKept financing round**, not a proved personal Presto commitment, and Silicon Canals is secondary rather than OutKept's own primary announcement. Original frozen model decision `include` was left unchanged; only its human-review status was updated.
+
+Now 9 investor candidates have human classification decisions (7 positive, 2 excluded), with 1 AI abstention on Nation1. On the 8 determinate predictions that were audited: TP=6, TN=2, FP=0, FN=0. The observed precision on this purposive small sample is 6/6 (not a representative population estimate). Capital/fund size attributes remain insufficient for an aggregate global estimate.

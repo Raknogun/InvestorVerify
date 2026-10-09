@@ -1,6 +1,6 @@
 # AI screening of 20 Czech-connected VC candidates — 2026-10-09
 
-**Status: original AI predictions frozen; one completed investor-level human audit among these 20 (Purple Ventures `include`).** The project author also checked individual StartupYard FAQ statements, but the StartupYard organization-level status remains unresolved.
+**Status: original AI predictions frozen; two completed investor-level human audits among these 20 (Purple Ventures and Presto Ventures, both `include`).** The project author also checked individual StartupYard FAQ statements, but the StartupYard organization-level status remains unresolved.
 
 | AI decision | Count |
 |---|---:|
@@ -54,7 +54,7 @@ This deliberately mixed sample and the earlier seven were selected purposively, 
 
 1. [StartupYard FAQ](https://startupyard.com/faq/): **terms checked by author**; still determine who legally invests the optional €25k and whether StartupYard is eligible as a VC manager. Partner-controlled follow-on financing must not be assigned to StartupYard.
 2. [Purple Ventures](https://www.purple-ventures.com/): **investor-level audit completed (include)**. Author independently checked initial €250k–€400k, minority equity and pre-seed/seed on primary website and verified its participation in [Delta Green's 2024 announcement](https://www.deltagreen.cz/press-releases/cesti-energeticti-inovatori-v-centru-zajmu-delta-green-ziskava-2-2-milionu-eur-od-tilia-impact-ventures-credo-ventures-a-purple-ventures). The round total (€2.2m) is not Purple's individual investment.
-3. [Presto Ventures](https://www.prestoventures.com/): strategy **author-confirmed** (seed–Series A, €500k–5m own tickets versus €800k–8m target rounds, advanced security/defense/dual-use). Independently check [Silicon Canals, 22 January 2024](https://siliconcanals.com/outkept-secures-500k/) naming Presto Ventures and BAN Flanders in OutKept's €500k total seed round. Separate vehicle Presto Tech Horizons and €150m fund **target** must not be mistaken for Presto's current AUM.
+3. [Presto Ventures](https://www.prestoventures.com/): **investor-level audit completed (include)**. Author confirmed seed–Series A strategy, €500k–5m own tickets versus €800k–8m target rounds, security/defense/dual-use, and a [Silicon Canals article from 22 January 2024](https://siliconcanals.com/outkept-secures-500k/) naming Presto and BAN Flanders in OutKept's €500k total seed round. The article quotes Eduard Kucera, partner at Presto. This is independent press evidence, not an issuer statement by OutKept, and no individual Presto amount was disclosed. Separate vehicle Presto Tech Horizons and a €150m fund **target** must not be mistaken for current AUM.
 4. [JIC Ventures](https://www.jic.cz/cz/o-nas/pro-media/prvni-investice-noveho-fondu-jic-ventures-miri-do): verify FaceUp transaction and fund manager identity.
 5. [Garage Angels](https://g-angels.cz/): distinguish genuine angel group from VC funds.
 6. [Starcube](https://www.jic.cz/en/o-nas/pro-media/jic-starcube-with-a-new-manager-and-new-topics-for-this-years-round): check if it itself invested rather than facilitating investment.
