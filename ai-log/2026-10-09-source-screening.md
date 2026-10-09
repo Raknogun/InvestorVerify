@@ -159,3 +159,15 @@ AI found an [issuer-side VRgineers announcement dated Nov 28 2023](https://www.p
 An unrelated domain [n1invest.co](https://n1invest.co/) calls itself "N1 Investment Company"; it lists different management (Nykyta Izmaylov and Kyrylo Medvediev), a separate investment strategy and locations. This site **must NOT be used as evidence** for Czech Nation 1 / N1 Ventures. Same short brand does not establish common identity. This is an observed near-name collision, not a hypothetical example.
 
 Author verified only the three portfolio names in CVCA (E035 `human_verified`); no independent `include` / `exclude` reviewer decision was recorded for Nation1 yet, and `data/manual_audit.csv` stays at six audited records. Do not use any of these claims to change the frozen AI `review` prediction retroactively.
+
+## Nation1: independent confirmation of USD 0.5m follow-on investment
+
+User shared a screenshot of VRgineers' own 2023-11-28 press release and wrote:
+
+> «Вот, оно есть»
+
+The screenshot highlights `Nation 1 increasing its share by 0.5 million USD`, so author independently verified the **Nation 1-specific USD 500,000** follow-on investment. The release also states the total Series A round was **USD 6 million**, led by Taiwania Capital; these are separate amounts.
+
+Nation1's human audit label is now `include` for demonstrated **historical direct VC investing**, with no measured reviewer duration. Claim E036 changed to `human_verified`. The original AI prediction `review` is **unchanged** and now shows `human_review_status=reviewed`; the quality calculator counts this as an **abstention/deferred prediction**, not as a true positive. Current legal fund-manager continuity under the N1 brand remains unverified by the author. That is a separate entity-resolution question.
+
+The author should next compare the Sep 2023 Nation 1 → N1 announcement with current N1 official website (n1.rocks). The unrelated site n1invest.co must not be merged into this identity.
