@@ -95,7 +95,7 @@ class ValidationTests(unittest.TestCase):
         owner={r["evidence_id"]:r["investor_id"] for r in evidence}
         self.assertTrue(all(all(owner.get(x)==r["investor_id"] for x in
                             r["supporting_evidence_ids"].split(";")) for r in newer))
-        self.assertEqual(len(evidence),121)
+        self.assertEqual(len(evidence),125)
 
     def test_mixed_type_angel_group_is_not_false_investor_label(self):
         from investorverify.discover import load_rows
@@ -223,6 +223,21 @@ class ValidationTests(unittest.TestCase):
         self.assertEqual(e["E119"]["verification_status"],"ai_source_checked_pending_human")
         self.assertEqual(e["E120"]["value"],"3300000")
         self.assertEqual(e["E121"]["field"],"investment_ticket_conflicting_claims")
+        self.assertEqual(p["cznew008"]["human_review_status"],"not_reviewed")
+        self.assertEqual(measure(ROOT/"data")["audited"],14)
+
+    def test_kaya_fund_capital_claims_and_unaudited_deal(self):
+        from investorverify.discover import load_rows
+        e={r["evidence_id"]:r for r in load_rows(ROOT/"data"/"evidence.csv")}
+        p={r["investor_id"]:r for r in load_rows(ROOT/"data"/"ai_predictions.csv")}
+        for key in ["E051","E071","E072","E073","E074","E122","E123","E124","E125"]:
+            self.assertEqual(e[key]["verification_status"],"human_verified")
+        self.assertEqual(e["E073"]["value"],"500000000")
+        self.assertEqual(e["E074"]["value"],"85000000")
+        self.assertEqual(e["E122"]["field"],"portfolio_company_count_min_inclusive")
+        self.assertEqual(e["E122"]["value"],"60")
+        for key in ["E119","E120","E121"]:
+            self.assertEqual(e[key]["verification_status"],"ai_source_checked_pending_human")
         self.assertEqual(p["cznew008"]["human_review_status"],"not_reviewed")
         self.assertEqual(measure(ROOT/"data")["audited"],14)
 

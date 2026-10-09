@@ -64,3 +64,6 @@ This deliberately mixed sample and the earlier seven were selected purposively, 
 
 ## Follow-up audit: J&T Ventures
 Project author checked Forbes Cesko (12 February 2025) naming J&T Ventures among investors in Grid.online together with Reflex Capital and Grid Invest. EUR 1.5 million is total round funding. Reflex Capital provided EUR 1m; J&T individual amount remains undisclosed. Original model include label preserved. Source: https://forbes.cz/miliony-na-revoluci-cesky-logisticky-startup-grid-online-ziskal-investici-15-milionu-eur/
+
+## Kaya VC — official homepage verified by author
+Kaya's official site (https://www.kaya.vc/) screenshot shows USD 500m total AUM and USD 85m current fund as different measures; its ticket USD 1m–3m; a portfolio of 60+ companies; founded 2011; CEE geography and pre-seed/seed focus. Those source assertions are author-verified (E051 E071–E074 E122–E125) but not independently financial-audited. Different ranges stated on https://www.kaya.vc/facts are still contradictory and E121 awaits checking. Independent partner-investor news about Riptides E119/E120 is not yet checked by the author. Kaya's original AI include stays frozen and human classification remains unreviewed.

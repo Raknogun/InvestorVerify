@@ -14,7 +14,7 @@ Investor directories frequently mix actual funds with advisers, associations and
 - [Candidate registry](data/candidates.csv): 27 candidates: 14 manually audited for VC scope and 13 AI-screened candidates without classification audit (not a census)
 - [Reproducible discovery source sightings](data/discovery_sightings.csv): 25 sourced sightings, including 5 deliberate name/alias duplicates
 - [Discovery batch report](reports/DISCOVERY_BATCH_20261009.md) and [candidate intake script](src/investorverify/discover.py): source-driven expansion and deduplication; **not** automated proof of direct investing
-- [Claim-level evidence](data/evidence.csv): 121 claims with URLs, accessed date and verification stage
+- [Claim-level evidence](data/evidence.csv): 125 claims with URLs, accessed date and verification stage
 - [Frozen preliminary AI predictions](data/ai_predictions.csv): 27 total (20 newly AI-screened: 13 include, 2 exclude from **VC-only scope**, 5 review; original 7 predictions unchanged)
 - [Independent audit register](data/manual_audit.csv): 14 VC-scope reviews: ten included VC investors (Credo, Tilia, DEPO, Tensor, Nation1, Purple, Presto, JIC Ventures, J&T Ventures, Reflex Capital), two non-investors (CVCA, CzechStartups), one real angel group (Garage Angels) and one accelerator (JIC STARCUBE) excluded only from the VC-fund-manager pilot. Nation1 original AI decision remains `review`
 - [Screening of 20 new candidates](reports/SCREENING_BATCH_20261009.md), [first seven candidates](reports/INITIAL_SCREENING.md)
@@ -76,6 +76,7 @@ Precision is meaningful only for the **audited candidate sample**, not all inves
 - Presto Ventures strategy was author-checked on its official site: seed–Series A, security/defense/dual-use, €500k–5m own check versus €800k–8m target **total round**. Independent Silicon Canals reporting on its participation in OutKept's €500k seed round was author-confirmed, completing the `include` investor audit. The €500k round is not Presto's individual contribution.
 - Purple Ventures initial €250k–€400k ticket, minority equity strategy and pre-seed/seed stages were author-checked on its official site. The author also confirmed Purple in Delta Green's 2024 investee-side announcement and completed the investor-level `include` audit. The €2.2m is the total three-investor round, not Purple's individual contribution.
 - StartupYard FAQ's financing terms have been checked by the project author, but its investor eligibility label is still `review`. Its €45k in-kind note and optional €25k cash must not be confused with €100k follow-on investments controlled by partner DEPO Ventures.
+- Kaya VC homepage checked by project author: USD 500m self-reported total AUM versus USD 85m current fund size (neither is known available capital); USD 1m–3m homepage tickets; 60+ backed companies; founded 2011; CEE pre-seed and seed focus. Contradictory ticket claims on another official page and Riptides co-investment statement remain pending human checks.
 - Next: independently audit the 20 new AI-screened candidates, preserving frozen predictions, then compute quality metrics and global cost model.
 
 ## AI use and transparency

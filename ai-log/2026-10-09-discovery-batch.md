@@ -164,3 +164,8 @@ Before any author source check, AI located Portfolion Capital Partners' 2025-04-
 AI also detected inconsistent public ticket ranges across Kaya pages: https://www.kaya.vc/ homepage **USD 1-3m**, https://www.kaya.vc/facts descriptive introduction **USD 0.5-2m**, and a later section of that same facts page says **EUR 0.1-3m**. The site does not make clear whether these refer to different products/periods. E121 records the conflict for human review. Existing E071-E072 came from the homepage and remain *claims attributable to that page*, not a conclusive global typical ticket range. USD 500m of total AUM and USD 85m current fund on homepage are distinct metrics.
 
 Original frozen Kaya `include` AI prediction stays unchanged; no manual label or fictitious review minutes added.
+
+## Kaya VC — project author checked official homepage screenshot
+User supplied a screenshot of official homepage showing **60+ Companies**, **2011 Founded**, **$500M AUM Total**, **$1–3M Ticket**, **Pre+Seed Round**, **$85M Current Fund** and CEE-founder investment strategy; wrote verbatim "вот". Existing E051 E071 E072 E073 E074 are now human-verified as precise **self-reported site claims**, and E122–E125 record an inclusive company count floor of 60 and basic site metadata.
+
+The observed USD 500m total AUM is **not** the cash still available to invest. USD 85m refers to current fund size rather than that fund's free cash. USD 1m–3m is the homepage ticket claim; other ranges on Kaya Facts remain unresolved and E121 stays model-checked only. The external co-investor report on Riptides E119 and E120 still awaits project-author reading. No human investor-level label or fictional review duration added; frozen model include unchanged.
