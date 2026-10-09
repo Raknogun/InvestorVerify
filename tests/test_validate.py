@@ -172,7 +172,7 @@ class ValidationTests(unittest.TestCase):
         self.assertIn("VC fund manager pilot",a["cznew014"]["decision_reason"])
         self.assertEqual(p["cznew014"]["ai_prediction"],"exclude")
         self.assertEqual(p["cznew014"]["human_review_status"],"reviewed")
-        self.assertEqual(measure(ROOT/"data")["TN"],3)
+        self.assertEqual(measure(ROOT/"data")["TN"],4)
 
     def test_starcube_alumni_funds_not_direct_vc_fund(self):
         from investorverify.discover import load_rows
