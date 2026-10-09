@@ -2,7 +2,7 @@
 
 A small, reproducible Python research pilot for **Assignment A: Reliable Investor Database**.
 
-**Pilot:** venture capital organizations with a Czech market or office connection (not necessarily Czech legal domicile). **Status:** first AI-assisted web screening, **nine candidate classifications independently audited (7 investors, 2 excluded non-investors); N1 brand/entity continuity pending**.
+**Pilot:** venture capital organizations with a Czech market or office connection (not necessarily Czech legal domicile). **Status:** first AI-assisted web screening, **ten candidate classifications independently audited (8 investors, 2 excluded non-investors); N1 brand/entity continuity pending**.
 
 ## Why this project exists
 
@@ -11,17 +11,17 @@ Investor directories frequently mix actual funds with advisers, associations and
 ## Current deliverables (2026-10-09)
 
 - [Research design and inclusion/exclusion rules](docs/PLAN.md)
-- [Candidate registry](data/candidates.csv): 27 candidates: 9 manually audited entries (including Purple and Presto Ventures) and 18 additional AI-screened organizations without investor-level manual audit (not a census)
+- [Candidate registry](data/candidates.csv): 27 candidates: 10 manually audited entries (including Purple, Presto and JIC Ventures) and 17 additional AI-screened organizations without investor-level manual audit (not a census)
 - [Reproducible discovery source sightings](data/discovery_sightings.csv): 25 sourced sightings, including 5 deliberate name/alias duplicates
 - [Discovery batch report](reports/DISCOVERY_BATCH_20261009.md) and [candidate intake script](src/investorverify/discover.py): source-driven expansion and deduplication; **not** automated proof of direct investing
-- [Claim-level evidence](data/evidence.csv): 102 claims with URLs, accessed date and verification stage
+- [Claim-level evidence](data/evidence.csv): 104 claims with URLs, accessed date and verification stage
 - [Frozen preliminary AI predictions](data/ai_predictions.csv): 27 total (20 newly AI-screened: 13 include, 2 exclude from **VC-only scope**, 5 review; original 7 predictions unchanged)
-- [Independent audit register](data/manual_audit.csv): 9 independently reviewed candidates: seven direct VC investors (Credo, Tilia, DEPO, Tensor, Nation1, Purple Ventures, Presto Ventures) and two non-investors (CVCA, CzechStartups). Nation1 is an audited investor but the original AI prediction stays `review` due to brand ambiguity
+- [Independent audit register](data/manual_audit.csv): 10 independently reviewed candidates: eight VC investors (Credo, Tilia, DEPO, Tensor, Nation1, Purple, Presto, JIC Ventures) and two non-investors (CVCA, CzechStartups). Nation1 is an audited investor but the original AI prediction remains `review` due to brand ambiguity
 - [Screening of 20 new candidates](reports/SCREENING_BATCH_20261009.md), [first seven candidates](reports/INITIAL_SCREENING.md)
 - [AI collaboration log](ai-log/): source and code work, actual issues and corrections; uses ChatGPT **not Claude Code**
 - [Python data validator](src/investorverify/validate.py), [precision measurement](src/investorverify/quality.py) and [unit tests](tests/test_validate.py)
 
-**Seven confirmed investor labels and two excluded organizations are not enough to estimate general accuracy.** The calculator currently returns `preliminary_small_sample` and displays sample size. Our target is about 30 candidates and at least 20 independently audited entries; these are targets, not achievements.
+**Eight confirmed investor labels and two excluded organizations are not enough to estimate general accuracy.** The calculator currently returns `preliminary_small_sample` and displays sample size. Our target is about 30 candidates and at least 20 independently audited entries; these are targets, not achievements.
 
 ## Setup and checks
 
@@ -37,7 +37,7 @@ python -m investorverify.quality
 
 To refresh candidates from curated public-source sightings, run `python -m investorverify.discover --write` and review the Git diff before committing. To collect fresh public HTML headings into an **unverified staging CSV only**, run `python -m investorverify.discover --fetch-czechstartups` (requires internet and the website layout may change). Avoid excessive requests and respect site terms.
 
-A clean run should show structural validation passing, tests passing and quality status `preliminary_small_sample` (9 reviewed candidates: TP=6, TN=2, 1 abstention). GitHub Actions runs the same checks on push. **Passing code tests does not verify real-world investor assertions.**
+A clean run should show structural validation passing, tests passing and quality status `preliminary_small_sample` (10 reviewed candidates: TP=7, TN=2, 1 abstention). GitHub Actions runs the same checks on push. **Passing code tests does not verify real-world investor assertions.**
 
 ## Data definitions
 
@@ -64,11 +64,12 @@ Precision is meaningful only for the **audited candidate sample**, not all inves
 
 ## Known limitations and next work
 
-- Audit sample has 9 independently reviewed candidates (7 includes; 2 excludes). Of the 20 newly AI-screened organizations, Purple Ventures and Presto Ventures have completed investor-level human audits; Nation1's original AI prediction stays `review`.
+- Audit sample has 10 independently reviewed candidates (8 includes; 2 excludes). Of the 20 newly AI-screened organizations, Purple, Presto and JIC Ventures have completed investor-level human audits; Nation1's original AI prediction stays `review`.
 - No empirically supported worldwide investor count or costs yet.
 - Some disclosed capital figures are historical; there is not enough public evidence to infer current available capital.
 - Nation1 → N1 brand rename was author-confirmed from a 2023 Newstream article, and current partner Jaroslav Trojan and Prague address match the historical profile. N1's self-reported USD 60m managed across two funds (AI and healthcare focus) was verified on its website on 2026-10-09. This figure is neither available capital nor the historical EUR 35m reported by CVCA. Current legal-entity/fund-vehicle continuity remains unverified; original AI decision stays `review`.
 - The pilot is not exhaustive and has not measured recall in a global universe.
+- JIC Ventures participation in FaceUp Series A was verified from JIC's official article. Total round **exceeded CZK 110m**, led by Fil Rouge Capital; no JIC-specific check or fund AUM was established. Its previously sourced CZK 400m fund figure awaits a separate author check.
 - Presto Ventures strategy was author-checked on its official site: seed–Series A, security/defense/dual-use, €500k–5m own check versus €800k–8m target **total round**. Independent Silicon Canals reporting on its participation in OutKept's €500k seed round was author-confirmed, completing the `include` investor audit. The €500k round is not Presto's individual contribution.
 - Purple Ventures initial €250k–€400k ticket, minority equity strategy and pre-seed/seed stages were author-checked on its official site. The author also confirmed Purple in Delta Green's 2024 investee-side announcement and completed the investor-level `include` audit. The €2.2m is the total three-investor round, not Purple's individual contribution.
 - StartupYard FAQ's financing terms have been checked by the project author, but its investor eligibility label is still `review`. Its €45k in-kind note and optional €25k cash must not be confused with €100k follow-on investments controlled by partner DEPO Ventures.

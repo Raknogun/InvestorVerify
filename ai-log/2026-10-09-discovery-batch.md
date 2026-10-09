@@ -106,3 +106,15 @@ The article states that Belgian cybersecurity startup OutKept received **EUR 500
 **Audit result:** `cznew004` = `include`, reviewer `project_author`, date 2026-10-09, review duration not measured (empty), supporting URLs the official Presto site and Silicon Canals. E102 became `human_verified` for the source's exact assertion. The **EUR 500,000 is the total OutKept financing round**, not a proved personal Presto commitment, and Silicon Canals is secondary rather than OutKept's own primary announcement. Original frozen model decision `include` was left unchanged; only its human-review status was updated.
 
 Now 9 investor candidates have human classification decisions (7 positive, 2 excluded), with 1 AI abstention on Nation1. On the 8 determinate predictions that were audited: TP=6, TN=2, FP=0, FN=0. The observed precision on this purposive small sample is 6/6 (not a representative population estimate). Capital/fund size attributes remain insufficient for an aggregate global estimate.
+
+## JIC Ventures: FaceUp investment author-verified
+
+The user provided a screenshot of JIC's [official 2026 press announcement](https://www.jic.cz/cz/o-nas/pro-media/prvni-investice-noveho-fondu-jic-ventures-miri-do) showing the headline 'První investice nového fondu JIC Ventures míří do technologického startupu FaceUp' and article stating that JIC Ventures joined FaceUp's Series A capital investment. The user wrote verbatim:
+
+> «вот»
+
+The visible Czech text says the **overall** Series A financing **exceeded CZK 110 million** and was **led by Fil Rouge Capital**, a Croatian fund. This must not be attributed in full to JIC Ventures. The article confirms JIC Ventures supplied capital and knowledge, not merely accelerator mentoring.
+
+Added human classification `cznew015=include` (review date 2026-10-09, duration unknown/blank). Changed E058 to `human_verified`, and added E103 as an exclusive numerical lower bound on the total round and E104 for lead investor Fil Rouge Capital. The pre-existing separately reported CZK 400m JIC Ventures fund figure E079 remains `ai_source_checked_pending_human`: the user's screenshot did **not** independently verify it. The originally frozen AI prediction `include` is unchanged, only status updated to `reviewed`.
+
+Now ten candidates have independent project-author screening labels (8 included, 2 excluded); one of ten was an original AI abstention `review`, so eight? **Precisely nine** determinate model classifications are evaluated (TP=7, TN=2). This is a small purposive sample, not an externally valid worldwide precision estimate. No review duration was fabricated.
