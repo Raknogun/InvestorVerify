@@ -105,3 +105,15 @@ The screenshot confirms DEPO as a participating investor in Tatum's **overall US
 Actions: `czvc002` recorded `include` in author audit; `E032` marked `human_verified` for the specific participating-investor assertion; `E033` added for Tensor Ventures using the same investee press release, pending separate author audit. Original DEPO fund size, ticket range and other claims remain historical/AI-screened. No review duration was reported.
 
 This makes 3 independently confirmed positive classifications in a deliberately selected sample of seven candidates — **not** a representative precision benchmark. We still need independently audited negative classifications and other candidates to measure credible performance.
+
+## Tensor Ventures: screenshot and independent investment support
+
+User opened the [official Tensor Ventures website](https://tensor.ventures/) at its Portfolio tab, shared a screenshot and asked:
+
+> «Я так понимаю это то?»
+
+The visible portfolio detail for **Neuronix AI Labs** said: founded 2020; **TV Invested 2021**; exit acquired by Microchip Technology in 2024. The displayed investment year is an explicit first-party portfolio statement. A previous user-provided screenshot of the [Tatum Technology LLC 2022 funding announcement](https://www.prnewswire.com/news-releases/tatum-receives-41-5-million-funding-to-accelerate-growth-of-unique-blockchain-development-platform-speeding-time-to-market-for-digital-finance-and-web-3-0-applications-301646685.html) independently named Tensor Ventures among investors alongside Depo Ventures.
+
+Human audit result: Tensor classified `include` (`czvc003`), with the two source URLs; minutes not measured. `E033` marked `human_verified` for Tatum investment participation, `E034` added as `human_verified` for the official 2021 Neuronix investment claim. The acquisition/exiting 2024 was visible on the site but **not independently verified** and is not used as required proof. The EUR 41.5m represents the entire Tatum funding round, not Tensor's contribution.
+
+State: four confirmed positives; no manually reviewed negative examples yet. Sample size is too small and selected for confirmed investors, so the resulting 4/4 is **not** representative accuracy.
