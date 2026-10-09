@@ -83,3 +83,13 @@ User's actual response: **«да, это есть»**.
 This confirms the **investee-side claim** that Tilia led the financing round with Credo Ventures and Purple Ventures. Earlier user-supplied Tilia portfolio screenshot showed **21 companies as of Q4 2025**. The model classified Tilia as `include`; author confirmed this investor-level decision.
 
 Actions: created `czvc005` independent human audit record with author as reviewer; marked only E027 (portfolio count) and E031 (named lead-investor role) `human_verified`; other claims about ticket size, sector and capital remain AI-screened. Duration was not measured and remains blank. EUR 2.2m is the **total financing round**, not Tilia's personal contribution. Two reviewed investors are too few for representative precision.
+
+## DEPO Ventures: directory screening and a concrete data-quality issue
+
+The project author supplied a screenshot of the CVCA member profile and wrote (actual words):
+
+> «Есть портфолио, но без ссылок»
+
+This confirmed the CVCA listing of sector-agnostic VC, historical reported funds under management EUR 5.5m, preferred checks EUR 50k–300k, geographic focus CEE and multiple named portfolio firms. However, this association directory has no direct investee transaction links. The listed Czech portfolio mentions **Tatum twice**, an actual duplicate candidate token in the source list; therefore a raw count of names would be unreliable.
+
+AI located an [issuer-side Tatum Technology LLC press announcement dated 2022-10-12](https://www.prnewswire.com/news-releases/tatum-receives-41-5-million-funding-to-accelerate-growth-of-unique-blockchain-development-platform-speeding-time-to-market-for-digital-finance-and-web-3-0-applications-301646685.html), naming Depo Ventures among the investors in a USD 41.5m *total* funding round. Added E032 with `ai_source_checked_pending_human`. Not claimed as DEPO's personal investment amount. **The project author has not yet independently verified this Tatum release**, so DEPO still has no manual label.
