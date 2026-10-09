@@ -2,7 +2,7 @@
 
 A small, reproducible Python research pilot for **Assignment A: Reliable Investor Database**.
 
-**Pilot:** venture capital organizations with a Czech market or office connection (not necessarily Czech legal domicile). **Status:** first AI-assisted web screening, **thirteen candidates audited for VC scope (9 VC investors, 2 non-investors, 1 out-of-scope angel group, 1 accelerator); N1 brand/entity continuity pending**.
+**Pilot:** venture capital organizations with a Czech market or office connection (not necessarily Czech legal domicile). **Status:** first AI-assisted web screening, **fourteen candidates audited for VC scope (10 VC investors, 2 non-investors, 1 out-of-scope angel group, 1 accelerator); N1 brand/entity continuity pending**.
 
 ## Why this project exists
 
@@ -11,17 +11,17 @@ Investor directories frequently mix actual funds with advisers, associations and
 ## Current deliverables (2026-10-09)
 
 - [Research design and inclusion/exclusion rules](docs/PLAN.md)
-- [Candidate registry](data/candidates.csv): 27 candidates: 13 manually audited for VC scope and 14 AI-screened candidates without classification audit (not a census)
+- [Candidate registry](data/candidates.csv): 27 candidates: 14 manually audited for VC scope and 13 AI-screened candidates without classification audit (not a census)
 - [Reproducible discovery source sightings](data/discovery_sightings.csv): 25 sourced sightings, including 5 deliberate name/alias duplicates
 - [Discovery batch report](reports/DISCOVERY_BATCH_20261009.md) and [candidate intake script](src/investorverify/discover.py): source-driven expansion and deduplication; **not** automated proof of direct investing
-- [Claim-level evidence](data/evidence.csv): 115 claims with URLs, accessed date and verification stage
+- [Claim-level evidence](data/evidence.csv): 118 claims with URLs, accessed date and verification stage
 - [Frozen preliminary AI predictions](data/ai_predictions.csv): 27 total (20 newly AI-screened: 13 include, 2 exclude from **VC-only scope**, 5 review; original 7 predictions unchanged)
-- [Independent audit register](data/manual_audit.csv): 13 VC-scope reviews: nine included VC investors (Credo, Tilia, DEPO, Tensor, Nation1, Purple, Presto, JIC Ventures, J&T Ventures), two non-investors (CVCA, CzechStartups), one real angel group (Garage Angels) and one accelerator (JIC STARCUBE) excluded only from the VC-fund-manager pilot. Nation1 original AI decision remains `review`
+- [Independent audit register](data/manual_audit.csv): 14 VC-scope reviews: ten included VC investors (Credo, Tilia, DEPO, Tensor, Nation1, Purple, Presto, JIC Ventures, J&T Ventures, Reflex Capital), two non-investors (CVCA, CzechStartups), one real angel group (Garage Angels) and one accelerator (JIC STARCUBE) excluded only from the VC-fund-manager pilot. Nation1 original AI decision remains `review`
 - [Screening of 20 new candidates](reports/SCREENING_BATCH_20261009.md), [first seven candidates](reports/INITIAL_SCREENING.md)
 - [AI collaboration log](ai-log/): source and code work, actual issues and corrections; uses ChatGPT **not Claude Code**
 - [Python data validator](src/investorverify/validate.py), [precision measurement](src/investorverify/quality.py) and [unit tests](tests/test_validate.py)
 
-**Nine VC includes and four VC excludes are too few to estimate production accuracy; Garage Angels is a real angel group, and Starcube is an accelerator with historical equity participation, not established as a pooled VC manager.** The calculator currently returns `preliminary_small_sample` and displays sample size. Our target is about 30 candidates and at least 20 independently audited entries; these are targets, not achievements.
+**Ten VC includes and four VC excludes are too few to estimate production accuracy; Garage Angels is a real angel group, and Starcube is an accelerator with historical equity participation, not established as a pooled VC manager.** The calculator currently returns `preliminary_small_sample` and displays sample size. Our target is about 30 candidates and at least 20 independently audited entries; these are targets, not achievements.
 
 ## Setup and checks
 
@@ -37,7 +37,7 @@ python -m investorverify.quality
 
 To refresh candidates from curated public-source sightings, run `python -m investorverify.discover --write` and review the Git diff before committing. To collect fresh public HTML headings into an **unverified staging CSV only**, run `python -m investorverify.discover --fetch-czechstartups` (requires internet and the website layout may change). Avoid excessive requests and respect site terms.
 
-A clean run should show structural validation passing, tests passing and quality status `preliminary_small_sample` (13 VC-scope reviews: TP=8, TN=4, 1 abstention). GitHub Actions runs the same checks on push. **Passing code tests does not verify real-world investor assertions.**
+A clean run should show structural validation passing, tests passing and quality status `preliminary_small_sample` (14 VC-scope reviews: TP=9, TN=4, 1 abstention). GitHub Actions runs the same checks on push. **Passing code tests does not verify real-world investor assertions.**
 
 ## Data definitions
 
@@ -64,7 +64,7 @@ Precision is meaningful only for the **audited candidate sample**, not all inves
 
 ## Known limitations and next work
 
-- Audit sample has 13 VC-scope reviews (9 VC includes; 4 VC excludes: two non-investors, one angel group, one accelerator). Six of the 20 new records have human reviews. This is not accuracy for all global investor types.
+- Audit sample has 14 VC-scope reviews (10 VC includes; 4 VC excludes: two non-investors, one angel group, one accelerator). Seven of the 20 new records have human reviews. This is not accuracy for all global investor types.
 - No empirically supported worldwide investor count or costs yet.
 - Some disclosed capital figures are historical; there is not enough public evidence to infer current available capital.
 - Nation1 → N1 brand rename was author-confirmed from a 2023 Newstream article, and current partner Jaroslav Trojan and Prague address match the historical profile. N1's self-reported USD 60m managed across two funds (AI and healthcare focus) was verified on its website on 2026-10-09. This figure is neither available capital nor the historical EUR 35m reported by CVCA. Current legal-entity/fund-vehicle continuity remains unverified; original AI decision stays `review`.

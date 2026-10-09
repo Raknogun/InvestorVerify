@@ -7,7 +7,7 @@ czvc005,include,"Official site lists investment offer, initial tickets and portf
 czneg001,exclude,Association represents investors rather than investing directly,E028,2026-10-09,reviewed
 czneg002,exclude,"Information portal, not a direct investor",E029,2026-10-09,reviewed
 cznew001,review,Company combines accelerator and investments; determine fund/legal owner before VC-only inclusion,E044;E064;E065,2026-10-09,not_reviewed
-cznew002,include,Official portfolio provides investor-level evidence,E045,2026-10-09,not_reviewed
+cznew002,include,Official portfolio provides investor-level evidence,E045,2026-10-09,reviewed
 cznew003,include,Official VC strategy and portfolio,E046;E066;E067,2026-10-09,not_reviewed
 cznew004,include,Official site lists prior investing and tickets,E047;E068;E069;E070,2026-10-09,reviewed
 cznew005,review,Direct investing real but venture studio/VC fund unit ambiguous,E048,2026-10-09,not_reviewed
