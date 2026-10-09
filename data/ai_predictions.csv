@@ -13,7 +13,7 @@ cznew004,include,Official site lists prior investing and tickets,E047;E068;E069;
 cznew005,review,Direct investing real but venture studio/VC fund unit ambiguous,E048,2026-10-09,not_reviewed
 cznew006,include,Primary portfolio site,E049;E086,2026-10-09,reviewed
 cznew007,review,Parent group vs VC subfund not one VC record; avoid double counting,E050,2026-10-09,not_reviewed
-cznew008,include,Official VC fund site and terms,E051;E071;E072;E073;E074,2026-10-09,not_reviewed
+cznew008,include,Official VC fund site and terms,E051;E071;E072;E073;E074,2026-10-09,reviewed
 cznew009,review,Must reconcile current manager and new brand before duplicate merging,E052;E075;E076,2026-10-09,not_reviewed
 cznew010,include,Issuer explicitly states early-stage minority equity stakes,E053;E077;E078,2026-10-09,reviewed
 cznew011,exclude,No independent proof of Starcube own VC investment vehicle; exclude VC-only sample pending contrary evidence,E054,2026-10-09,reviewed
