@@ -1,0 +1,7 @@
+# Kaya VC final independent audit (9 October 2026)
+
+The user sent a screenshot of the public investment story at https://www.portfolion.com/investment-story/riptides-seed/ and asked "это?". Portfolion Capital Partners (co-investor) reports that Kaya VC co-led Hungarian cybersecurity startup Riptides' USD 3.3 million pre-seed financing with Portfolion. It names Cloudbreak, the founding team's fund, as a separate USD 500,000 contributor. USD 3.3m is the **total round**; USD 500k belongs to **Cloudbreak**; Kaya's own contribution is **unknown**.
+
+Earlier, the user confirmed the Kaya homepage https://www.kaya.vc/ self-reported USD 500m total AUM, USD 85m current fund, a USD 1–3m homepage ticket, 60+ companies, 2011 founded year, and CEE pre-seed/seed focus. These are public claims, not audited financial values or deployable capital. The conflicting ticket ranges in https://www.kaya.vc/facts remain flagged, not resolved.
+
+Result: original AI decision include preserved. Independent author label **include** recorded in manual_audit.csv, with reviewed status in ai_predictions.csv and evidence rows E119, E120 and E126 human_verified. Review minutes not measured. After this classification, the purposively assembled VC pilot has 15 audited entities (11 included, 4 VC-scope excluded), 1 abstained model prediction, and a preliminary 10 TP / 4 TN among 14 binary decisions. This is not a representative world-market precision estimate.

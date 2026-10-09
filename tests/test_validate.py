@@ -226,7 +226,7 @@ class ValidationTests(unittest.TestCase):
         self.assertEqual(p["cznew008"]["human_review_status"],"reviewed")
         self.assertEqual(measure(ROOT/"data")["audited"],15)
 
-    def test_kaya_fund_capital_claims_and_unaudited_deal(self):
+    def test_kaya_fund_capital_claims_and_verified_deal(self):
         from investorverify.discover import load_rows
         e={r["evidence_id"]:r for r in load_rows(ROOT/"data"/"evidence.csv")}
         p={r["investor_id"]:r for r in load_rows(ROOT/"data"/"ai_predictions.csv")}
@@ -239,7 +239,7 @@ class ValidationTests(unittest.TestCase):
         for key in ["E119","E120"]:
             self.assertEqual(e[key]["verification_status"],"human_verified")
         self.assertEqual(e["E121"]["verification_status"],"ai_source_checked_pending_human")
-        self.assertEqual(p["cznew008"]["human_review_status"],"not_reviewed")
+        self.assertEqual(p["cznew008"]["human_review_status"],"reviewed")
         self.assertEqual(measure(ROOT/"data")["audited"],15)
 
     def test_kaya_other_investor_not_misattributed(self):
