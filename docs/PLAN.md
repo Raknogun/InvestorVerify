@@ -42,3 +42,9 @@ This pilot is **VC/corporate-VC-manager only**, whereas the eventual world datas
 The original seven predictions and seven author labels are frozen. Twenty new names have received **provisional AI-only** decisions supported by sources in `data/evidence.csv`: include (13), exclude (2), review (5). No extra human results or precision improvements are claimed. Source publication dates are left empty if undated; access date is not a statement's as-of date.
 
 The methodology uses three buckets: `include` only for apparent direct VC/CVC managers, `exclude` for out-of-scope VC-only entities, `review` for type/identity/activity ambiguity. Manual labels must be decided **after** seeing these saved predictions. For the worldwide estimate, re-evaluate angel and PE exclusions under their proper dataset types.
+
+## Investor type versus investor validity: Garage Angels check
+
+The user reviewed [Garage Angels](https://g-angels.cz/) and confirmed that it describes itself as an informal group of individual investors funding early-stage companies with their **own money** and without a set industry focus. For a **VC/CVC manager-only pilot**, classify `exclude` because the organization is not presented as a pooled VC fund manager. For the **full Assignment A**, business angels must be in scope: keep Garage Angels as an angel-group lead, but verify a specific investment or individual angel before reporting fully validated global investor data.
+
+Important measurement limitation: `quality.py` labels this case a TN only under **VC eligibility**, never under "real investor versus fake". World-scale evaluation needs separate `investor_type`, `is_real_investor` and `vc_pilot_eligible` decisions. The existing pilot confusion matrix cannot establish precision across all investor types.

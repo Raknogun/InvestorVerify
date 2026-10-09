@@ -118,3 +118,15 @@ The visible Czech text says the **overall** Series A financing **exceeded CZK 11
 Added human classification `cznew015=include` (review date 2026-10-09, duration unknown/blank). Changed E058 to `human_verified`, and added E103 as an exclusive numerical lower bound on the total round and E104 for lead investor Fil Rouge Capital. The pre-existing separately reported CZK 400m JIC Ventures fund figure E079 remains `ai_source_checked_pending_human`: the user's screenshot did **not** independently verify it. The originally frozen AI prediction `include` is unchanged, only status updated to `reviewed`.
 
 Now ten candidates have independent project-author screening labels (8 included, 2 excluded); one of ten was an original AI abstention `review`, so eight? **Precisely nine** determinate model classifications are evaluated (TP=7, TN=2). This is a small purposive sample, not an externally valid worldwide precision estimate. No review duration was fabricated.
+
+## Garage Angels: firsthand screenshots and negative-class scope
+
+User posted two screenshots of the official [Garage Angels website](https://g-angels.cz/) and asked verbatim:
+
+> «это?»
+
+The first identifies an *informal group of individual investors* investing **exclusively their own money**. The second explicitly focuses on early-stage angel financing, with no specified industries.
+
+**Model classification nuance:** this is evidence of legitimate angel-type investment activity as described by the group, not evidence of a pooled VC fund. Its original `exclude` decision remains unchanged as a VC-only exclusion, and `human_review_status` is now `reviewed`. This must NOT be marketed as an AI victory at detecting "fake investors" worldwide: angels are expressly included in the employer's original assignment. No named completed transaction, individual member funding or investable capital was established.
+
+Author's audit: `cznew014=exclude` for **VC pilot only**, dated 2026-10-09; review minutes unrecorded. E057 and E105–E107 checked against user's screenshots. The sample is now 11 reviewed for VC scope (8 included VC funds, 2 excluded non-investor entities, 1 excluded genuine angel group). Original Nation1 `review` prediction remains an abstention: among 10 determinate VC eligibility predictions TP=7 and TN=3, no observed FP or FN. Not representative of the global investor population.
