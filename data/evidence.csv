@@ -1,15 +1,30 @@
-investor_name,field,value,unit,source_url,source_published_date,accessed_date,verification_status,notes
-Credo Ventures,investment_activity,Leads pre-seed rounds,,https://www.credoventures.com/,,2026-10-09,pending_manual_review,Official website states it leads pre-seed rounds
-Credo Ventures,typical_ticket_min,1000000,USD,https://www.credoventures.com/,,2026-10-09,pending_manual_review,Publicly advertised check size
-Credo Ventures,typical_ticket_max,5000000,USD,https://www.credoventures.com/,,2026-10-09,pending_manual_review,Publicly advertised check size
-Credo Ventures,geographic_focus,CEE and diaspora,,https://www.credoventures.com/,,2026-10-09,pending_manual_review,Official statement
-DEPO Ventures,investment_activity,Venture capital investing,,https://cvca.cz/en/membership/,,2026-10-09,pending_manual_review,Association profile may be stale
-DEPO Ventures,typical_ticket_min,50000,EUR,https://cvca.cz/en/membership/,,2026-10-09,pending_manual_review,Association historical profile
-DEPO Ventures,typical_ticket_max,300000,EUR,https://cvca.cz/en/membership/,,2026-10-09,pending_manual_review,Association historical profile
-Tensor Ventures,investment_activity,Deeptech investments,,https://cvca.cz/en/membership/,,2026-10-09,pending_manual_review,Association profile
-Tensor Ventures,typical_ticket_min,250000,EUR,https://cvca.cz/en/membership/,,2026-10-09,pending_manual_review,Association historical profile
-Tensor Ventures,typical_ticket_max,1000000,EUR,https://cvca.cz/en/membership/,,2026-10-09,pending_manual_review,Association historical profile
-Nation1,investment_activity,Pre-seed and seed startup financing,,https://cvca.cz/en/membership/,,2026-10-09,pending_manual_review,Association historical profile
-Tilia Impact Ventures,investment_activity,Impact investing,,https://cvca.cz/en/membership/,,2026-10-09,pending_manual_review,Association profile
-Startupstart.cz,entity_type,Startup-investor matching platform,,https://czechstartups.gov.cz/en/startup-ecosystem/investors/,,2026-10-09,pending_manual_review,Negative control; verify whether it invests directly
-Czech Private Equity and Venture Capital Association,entity_type,Industry association,,https://czechstartups.gov.cz/en/startup-ecosystem/investors/,,2026-10-09,pending_manual_review,Negative control
+evidence_id,investor_id,field,value,unit,source_url,source_type,source_published_date,accessed_date,verification_status,notes
+E001,czvc001,investment_activity,VC funding of startups,,https://www.credoventures.com/,primary,,2026-10-09,ai_source_checked_pending_human,Investor describes leading pre-seed rounds and 100+ backed companies
+E002,czvc001,stage,Pre-seed onward,,https://www.credoventures.com/,primary,,2026-10-09,ai_source_checked_pending_human,Issuer states focus on leading pre-seed rounds
+E003,czvc001,typical_ticket_min,1000000,USD,https://www.credoventures.com/,primary,,2026-10-09,ai_source_checked_pending_human,Current website lists check sizes USD 1m–5m
+E004,czvc001,typical_ticket_max,5000000,USD,https://www.credoventures.com/,primary,,2026-10-09,ai_source_checked_pending_human,Current website lists check sizes USD 1m–5m
+E005,czvc001,geographic_focus,CEE and global diaspora,,https://www.credoventures.com/,primary,,2026-10-09,ai_source_checked_pending_human,Czech-connected; base includes Prague and Krakow
+E006,czvc001,portfolio_example,ElevenLabs,,https://www.credoventures.com/,primary,,2026-10-09,ai_source_checked_pending_human,Portfolio highlight identified on issuer website
+E007,czvc002,investment_activity,VC portfolio investing,,https://cvca.cz/en/depo-ventures-2/,association,,2026-10-09,ai_source_checked_pending_human,CVCA lists venture investments and named portfolio; listing may be stale
+E008,czvc002,typical_ticket_min_historical,50000,EUR,https://cvca.cz/en/depo-ventures-2/,association,,2026-10-09,ai_source_checked_pending_human,Historic CVCA listing; NOT a verified 2026 current check size
+E009,czvc002,typical_ticket_max_historical,300000,EUR,https://cvca.cz/en/depo-ventures-2/,association,,2026-10-09,ai_source_checked_pending_human,Historic CVCA listing; NOT a verified 2026 current check size
+E010,czvc002,funds_managed_historical,5500000,EUR,https://cvca.cz/en/depo-ventures-2/,association,,2026-10-09,ai_source_checked_pending_human,Historic reported funds managed; not available cash or current AUM
+E011,czvc002,sector,Sector-agnostic,,https://cvca.cz/en/depo-ventures-2/,association,,2026-10-09,ai_source_checked_pending_human,Historic CVCA investment profile
+E012,czvc002,activity_2026,"Early-stage investing, new fund described",,https://www.e15.cz/clanek/rozhovory/kvalitnich-startupu-je-dost-musite-je-ale-najit-s-novym-fondem-cilime-na-vesmir-rika-sima-z-depo-ventures-1431871,press,2026-04-11,2026-10-09,ai_source_checked_pending_human,April 2026 interview reports new fund and ongoing investing
+E013,czvc003,investment_activity,Direct seed and Series A investments,,https://tensor.ventures/,primary,,2026-10-09,ai_source_checked_pending_human,Site identifies seed/Series A and public portfolio
+E014,czvc003,sector,AI; quantum; computational biotech; sustainable technology,,https://tensor.ventures/,primary,,2026-10-09,ai_source_checked_pending_human,Stated investment focus
+E015,czvc003,portfolio_example,Heartbeat.bio,,https://tensor.ventures/,primary,,2026-10-09,ai_source_checked_pending_human,Named in official portfolio
+E016,czvc003,legal_entity_country,Luxembourg,,https://tensor.ventures/,primary,,2026-10-09,ai_source_checked_pending_human,Fund GP and Fund I address in Luxembourg; CZ contact in Prague
+E017,czvc003,funds_managed_historical,20000000,EUR,https://cvca.cz/en/membership/,association,,2026-10-09,ai_source_checked_pending_human,CVCA listing from 2023; not a current value
+E018,czvc004,investment_activity_historical,Early stage VC investing,,https://cvca.cz/en/nation1-2/,association,,2026-10-09,ai_source_checked_pending_human,Historic Nation1 profile shows startup financing and portfolio; entity identity needs follow-up
+E019,czvc004,typical_ticket_min_historical,50000,EUR,https://cvca.cz/en/nation1-2/,association,,2026-10-09,ai_source_checked_pending_human,Historical profile only
+E020,czvc004,typical_ticket_max_historical,1500000,EUR,https://cvca.cz/en/nation1-2/,association,,2026-10-09,ai_source_checked_pending_human,Historical profile only
+E021,czvc004,funds_managed_historical,35000000,EUR,https://cvca.cz/en/nation1-2/,association,,2026-10-09,ai_source_checked_pending_human,Historical profile only; not 2026 reported available capital
+E022,czvc004,name_change,Nation 1 became N1 Ventures,,https://zpravy.kurzy.cz/743732-fond-nation-1-meni-jmeno-do-cela-jmenoval-dva-nove-partnery--ondreje-homolu-a-klaru-kocarovou/,press,2023-09-19,2026-10-09,ai_source_checked_pending_human,2023 rebranding report; investigate subsequent legal continuity before merging with N1 Investment Company
+E023,czvc005,investment_activity,Direct early-stage impact VC investment,,https://tilia.vc/,primary,,2026-10-09,ai_source_checked_pending_human,Official VC portfolio and investment offer
+E024,czvc005,typical_ticket_min,300000,EUR,https://tilia.vc/,primary,,2026-10-09,ai_source_checked_pending_human,Current main page lists initial ticket EUR 0.3–1.2m
+E025,czvc005,typical_ticket_max,1200000,EUR,https://tilia.vc/,primary,,2026-10-09,ai_source_checked_pending_human,Current main page lists initial ticket EUR 0.3–1.2m; older secondary page differs
+E026,czvc005,sector,Sector-agnostic; environmental and social impact,,https://tilia.vc/,primary,,2026-10-09,ai_source_checked_pending_human,"Sector agnostic, impact-driven investment policy"
+E027,czvc005,portfolio_company_count_2025q4,21,companies,https://tilia.vc/,primary,,2026-10-09,ai_source_checked_pending_human,As of Q4 2025 according to official fund impact section
+E028,czneg001,entity_type,Industry association; does not itself operate as a direct VC investor,,https://cvca.cz/en/about-us/,primary,,2026-10-09,ai_source_checked_pending_human,CVCA represents industry funds and their members; association is not a fund
+E029,czneg002,entity_type,Startup information and directory portal; not a direct VC investor,,https://czechstartups.gov.cz/en/about/,primary,,2026-10-09,ai_source_checked_pending_human,CzechStartups about page describes an informational portal
