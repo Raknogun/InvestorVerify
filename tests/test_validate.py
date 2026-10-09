@@ -95,7 +95,7 @@ class ValidationTests(unittest.TestCase):
         owner={r["evidence_id"]:r["investor_id"] for r in evidence}
         self.assertTrue(all(all(owner.get(x)==r["investor_id"] for x in
                             r["supporting_evidence_ids"].split(";")) for r in newer))
-        self.assertEqual(len(evidence),96)
+        self.assertEqual(len(evidence),102)
 
     def test_mixed_type_angel_group_is_not_false_investor_label(self):
         from investorverify.discover import load_rows
@@ -128,6 +128,22 @@ class ValidationTests(unittest.TestCase):
         predictions={r["investor_id"]:r for r in load_rows(ROOT/"data"/"ai_predictions.csv")}
         self.assertEqual(predictions["cznew010"]["ai_prediction"],"include")
         self.assertEqual(predictions["cznew010"]["human_review_status"],"reviewed")
+        self.assertEqual(measure(ROOT/"data")["audited"],8)
+
+    def test_presto_strategy_versus_total_round_and_independent_news(self):
+        from investorverify.discover import load_rows
+        evidence={r["evidence_id"]:r for r in load_rows(ROOT/"data"/"evidence.csv")}
+        for key in ["E068","E069","E097","E098","E099","E100","E101"]:
+            self.assertEqual(evidence[key]["verification_status"],"human_verified")
+        self.assertEqual(evidence["E068"]["value"],"500000")
+        self.assertEqual(evidence["E069"]["value"],"5000000")
+        self.assertEqual(evidence["E100"]["field"],"target_round_size_min")
+        self.assertEqual(evidence["E100"]["value"],"800000")
+        self.assertEqual(evidence["E101"]["value"],"8000000")
+        self.assertEqual(evidence["E102"]["verification_status"],"ai_source_checked_pending_human")
+        predictions={r["investor_id"]:r for r in load_rows(ROOT/"data"/"ai_predictions.csv")}
+        self.assertEqual(predictions["cznew004"]["ai_prediction"],"include")
+        self.assertEqual(predictions["cznew004"]["human_review_status"],"not_reviewed")
         self.assertEqual(measure(ROOT/"data")["audited"],8)
 
     def test_bad_evidence_reference(self):

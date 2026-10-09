@@ -82,3 +82,15 @@ The screenshot states Delta Green received a total EUR 2.2 million from **Tilia 
 **Audit recorded:** `cznew010` = `include`, reviewer `project_author`, access/review date 2026-10-09, duration unknown (left empty, not invented), two source URLs, decision rationale. E096 marked `human_verified`. Frozen model prediction `include` is unchanged; only `human_review_status` switched to `reviewed`.
 
 After this manual check, there are 8 human-audited candidates (6 investors and 2 excluded entities). The original model's Nation1 `review` is still an abstention. Thus, among the 7 binary predictions evaluated: TP=5, TN=2, FP=0, FN=0. Precision on these **selected cases** is 5/(5+0) = 100%, but this does **not** estimate production accuracy or generalizability, and most required per-field capital figures remain unavailable.
+
+## Presto Ventures — strategy screenshot; specific deal pending author check
+
+User submitted screenshot of [official Presto Ventures page](https://www.prestoventures.com/) highlighting the €500k–5M investment ticket and asked verbatim:
+
+> «Это?»
+
+Author-observed strategy: **seed to Series A**, mostly post-revenue startups, **NATO and allied markets / Israel**, security, defense, aerospace and dual-use technologies. Crucially, the site distinguishes ***Presto's own planned €500k–5M investment ticket*** (E068/E069) from ***€800k–8M target total financing rounds*** (new E100/E101). These are different investment metrics and must not be substituted.
+
+Verified screenshot claims are E068, E069, E097–E101, marked `human_verified` for the precise statements present; the current managed-capital/fund-vehicle claim E070 is still AI-screened, not author-audited.
+
+Model researched a [Silicon Canals January 22 2024 funding report](https://siliconcanals.com/outkept-secures-500k/) naming **Presto Ventures** among investors in Belgian startup **OutKept's total €500k seed round**, with BAN Flanders business angels. This is an **independent media source**, *not* investee's own announcement. Individual Presto contribution not known. Staged as E102, `ai_source_checked_pending_human`, pending the author's independent source review. No investor-level manual audit row was added. The model's frozen `include` prediction remains unchanged.
