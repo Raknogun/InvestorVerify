@@ -15,10 +15,12 @@ class ValidationTests(unittest.TestCase):
         self.assertTrue(is_public_url("https://example.org/portfolio"))
         self.assertFalse(is_public_url("http://localhost/a"))
         self.assertFalse(is_public_url("file:///etc/passwd"))
-    def test_no_audit_no_precision(self):
+    def test_first_verified_candidate_is_preliminary(self):
         result=measure(ROOT/"data")
-        self.assertEqual(result["status"],"not_measured")
-        self.assertNotIn("precision",result)
+        self.assertEqual(result["status"],"preliminary_small_sample")
+        self.assertEqual(result["audited"],1)
+        self.assertEqual(result["TP"],1)
+        self.assertEqual(result["precision"],1.0)
     def copy_fixture(self,target):
         for source in (ROOT/"data").glob("*.csv"):
             (target/source.name).write_bytes(source.read_bytes())
