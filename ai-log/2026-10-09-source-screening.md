@@ -171,3 +171,13 @@ The screenshot highlights `Nation 1 increasing its share by 0.5 million USD`, so
 Nation1's human audit label is now `include` for demonstrated **historical direct VC investing**, with no measured reviewer duration. Claim E036 changed to `human_verified`. The original AI prediction `review` is **unchanged** and now shows `human_review_status=reviewed`; the quality calculator counts this as an **abstention/deferred prediction**, not as a true positive. Current legal fund-manager continuity under the N1 brand remains unverified by the author. That is a separate entity-resolution question.
 
 The author should next compare the Sep 2023 Nation 1 → N1 announcement with current N1 official website (n1.rocks). The unrelated site n1invest.co must not be merged into this identity.
+
+## Nation1 → N1 brand rename verified by project author
+
+The user supplied a screenshot of the [Newstream article dated September 19 2023](https://www.newstream.cz/zpravy-z-firem/nation-1-meni-jmeno-a-chysta-novy-fond-do-vedeni-jmenoval-dva-nove-partnery), highlighting the statement that Czech VC fund Nation 1 changed its name to N1, and confirmed:
+
+> «да, есть»
+
+The article also mentions VRgineers and Snuggs, consistent with the earlier historic Nation1 portfolio. Thus E037 was changed to `human_verified` for the **brand rename claim only**. N1's current [official site](https://n1.rocks/) (AI-read, not author-audited yet) lists Jaroslav Trojan, Marek Moravec and the Prague address Národní 135/14, consistent with the old CVCA profile. This is useful entity corroboration, **not proof that the legal fund vehicle stayed the same**.
+
+The original AI prediction `review` is preserved to avoid hindsight changes. No new human investor classification row, precision change or invented audit duration was added. Do not conflate this fund with the unrelated n1invest.co.

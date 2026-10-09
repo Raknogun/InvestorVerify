@@ -62,7 +62,7 @@ Precision is meaningful only for the **audited candidate sample**, not all inves
 - Audit sample currently has 7 independently reviewed candidates (5 includes; 2 excludes), but the AI originally abstained on Nation1 and its prediction is not retroactively rewritten; other candidates are pending.
 - No empirically supported worldwide investor count or costs yet.
 - Some disclosed capital figures are historical; there is not enough public evidence to infer current available capital.
-- Nation1/N1 naming and fund-manager continuity require identity checking.
+- Nation1 → N1 brand rename was author-confirmed from a 2023 Newstream article. Current legal-entity/fund-vehicle continuity still requires checking; original AI decision remains `review`.
 - The pilot is not exhaustive and has not measured recall in a global universe.
 - Next: manual review, scale sample, compute real metrics and global cost model.
 
