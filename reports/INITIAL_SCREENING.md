@@ -1,6 +1,6 @@
 # Preliminary Czech VC screening — 2026-10-09
 
-**Mostly AI-screened data.** One investor classification (Credo) is now manually checked by the project author; this is not a representative accuracy sample. The first pilot contains 7 candidates (5 fund candidates and 2 non-investor negative controls), 31 extracted assertions, 7 preliminary AI decisions. One positive case was independently confirmed; 1/1 alone is too small for a credible precision estimate.
+**Mostly AI-screened data.** Two investor classifications (Credo and Tilia) are now manually checked by the project author; this is not a representative accuracy sample. The first pilot contains 7 candidates (5 fund candidates and 2 non-investor negative controls), 31 extracted assertions, 7 preliminary AI decisions. Two positive cases were independently confirmed; 2/2 alone is too small for a credible precision estimate.
 
 ## Candidate screening
 
@@ -25,8 +25,8 @@
 
 ## Next manual audit
 
-Continue independently checking additional candidates under `docs/PLAN.md`; capture actual audit minutes where possible. The first review duration was not measured and is deliberately blank. Enter the human labels in `data/manual_audit.csv`. Run `python -m investorverify.quality`; until audit exists it returns `not_measured`.
+Continue independently checking additional candidates under `docs/PLAN.md`; capture actual audit minutes where possible. The first review duration was not measured and is deliberately blank. Enter the human labels in `data/manual_audit.csv`. Run `python -m investorverify.quality`; the current status remains `preliminary_small_sample`, not a representative estimate.
 
 ## Known weaknesses
 
-The pilot has only one independently reviewed positive label; general investor-level precision cannot be claimed. Candidate discovery is not exhaustive. Some sources provide historical, not current, capital estimates. DEPO's official website was inaccessible to the web reader, so its profile also relies on association and press sources. Nation1 alias linkage is pending.
+The pilot has only two independently reviewed positive labels; general investor-level precision cannot be claimed. Candidate discovery is not exhaustive. Some sources provide historical, not current, capital estimates. DEPO's official website was inaccessible to the web reader, so its profile also relies on association and press sources. Nation1 alias linkage is pending.
