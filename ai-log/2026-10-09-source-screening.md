@@ -93,3 +93,15 @@ The project author supplied a screenshot of the CVCA member profile and wrote (a
 This confirmed the CVCA listing of sector-agnostic VC, historical reported funds under management EUR 5.5m, preferred checks EUR 50k–300k, geographic focus CEE and multiple named portfolio firms. However, this association directory has no direct investee transaction links. The listed Czech portfolio mentions **Tatum twice**, an actual duplicate candidate token in the source list; therefore a raw count of names would be unreliable.
 
 AI located an [issuer-side Tatum Technology LLC press announcement dated 2022-10-12](https://www.prnewswire.com/news-releases/tatum-receives-41-5-million-funding-to-accelerate-growth-of-unique-blockchain-development-platform-speeding-time-to-market-for-digital-finance-and-web-3-0-applications-301646685.html), naming Depo Ventures among the investors in a USD 41.5m *total* funding round. Added E032 with `ai_source_checked_pending_human`. Not claimed as DEPO's personal investment amount. **The project author has not yet independently verified this Tatum release**, so DEPO still has no manual label.
+
+## DEPO human confirmation and newly noticed Tensor Ventures (same date)
+
+The user shared a screenshot from Tatum's published 2022 funding announcement. Visible source passage explicitly names **Depo Ventures** among the investors, and **Tensor Ventures** also appears in the same passage. User asked, verbatim:
+
+> «Я так понимаю это оно?»
+
+The screenshot confirms DEPO as a participating investor in Tatum's **overall USD 41.5 million financing round**. Evolution Equity Partners led the round; individual contributions were not disclosed.
+
+Actions: `czvc002` recorded `include` in author audit; `E032` marked `human_verified` for the specific participating-investor assertion; `E033` added for Tensor Ventures using the same investee press release, pending separate author audit. Original DEPO fund size, ticket range and other claims remain historical/AI-screened. No review duration was reported.
+
+This makes 3 independently confirmed positive classifications in a deliberately selected sample of seven candidates — **not** a representative precision benchmark. We still need independently audited negative classifications and other candidates to measure credible performance.
