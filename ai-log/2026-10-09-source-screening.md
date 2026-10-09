@@ -43,3 +43,11 @@ These are actual changes to the earlier repository state, **not invented example
 - The original validator only checked simple CSV links and names, not prediction-to-evidence ownership or audit status. Additional checks and tests were added. This remains **structural QA**, not a factual audit.
 
 **Human verification state at end of session:** no human labels or verified accuracy percentage.
+
+## Follow-up: Credo Ventures evidence (same day)
+
+- User supplied a screenshot of Credo's portfolio listing for ElevenLabs and asked how to interpret it; the screenshot itself was **not** published to the repository.
+- AI checked the portfolio source and the [ElevenLabs funding announcement](https://elevenlabs.io/blog/elevenlabs-raises-2m-pre-seed-and-announces-ai-speech-platform-promising-to-revolutionize-audio-storytelling), published 2023-01-23. ElevenLabs names Credo as lead investor in a **USD 2 million total** pre-seed round.
+- Changed E006 to cite the specific Credo portfolio URL and added E030 for investee-side confirmation of the investment role.
+- Important control: the USD 2 million **total round** is not Credo's individual investment amount.
+- The user has **not** yet independently confirmed the ElevenLabs article. Therefore E006/E030 remain `ai_source_checked_pending_human` and `manual_audit.csv` stays empty.
