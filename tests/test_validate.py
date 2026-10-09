@@ -15,11 +15,11 @@ class ValidationTests(unittest.TestCase):
         self.assertTrue(is_public_url("https://example.org/portfolio"))
         self.assertFalse(is_public_url("http://localhost/a"))
         self.assertFalse(is_public_url("file:///etc/passwd"))
-    def test_three_verified_candidates_still_preliminary(self):
+    def test_four_verified_candidates_still_preliminary(self):
         result=measure(ROOT/"data")
         self.assertEqual(result["status"],"preliminary_small_sample")
-        self.assertEqual(result["audited"],3)
-        self.assertEqual(result["TP"],3)
+        self.assertEqual(result["audited"],4)
+        self.assertEqual(result["TP"],4)
         self.assertEqual(result["FP"],0)
         self.assertEqual(result["precision"],1.0)
     def copy_fixture(self,target):
