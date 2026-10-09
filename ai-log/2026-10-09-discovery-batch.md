@@ -42,3 +42,19 @@ AI examined primary portfolio and investor terms and CzechStartups/government li
 **Scope risk caught:** Garage Angels really invests the members' own money; its `exclude` is only a statement about the **VC-only pilot category**, not a 'not an investor' claim. A worldwide investor dataset must include its verified individual angels or an appropriately labeled group record if deduplicated. Miton, Rockaway, Pale Fire and former Czech Founders VC require parent/vehicle or current brand resolution, not hallucinated VC-only labels.
 
 **Validation plan:** a new GitHub Actions run must establish schema checks and unit tests on the atomic screening commit. Do not say tests passed until the run is complete. User manual audits are still seven; precision numerator and denominator have not changed.
+
+## StartupYard FAQ — author verified actual terms
+
+Project author posted two screenshots of StartupYard's [official FAQ](https://startupyard.com/faq/) and wrote verbatim:
+
+> «Вот это»
+
+The screenshots clearly state:
+- EUR 45,000 **in-kind acceleration programme** via convertible note — services, **not cash**.
+- Up to EUR 25,000 **optional cash** funding, bringing the conditional combined note to EUR 70,000.
+- Programme typically targets approximately **5% equity**, not a guaranteed fixed ownership stake.
+- Follow-on investments up to EUR 100,000 are **in partnership with DEPO Ventures, which has full authority to choose eligible teams**.
+
+**Actual model attribution correction:** initial E065 (`follow_on_investment_ceiling`) lacked explicit attribution and could mislead a reader into treating the EUR 100k as StartupYard's own investing power. Replaced the field with `partner_follow_on_investment_ceiling`, added DEPO discretion details, and marked only the directly inspected FAQ assertions `human_verified`. Added separately typed in-kind value, equity target and conditional total note statements. E044 and E064 updated to distinguish in-kind services from cash. Added regression test for this misattribution.
+
+**Unresolved:** who holds/invests the optional EUR 25k note legally, and whether the accelerator counts as a VC manager under the narrow pilot. The model's frozen `review` prediction is left unchanged, and `human_review_status` remains `not_reviewed`. No invented manual audit, review duration, or investor classification result.

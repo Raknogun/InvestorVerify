@@ -94,7 +94,7 @@ class ValidationTests(unittest.TestCase):
         owner={r["evidence_id"]:r["investor_id"] for r in evidence}
         self.assertTrue(all(all(owner.get(x)==r["investor_id"] for x in
                             r["supporting_evidence_ids"].split(";")) for r in newer))
-        self.assertEqual(len(evidence),87)
+        self.assertEqual(len(evidence),91)
 
     def test_mixed_type_angel_group_is_not_false_investor_label(self):
         from investorverify.discover import load_rows
@@ -102,6 +102,20 @@ class ValidationTests(unittest.TestCase):
         self.assertEqual(rows["cznew014"]["ai_prediction"],"exclude")
         self.assertIn("angel",rows["cznew014"]["reason"].lower())
         self.assertEqual(rows["cznew001"]["ai_prediction"],"review")
+
+    def test_startupyard_partner_financing_not_as_own_ticket(self):
+        from investorverify.discover import load_rows
+        evidence={r["evidence_id"]:r for r in load_rows(ROOT/"data"/"evidence.csv")}
+        self.assertEqual(evidence["E065"]["field"],"partner_follow_on_investment_ceiling")
+        self.assertEqual(evidence["E065"]["value"],"100000")
+        self.assertIn("DEPO",evidence["E065"]["notes"])
+        self.assertEqual(evidence["E088"]["field"],"in_kind_convertible_note_value")
+        self.assertEqual(evidence["E089"]["unit"],"percent")
+        self.assertEqual(evidence["E064"]["verification_status"],"human_verified")
+        self.assertEqual(evidence["E091"]["value"],"70000")
+        predictions={r["investor_id"]:r for r in load_rows(ROOT/"data"/"ai_predictions.csv")}
+        self.assertEqual(predictions["cznew001"]["ai_prediction"],"review")
+        self.assertEqual(predictions["cznew001"]["human_review_status"],"not_reviewed")
 
     def test_bad_evidence_reference(self):
         with tempfile.TemporaryDirectory() as tmp:

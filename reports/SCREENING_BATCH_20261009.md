@@ -1,6 +1,6 @@
 # AI screening of 20 Czech-connected VC candidates — 2026-10-09
 
-**Status: frozen provisional AI predictions; absolutely no independent human audit of these 20 yet.**
+**Status: frozen provisional AI predictions; no independent investor-level inclusion/exclusion audit of the 20 yet.** The project author has checked individual StartupYard FAQ statements, but this is a field-level source check only, **not** a completed organization-classification audit.
 
 | AI decision | Count |
 |---|---:|
@@ -36,7 +36,7 @@
 
 ## Important distinctions
 
-- **StartupYard:** [its own FAQ](https://startupyard.com/faq/) states an optional €25,000 cash convertible-note investment and a follow-on program up to €100,000. Therefore `review` is more truthful than automatically excluding an accelerator.
+- **StartupYard (author-confirmed FAQ):** [official FAQ](https://startupyard.com/faq/) states **€45,000 in-kind** acceleration (not cash) via convertible note, **optional €25,000 cash** (conditional total note €70,000), and a typical **~5% equity** target. The *up to €100,000* follow-on fund is **in partnership with DEPO Ventures, which has full discretion over investments**. Earlier model wording could imply StartupYard controls the whole €100k fund; E065 was corrected to `partner_follow_on_investment_ceiling`. This does not establish the legal investor of the optional €25k cash. The frozen model label stays `review`, and no human classification has been recorded.
 - **Starcube:** historical JIC program profile reports financing obtained by **participating startups from external private investors**, not conclusive proof that Starcube runs its own VC fund. `exclude` within this VC-only pilot, explicitly contestable on human audit.
 - **Garage Angels:** [they invest their own money](https://g-angels.cz/), so **they are genuine angel investors**. `exclude` only means not a pooled VC/CVC organization in this first sample. This case must be eligible for global angel coverage.
 - **Rockaway**, **Miton**, **Pale Fire Capital:** documented investors, but mixed parent/group, venture builder or growth/private-equity-oriented operations. `review` avoids double-counting with dedicated VC arms or overclaiming strict VC status.
@@ -52,7 +52,7 @@ This deliberately mixed sample and the earlier seven were selected purposively, 
 
 ## Prioritised manual audit
 
-1. [StartupYard FAQ](https://startupyard.com/faq/): is its cash investment performed directly, through which legal investing entity, and is it eligible in this VC-only scope?
+1. [StartupYard FAQ](https://startupyard.com/faq/): **terms checked by author**; still determine who legally invests the optional €25k and whether StartupYard is eligible as a VC manager. Partner-controlled follow-on financing must not be assigned to StartupYard.
 2. [Purple Ventures](https://www.purple-ventures.com/): direct minority stakes and an initial €250–400k investment.
 3. [Presto Ventures](https://www.prestoventures.com/): direct investment activity, €500k–5m tickets and the *target* of a separate new fund.
 4. [JIC Ventures](https://www.jic.cz/cz/o-nas/pro-media/prvni-investice-noveho-fondu-jic-ventures-miri-do): verify FaceUp transaction and fund manager identity.
