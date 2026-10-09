@@ -63,3 +63,11 @@ The user had earlier submitted a screenshot of the Credo portfolio page showing 
 **Decision:** `czvc001` marked `include` in `data/manual_audit.csv`, reviewed by `project_author`. Evidence entries E006 and E030 marked `human_verified` for the specific portfolio and lead-investor assertions; other Credo attributes (including fund capital and quoted ticket size) remain AI-screened and not independently audited.
 
 **Missing measurement:** minutes spent on the review were not recorded, so `minutes_spent` is empty. The validator permits an unknown duration rather than making up a number. Any precision calculated from a single audited company is flagged as a very small preliminary sample, not claimed as reliable general accuracy.
+
+## Follow-up: Tilia portfolio screenshot and investee source
+
+User submitted a screenshot of Tilia's "Portfolio Impact" area, with "21 companies in portfolio" and "37m+ EUR unlocked for impact from investors", and explicitly stated: "Не уверен." The screenshot **does not** independently establish a transaction. The latter amount is not fund AUM.
+
+AI found a public [Delta Green company press release dated 2024-05-28](https://www.deltagreen.cz/press-releases/cesti-energeticti-inovatori-v-centru-zajmu-delta-green-ziskava-2-2-milionu-eur-od-tilia-impact-ventures-credo-ventures-a-purple-ventures) naming Tilia as lead among three VC investors in a total EUR 2.2m round. Added claim E031 as `ai_source_checked_pending_human`. No individual contribution was disclosed; no claim of Tilia contributing EUR 2.2m has been made.
+
+**Pending author action:** open the Delta Green article and confirm the relationship independently. The Tilia investor-level human audit remains unentered.
