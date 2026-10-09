@@ -1,6 +1,6 @@
 # Preliminary Czech VC screening — 2026-10-09
 
-**Not a manually audited sample.** This is a source-assisted AI screening. The first pilot contains 7 candidates (5 fund candidates and 2 non-investor negative controls), 30 extracted assertions, 7 preliminary AI decisions. No precision result is available until independent human decisions are recorded.
+**Mostly AI-screened data.** One investor classification (Credo) is now manually checked by the project author; this is not a representative accuracy sample. The first pilot contains 7 candidates (5 fund candidates and 2 non-investor negative controls), 30 extracted assertions, 7 preliminary AI decisions. One positive case was independently confirmed; 1/1 alone is too small for a credible precision estimate.
 
 ## Candidate screening
 
@@ -25,8 +25,8 @@
 
 ## Next manual audit
 
-Open each original source and independently label included/excluded/unclear under `docs/PLAN.md`; measure audit minutes. Enter the human labels in `data/manual_audit.csv`. Run `python -m investorverify.quality`; until audit exists it returns `not_measured`.
+Continue independently checking additional candidates under `docs/PLAN.md`; capture actual audit minutes where possible. The first review duration was not measured and is deliberately blank. Enter the human labels in `data/manual_audit.csv`. Run `python -m investorverify.quality`; until audit exists it returns `not_measured`.
 
 ## Known weaknesses
 
-The pilot has no independent labels yet; investor-level precision cannot be claimed. Candidate discovery is not exhaustive. Some sources provide historical, not current, capital estimates. DEPO's official website was inaccessible to the web reader, so its profile also relies on association and press sources. Nation1 alias linkage is pending.
+The pilot has only one independently reviewed positive label; general investor-level precision cannot be claimed. Candidate discovery is not exhaustive. Some sources provide historical, not current, capital estimates. DEPO's official website was inaccessible to the web reader, so its profile also relies on association and press sources. Nation1 alias linkage is pending.
