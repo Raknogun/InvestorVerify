@@ -1,6 +1,6 @@
 # Preliminary Czech VC screening — 2026-10-09
 
-**Mostly AI-screened data.** Four investor classifications (Credo, Tilia, DEPO and Tensor) are now manually checked by the project author; this is not a representative accuracy sample. The first pilot contains 7 candidates (5 fund candidates and 2 non-investor negative controls), 34 extracted assertions, 7 preliminary AI decisions. Four positive cases were independently confirmed; 4/4 alone is too small for a credible precision estimate.
+**Mostly AI-screened data.** Five candidate classifications (Credo, Tilia, DEPO, Tensor and CVCA) are now manually checked by the project author; this is not a representative accuracy sample. The first pilot contains 7 candidates (5 fund candidates and 2 non-investor negative controls), 34 extracted assertions, 7 preliminary AI decisions. Four positive cases and one negative-control case were independently confirmed; this convenience sample is too small for a credible precision estimate.
 
 ## Candidate screening
 
@@ -11,7 +11,7 @@
 | Tensor Ventures | Include | [Official portfolio](https://tensor.ventures/) shows a 2021 Neuronix AI Labs investment; [Tatum issuer announcement](https://www.prnewswire.com/news-releases/tatum-receives-41-5-million-funding-to-accelerate-growth-of-unique-blockchain-development-platform-speeding-time-to-market-for-digital-finance-and-web-3-0-applications-301646685.html) names Tensor as an investor. Official website also describes Seed/Series A focus and deeptech portfolio | Fund legal entities are in Luxembourg, with Czech contact office; include because scope is Czech-connected, not Czech incorporation |
 | Nation1 | Needs review | [Old CVCA profile](https://cvca.cz/en/nation1-2/) confirms historical investment activity; [2023 report](https://zpravy.kurzy.cz/743732-fond-nation-1-meni-jmeno-do-cela-jmenoval-dva-nove-partnery--ondreje-homolu-a-klaru-kocarovou/) discusses rebrand to N1 | Do NOT conflate Nation1 / N1 Ventures with any similarly named firm without identity proof; current manager/fund relationship unresolved |
 | Tilia Impact Ventures | Include | [Official website](https://tilia.vc/) identifies direct early-stage impact investment, a 0.3–1.2m EUR initial ticket and portfolio | Older pages have other ticket ranges. EUR 37m unlocked from other investors does **not** equal Tilia fund size |
-| CVCA | Exclude | [Association description](https://cvca.cz/en/about-us/) identifies it as an industry association rather than direct VC investor | Useful negative control |
+| CVCA | Exclude (author verified) | [Association's About Us](https://cvca.cz/en/about-us/) states it represents PE and VC fund interests; this describes an industry association, not a confirmed direct-investing entity | Verified negative control under pilot eligibility rules, not absolute proof of no investments |
 | CzechStartups | Exclude | [Portal description](https://czechstartups.gov.cz/en/about/) identifies it as an information website rather than investor | Useful negative control |
 
 ## Policy decisions
@@ -29,4 +29,4 @@ Continue independently checking additional candidates under `docs/PLAN.md`; capt
 
 ## Known weaknesses
 
-The pilot has only four independently reviewed positive labels; general investor-level precision cannot be claimed. Candidate discovery is not exhaustive. Some sources provide historical, not current, capital estimates. DEPO's official website was inaccessible to the web reader, so its profile also relies on association and press sources. Nation1 alias linkage is pending.
+The pilot has only four independently reviewed positive labels and one manually reviewed negative control; general investor-level precision cannot be claimed. Candidate discovery is not exhaustive. Some sources provide historical, not current, capital estimates. DEPO's official website was inaccessible to the web reader, so its profile also relies on association and press sources. Nation1 alias linkage is pending.
