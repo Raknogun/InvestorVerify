@@ -1,8 +1,8 @@
-name,country,category_proposed,discovery_source_url,status
-Credo Ventures,CZ,VC,https://czechstartups.gov.cz/en/startup-ecosystem/investors/,candidate
-DEPO Ventures,CZ,VC,https://cvca.cz/en/membership/,candidate
-Tensor Ventures,CZ,VC,https://cvca.cz/en/membership/,candidate
-Nation1,CZ,VC,https://cvca.cz/en/membership/,candidate
-Tilia Impact Ventures,CZ,VC,https://cvca.cz/en/membership/,candidate
-Startupstart.cz,CZ,unknown,https://czechstartups.gov.cz/en/startup-ecosystem/investors/,candidate
-Czech Private Equity and Venture Capital Association,CZ,unknown,https://czechstartups.gov.cz/en/startup-ecosystem/investors/,candidate
+investor_id,name,aliases,country_focus,category_proposed,discovery_source_url,status
+czvc001,Credo Ventures,Credo,CZ,VC,https://www.credoventures.com/,pending_manual_review
+czvc002,DEPO Ventures,DEPO VENTURES s.r.o.,CZ,VC,https://cvca.cz/en/depo-ventures-2/,pending_manual_review
+czvc003,Tensor Ventures,Tensor Ventures Fund I,CZ,VC,https://tensor.ventures/,pending_manual_review
+czvc004,Nation1,Nation 1; N1 Ventures,CZ,VC,https://cvca.cz/en/nation1-2/,identity_review_needed
+czvc005,Tilia Impact Ventures,Tilia,CZ,VC,https://tilia.vc/,pending_manual_review
+czneg001,Czech Private Equity and Venture Capital Association,CVCA,CZ,non_investor,https://cvca.cz/en/about-us/,pending_manual_review
+czneg002,CzechStartups,CzechStartups.gov.cz,CZ,non_investor,https://czechstartups.gov.cz/en/about/,pending_manual_review
