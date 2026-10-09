@@ -79,7 +79,11 @@ def validate(data_dir: Path) -> list[str]:
         refs = [ref.strip() for ref in row["supporting_evidence_ids"].split(";") if ref.strip()]
         if not refs or any(evidence_owners.get(ref) != ident for ref in refs):
             errors.append(f"ai_predictions.csv:{line}: missing, unknown or cross-investor evidence")
-    if ids != seen: errors.append("ai_predictions.csv: not all candidates have a prediction")
+    # Discovery-only entries deliberately have no AI prediction and cannot count as screened.
+    missing_screen = [row["investor_id"] for row in candidates
+                      if row["investor_id"] not in seen and row["status"] != "discovered_unreviewed"]
+    if missing_screen:
+        errors.append(f"ai_predictions.csv: missing predictions for screened candidates: {missing_screen}")
     reviewed = set()
     for line,row in enumerate(audit,2):
         ident = row["investor_id"]

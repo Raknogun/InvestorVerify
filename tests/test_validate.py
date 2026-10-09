@@ -36,6 +36,47 @@ class ValidationTests(unittest.TestCase):
             (target/"evidence.csv").write_text(source.replace("E040,czvc004,managed_capital_reported,60000000,USD","E040,czvc004,managed_capital_reported,60000000,"),encoding="utf-8")
             self.assertTrue(any("missing numeric unit" in e for e in validate(target)))
 
+    def test_extended_discovery_coverage(self):
+        from investorverify.discover import load_rows, merge
+        existing = load_rows(ROOT/"data"/"candidates.csv")
+        sightings = load_rows(ROOT/"data"/"discovery_sightings.csv")
+        self.assertEqual(len(existing), 27)
+        self.assertEqual(len(sightings), 25)
+        combined, added, matches = merge(existing, sightings)
+        self.assertEqual(len(combined), 27)
+        self.assertEqual(len(added), 0)
+        self.assertEqual(len(matches), 25)
+        self.assertFalse(any(r["investor_id"] in {"czneg001","czneg002"}
+                             and r["status"] == "discovered_unreviewed" for r in combined))
+
+    def test_alias_collision_and_idempotent_merge(self):
+        from investorverify.discover import merge, name_key
+        self.assertEqual(name_key("Nation 1"), name_key("Nation1"))
+        base = [{"investor_id": "czvc004", "name": "Nation1", "aliases": "N1; Nation 1", "status":"reviewed",
+                 "country_focus": "CZ", "category_proposed": "VC", "discovery_source_url":"https://example.org"}]
+        sightings = [
+            {"candidate_name": "N1", "source_url": "https://example.org"},
+            {"candidate_name": "Beta Ventures", "source_url": "https://example.org"}
+        ]
+        combined, added, duplicates = merge(base, sightings)
+        self.assertEqual((len(combined),len(added),len(duplicates)),(2,1,1))
+        again, more, duplicates2 = merge(combined, sightings)
+        self.assertEqual((len(again),len(more),len(duplicates2)),(2,0,2))
+
+    def test_html_headings_stay_staged(self):
+        from investorverify.discover import parse_directory_headings
+        html = "<h4>Alpha VC</h4><h4><span>Beta</span> Ventures</h4><h4>Alpha VC</h4>"
+        self.assertEqual(parse_directory_headings(html), ["Alpha VC","Beta Ventures"])
+
+    def test_old_missing_screening_still_invalid(self):
+        from investorverify.validate import validate
+        with tempfile.TemporaryDirectory() as tmp:
+            target=Path(tmp); self.copy_fixture(target)
+            path=target/"ai_predictions.csv"
+            lines=path.read_text(encoding="utf-8").splitlines()
+            path.write_text("\n".join(row for row in lines if not row.startswith("czvc001,"))+"\n",encoding="utf-8")
+            self.assertTrue(any("missing predictions for screened candidates" in e for e in validate(target)))
+
     def test_bad_evidence_reference(self):
         with tempfile.TemporaryDirectory() as tmp:
             target=Path(tmp); self.copy_fixture(target)

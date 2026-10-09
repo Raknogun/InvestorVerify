@@ -2,7 +2,27 @@ investor_id,name,aliases,country_focus,category_proposed,discovery_source_url,st
 czvc001,Credo Ventures,Credo,CZ,VC,https://www.credoventures.com/,pending_manual_review
 czvc002,DEPO Ventures,DEPO VENTURES s.r.o.,CZ,VC,https://cvca.cz/en/depo-ventures-2/,pending_manual_review
 czvc003,Tensor Ventures,Tensor Ventures Fund I,CZ,VC,https://tensor.ventures/,pending_manual_review
-czvc004,Nation1,Nation 1; N1 Ventures,CZ,VC,https://cvca.cz/en/nation1-2/,identity_review_needed
+czvc004,Nation1,Nation 1; N1; N1 Ventures,CZ,VC,https://cvca.cz/en/nation1-2/,identity_review_needed
 czvc005,Tilia Impact Ventures,Tilia,CZ,VC,https://tilia.vc/,pending_manual_review
 czneg001,Czech Private Equity and Venture Capital Association,CVCA,CZ,non_investor,https://cvca.cz/en/about-us/,pending_manual_review
 czneg002,CzechStartups,CzechStartups.gov.cz,CZ,non_investor,https://czechstartups.gov.cz/en/about/,pending_manual_review
+cznew001,StartupYard,,CZ,unknown,https://ris3.gov.cz/sites/default/files/2025-08/20280819_Anal%C3%BDza%20vybran%C3%BDch%20t%C3%A9mat%20pr%C5%AFmyslov%C3%A9%20transformace_web_144dpi_75%25_0.pdf,discovered_unreviewed
+cznew002,Reflex Capital,,CZ,unknown,https://ris3.gov.cz/sites/default/files/2025-08/20280819_Anal%C3%BDza%20vybran%C3%BDch%20t%C3%A9mat%20pr%C5%AFmyslov%C3%A9%20transformace_web_144dpi_75%25_0.pdf,discovered_unreviewed
+cznew003,Lighthouse Ventures,,CZ,unknown,https://ris3.gov.cz/sites/default/files/2025-08/20280819_Anal%C3%BDza%20vybran%C3%BDch%20t%C3%A9mat%20pr%C5%AFmyslov%C3%A9%20transformace_web_144dpi_75%25_0.pdf,discovered_unreviewed
+cznew004,Presto Ventures,,CZ,unknown,https://ris3.gov.cz/sites/default/files/2025-08/20280819_Anal%C3%BDza%20vybran%C3%BDch%20t%C3%A9mat%20pr%C5%AFmyslov%C3%A9%20transformace_web_144dpi_75%25_0.pdf,discovered_unreviewed
+cznew005,Miton,,CZ,unknown,https://ris3.gov.cz/sites/default/files/2025-08/20280819_Anal%C3%BDza%20vybran%C3%BDch%20t%C3%A9mat%20pr%C5%AFmyslov%C3%A9%20transformace_web_144dpi_75%25_0.pdf,discovered_unreviewed
+cznew006,J&T Ventures,,CZ,unknown,https://ris3.gov.cz/sites/default/files/2025-08/20280819_Anal%C3%BDza%20vybran%C3%BDch%20t%C3%A9mat%20pr%C5%AFmyslov%C3%A9%20transformace_web_144dpi_75%25_0.pdf,discovered_unreviewed
+cznew007,Rockaway,,CZ,unknown,https://ris3.gov.cz/sites/default/files/2025-08/20280819_Anal%C3%BDza%20vybran%C3%BDch%20t%C3%A9mat%20pr%C5%AFmyslov%C3%A9%20transformace_web_144dpi_75%25_0.pdf,discovered_unreviewed
+cznew008,Kaya VC,,CZ,unknown,https://ris3.gov.cz/sites/default/files/2025-08/20280819_Anal%C3%BDza%20vybran%C3%BDch%20t%C3%A9mat%20pr%C5%AFmyslov%C3%A9%20transformace_web_144dpi_75%25_0.pdf,discovered_unreviewed
+cznew009,Czech Founders VC,,CZ,unknown,https://ris3.gov.cz/sites/default/files/2025-08/20280819_Anal%C3%BDza%20vybran%C3%BDch%20t%C3%A9mat%20pr%C5%AFmyslov%C3%A9%20transformace_web_144dpi_75%25_0.pdf,discovered_unreviewed
+cznew010,Purple Ventures,,CZ,unknown,https://ris3.gov.cz/sites/default/files/2025-08/20280819_Anal%C3%BDza%20vybran%C3%BDch%20t%C3%A9mat%20pr%C5%AFmyslov%C3%A9%20transformace_web_144dpi_75%25_0.pdf,discovered_unreviewed
+cznew011,Starcube,,CZ,unknown,https://ris3.gov.cz/sites/default/files/2025-08/20280819_Anal%C3%BDza%20vybran%C3%BDch%20t%C3%A9mat%20pr%C5%AFmyslov%C3%A9%20transformace_web_144dpi_75%25_0.pdf,discovered_unreviewed
+cznew012,Pale Fire Capital,,CZ,unknown,https://ris3.gov.cz/sites/default/files/2025-08/20280819_Anal%C3%BDza%20vybran%C3%BDch%20t%C3%A9mat%20pr%C5%AFmyslov%C3%A9%20transformace_web_144dpi_75%25_0.pdf,discovered_unreviewed
+cznew013,Y Soft Ventures,,CZ,unknown,https://ris3.gov.cz/sites/default/files/2025-08/20280819_Anal%C3%BDza%20vybran%C3%BDch%20t%C3%A9mat%20pr%C5%AFmyslov%C3%A9%20transformace_web_144dpi_75%25_0.pdf,discovered_unreviewed
+cznew014,Garage Angels,,CZ,unknown,https://ris3.gov.cz/sites/default/files/2025-08/20280819_Anal%C3%BDza%20vybran%C3%BDch%20t%C3%A9mat%20pr%C5%AFmyslov%C3%A9%20transformace_web_144dpi_75%25_0.pdf,discovered_unreviewed
+cznew015,JIC Ventures,,CZ,unknown,https://ris3.gov.cz/sites/default/files/2025-08/20280819_Anal%C3%BDza%20vybran%C3%BDch%20t%C3%A9mat%20pr%C5%AFmyslov%C3%A9%20transformace_web_144dpi_75%25_0.pdf,discovered_unreviewed
+cznew016,Novira Capital,,CZ,unknown,https://ris3.gov.cz/sites/default/files/2025-08/20280819_Anal%C3%BDza%20vybran%C3%BDch%20t%C3%A9mat%20pr%C5%AFmyslov%C3%A9%20transformace_web_144dpi_75%25_0.pdf,discovered_unreviewed
+cznew017,Heartcore Capital,,CZ,unknown,https://czechstartups.gov.cz/en/startup-ecosystem/investors/,discovered_unreviewed
+cznew018,Tachles VC,,CZ,unknown,https://czechstartups.gov.cz/en/startup-ecosystem/investors/,discovered_unreviewed
+cznew019,INVEN Capital,,CZ,unknown,https://czechstartups.gov.cz/en/startup-ecosystem/investors/,discovered_unreviewed
+cznew020,Springtide Ventures,,CZ,unknown,https://czechstartups.gov.cz/en/startup-ecosystem/investors/,discovered_unreviewed

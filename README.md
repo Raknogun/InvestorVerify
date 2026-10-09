@@ -11,7 +11,9 @@ Investor directories frequently mix actual funds with advisers, associations and
 ## Current deliverables (2026-10-09)
 
 - [Research design and inclusion/exclusion rules](docs/PLAN.md)
-- [Candidate registry](data/candidates.csv): 7 candidates, including negative controls (not a market census)
+- [Candidate registry](data/candidates.csv): 27 candidates: 7 previously audited entries and 20 newly discovered unverified organizations (not a census)
+- [Reproducible discovery source sightings](data/discovery_sightings.csv): 25 sourced sightings, including 5 deliberate name/alias duplicates
+- [Discovery batch report](reports/DISCOVERY_BATCH_20261009.md) and [candidate intake script](src/investorverify/discover.py): source-driven expansion and deduplication; **not** automated proof of direct investing
 - [Claim-level evidence](data/evidence.csv): 43 claims with URLs, accessed date and verification stage
 - [Frozen preliminary AI predictions](data/ai_predictions.csv): 4 include, 2 exclude, 1 review
 - [Independent audit register](data/manual_audit.csv): 7 independently reviewed candidates: five historical or current direct VC investors (Credo, Tilia, DEPO, Tensor, Nation1) and two non-investors (CVCA, CzechStartups). Nation1 is an audited investor but the original AI prediction stays `review` due to brand ambiguity
@@ -27,10 +29,13 @@ Python 3.10+ and pip required. No paid API key is needed to run the current code
 
 ```bash
 python -m pip install -e .
+python -m investorverify.discover --check
 python -m investorverify.validate
 python -m unittest discover -s tests -v
 python -m investorverify.quality
 ```
+
+To refresh candidates from curated public-source sightings, run `python -m investorverify.discover --write` and review the Git diff before committing. To collect fresh public HTML headings into an **unverified staging CSV only**, run `python -m investorverify.discover --fetch-czechstartups` (requires internet and the website layout may change). Avoid excessive requests and respect site terms.
 
 A clean run should show structural validation passing, tests passing and quality status `preliminary_small_sample` (7 reviewed candidates: TP=4, TN=2, 1 abstention). GitHub Actions runs the same checks on push. **Passing code tests does not verify real-world investor assertions.**
 
@@ -59,12 +64,12 @@ Precision is meaningful only for the **audited candidate sample**, not all inves
 
 ## Known limitations and next work
 
-- Audit sample currently has 7 independently reviewed candidates (5 includes; 2 excludes), but the AI originally abstained on Nation1 and its prediction is not retroactively rewritten; other candidates are pending.
+- Audit sample has 7 independently reviewed candidates (5 includes; 2 excludes). The 20 newly discovered organizations have **no AI inclusion prediction and no human audit**; Nation1's original AI decision stays `review`.
 - No empirically supported worldwide investor count or costs yet.
 - Some disclosed capital figures are historical; there is not enough public evidence to infer current available capital.
 - Nation1 → N1 brand rename was author-confirmed from a 2023 Newstream article, and current partner Jaroslav Trojan and Prague address match the historical profile. N1's self-reported USD 60m managed across two funds (AI and healthcare focus) was verified on its website on 2026-10-09. This figure is neither available capital nor the historical EUR 35m reported by CVCA. Current legal-entity/fund-vehicle continuity remains unverified; original AI decision stays `review`.
 - The pilot is not exhaustive and has not measured recall in a global universe.
-- Next: manual review, scale sample, compute real metrics and global cost model.
+- Next: AI-screen the 20 discovery-only candidates, freeze those new predictions, independently audit a defined mixed sample, then compute real metrics and global cost model.
 
 ## AI use and transparency
 
