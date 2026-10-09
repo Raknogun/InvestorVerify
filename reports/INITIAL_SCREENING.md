@@ -1,6 +1,6 @@
 # Preliminary Czech VC screening — 2026-10-09
 
-**Mostly AI-screened data.** One investor classification (Credo) is now manually checked by the project author; this is not a representative accuracy sample. The first pilot contains 7 candidates (5 fund candidates and 2 non-investor negative controls), 30 extracted assertions, 7 preliminary AI decisions. One positive case was independently confirmed; 1/1 alone is too small for a credible precision estimate.
+**Mostly AI-screened data.** One investor classification (Credo) is now manually checked by the project author; this is not a representative accuracy sample. The first pilot contains 7 candidates (5 fund candidates and 2 non-investor negative controls), 31 extracted assertions, 7 preliminary AI decisions. One positive case was independently confirmed; 1/1 alone is too small for a credible precision estimate.
 
 ## Candidate screening
 
