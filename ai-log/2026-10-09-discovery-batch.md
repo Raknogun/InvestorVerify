@@ -156,3 +156,11 @@ The article names Reflex Capital, J&T Ventures and Grid Invest as providers of E
 Decision: author verified J&T as include for VC-only pilot, saved as cznew006 in manual_audit.csv. Review duration was not measured. E113-E115 record participation, total round and another investor's known amount, all checked by the author. Original AI prediction include remains frozen. The primary portfolio listings E049 and E086 remain only AI-screened.
 
 Current author audits: 13 candidates: 9 VC includes and 4 VC exclusions. One AI abstention, 12 evaluated determinate decisions: TP=8, TN=4, FP=0, FN=0. Purpose-selected evidence sample cannot establish overall accuracy.
+
+## Kaya VC staged independent source and conflicting ticket disclosures
+
+Before any author source check, AI located Portfolion Capital Partners' 2025-04-23 investment story: https://www.portfolion.com/investment-story/riptides-seed/. Portfolion names Kaya VC as a **co-lead** in Riptides' overall **USD 3.3m** pre-seed financing; this is a report by another participating investor, not a company-issued Riptides press release. Kaya-specific contribution not disclosed. New E119-E120 are therefore `ai_source_checked_pending_human`, not human verified.
+
+AI also detected inconsistent public ticket ranges across Kaya pages: https://www.kaya.vc/ homepage **USD 1-3m**, https://www.kaya.vc/facts descriptive introduction **USD 0.5-2m**, and a later section of that same facts page says **EUR 0.1-3m**. The site does not make clear whether these refer to different products/periods. E121 records the conflict for human review. Existing E071-E072 came from the homepage and remain *claims attributable to that page*, not a conclusive global typical ticket range. USD 500m of total AUM and USD 85m current fund on homepage are distinct metrics.
+
+Original frozen Kaya `include` AI prediction stays unchanged; no manual label or fictitious review minutes added.
