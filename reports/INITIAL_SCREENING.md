@@ -1,6 +1,6 @@
 # Preliminary Czech VC screening — 2026-10-09
 
-**Not a manually audited sample.** This is a source-assisted AI screening. The first pilot contains 7 candidates (5 fund candidates and 2 non-investor negative controls), 29 extracted assertions, 7 preliminary AI decisions. No precision result is available until independent human decisions are recorded.
+**Not a manually audited sample.** This is a source-assisted AI screening. The first pilot contains 7 candidates (5 fund candidates and 2 non-investor negative controls), 30 extracted assertions, 7 preliminary AI decisions. No precision result is available until independent human decisions are recorded.
 
 ## Candidate screening
 
