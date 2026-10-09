@@ -12,7 +12,7 @@ Investor directories frequently mix actual funds with advisers, associations and
 
 - [Research design and inclusion/exclusion rules](docs/PLAN.md)
 - [Candidate registry](data/candidates.csv): 7 candidates, including negative controls (not a market census)
-- [Claim-level evidence](data/evidence.csv): 34 claims with URLs, accessed date and verification stage
+- [Claim-level evidence](data/evidence.csv): 37 claims with URLs, accessed date and verification stage
 - [Frozen preliminary AI predictions](data/ai_predictions.csv): 4 include, 2 exclude, 1 review
 - [Independent audit register](data/manual_audit.csv): 6 independently reviewed candidates: Credo Ventures, Tilia Impact Ventures, DEPO Ventures, Tensor Ventures (include); CVCA association and CzechStartups portal (exclude)
 - [Initial screening report](reports/INITIAL_SCREENING.md)

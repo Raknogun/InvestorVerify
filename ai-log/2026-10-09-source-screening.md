@@ -141,3 +141,21 @@ The webpage says it gathers information on programmes, investment support provid
 Human decision: `czneg002` = `exclude` under the direct VC investor inclusion rule. Only the observed portal purpose in E029 is marked `human_verified`; we do **not** claim proof the portal has never made investments. Review duration not measured and deliberately omitted.
 
 Current manual decision tally: **6 candidates (4 include, 2 exclude)**, yielding TP=4, TN=2 in this purposively assembled pilot. No false positives/negatives have yet been observed; the sample is too small and selected to justify population accuracy claims. The unresolved candidate Nation1/N1 remains to be audited.
+
+## Nation1 — author screenshot and AI source follow-up
+
+User supplied screenshot of [Nation1 profile in CVCA](https://cvca.cz/en/nation1-2/) with three companies in the Czech portfolio: **VRgineers, Snuggs, Buildiro**. User said, verbatim:
+
+> «3 компании в портфолио nation1»
+
+Other historic CVCA values: reported funds managed EUR 35m, preferred check EUR 50k–1.5m, technology sector, 7 CZ deals. **3 portfolio companies != 7 reported transactions**; do not infer number of companies from number of deals. The page is historical; it cannot prove current 2026 amounts.
+
+AI found an [issuer-side VRgineers announcement dated Nov 28 2023](https://www.prnewswire.com/news-releases/vrgineers-successfully-closes-6-million-usd-series-a-investment-301998176.html) explicitly reporting Nation 1 increased its stake by USD 0.5m in a USD 6m Series A round. Unlike many round-size announcements, **USD 0.5m is attributed to Nation 1 itself**. E036 added as `ai_source_checked_pending_human` while the project author verifies this second source.
+
+[Newstream, Sep 19 2023](https://www.newstream.cz/zpravy-z-firem/nation-1-meni-jmeno-a-chysta-novy-fond-do-vedeni-jmenoval-dva-nove-partnery) states Nation 1 rebranded to N1. [n1.rocks](https://n1.rocks/) lists original partner names and Prague address; current brand/vehicle relationship should be checked further.
+
+### Actual model disambiguation risk caught
+
+An unrelated domain [n1invest.co](https://n1invest.co/) calls itself "N1 Investment Company"; it lists different management (Nykyta Izmaylov and Kyrylo Medvediev), a separate investment strategy and locations. This site **must NOT be used as evidence** for Czech Nation 1 / N1 Ventures. Same short brand does not establish common identity. This is an observed near-name collision, not a hypothetical example.
+
+Author verified only the three portfolio names in CVCA (E035 `human_verified`); no independent `include` / `exclude` reviewer decision was recorded for Nation1 yet, and `data/manual_audit.csv` stays at six audited records. Do not use any of these claims to change the frozen AI `review` prediction retroactively.
