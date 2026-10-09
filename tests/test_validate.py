@@ -95,7 +95,7 @@ class ValidationTests(unittest.TestCase):
         owner={r["evidence_id"]:r["investor_id"] for r in evidence}
         self.assertTrue(all(all(owner.get(x)==r["investor_id"] for x in
                             r["supporting_evidence_ids"].split(";")) for r in newer))
-        self.assertEqual(len(evidence),126)
+        self.assertEqual(len(evidence),129)
 
     def test_mixed_type_angel_group_is_not_false_investor_label(self):
         from investorverify.discover import load_rows
@@ -252,6 +252,19 @@ class ValidationTests(unittest.TestCase):
         self.assertEqual(e["E120"]["value"],"3300000")
         self.assertEqual(e["E121"]["verification_status"],"ai_source_checked_pending_human")
         self.assertEqual(p["cznew008"]["human_review_status"],"reviewed")
+
+    def test_czech_founders_launch_is_not_legal_rename(self):
+        from investorverify.discover import load_rows
+        e={r["evidence_id"]:r for r in load_rows(ROOT/"data"/"evidence.csv")}
+        p={r["investor_id"]:r for r in load_rows(ROOT/"data"/"ai_predictions.csv")}
+        self.assertEqual(e["E052"]["verification_status"],"human_verified")
+        self.assertEqual(e["E052"]["field"],"related_venture_launch")
+        self.assertIn("Does not prove",e["E052"]["notes"])
+        self.assertEqual(e["E128"]["verification_status"],"ai_source_checked_pending_human")
+        self.assertEqual(e["E129"]["value"],"1100000")
+        self.assertEqual(p["cznew009"]["ai_prediction"],"review")
+        self.assertEqual(p["cznew009"]["human_review_status"],"not_reviewed")
+        self.assertEqual(measure(ROOT/"data")["audited"],15)
 
     def test_bad_evidence_reference(self):
         with tempfile.TemporaryDirectory() as tmp:
