@@ -12,7 +12,7 @@ Investor directories frequently mix actual funds with advisers, associations and
 
 - [Research design and inclusion/exclusion rules](docs/PLAN.md)
 - [Candidate registry](data/candidates.csv): 7 candidates, including negative controls (not a market census)
-- [Claim-level evidence](data/evidence.csv): 31 claims with URLs, accessed date and verification stage
+- [Claim-level evidence](data/evidence.csv): 32 claims with URLs, accessed date and verification stage
 - [Frozen preliminary AI predictions](data/ai_predictions.csv): 4 include, 2 exclude, 1 review
 - [Independent audit register](data/manual_audit.csv): 2 independently reviewed candidates (Credo Ventures and Tilia Impact Ventures; author inspected portfolio information and investee announcements)
 - [Initial screening report](reports/INITIAL_SCREENING.md)
