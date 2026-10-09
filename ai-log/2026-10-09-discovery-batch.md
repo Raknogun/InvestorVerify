@@ -28,3 +28,17 @@ This followed the explicit plan to enlarge the pilot to 20–30 organizations au
 ## Verification and results
 
 After committing, refer to the actual GitHub Actions output for syntax tests and data validation. The intended result is 27 candidate records (7 old + 20 discovered), 25 input sightings, and no new human audit labels. Only actual CI results can establish passing tests.
+
+## Follow-up: 20-candidate AI classification
+
+User's literal continuation prompt:
+
+> «давай»
+
+AI examined primary portfolio and investor terms and CzechStartups/government links, screened all 20 originally unreviewed candidates and froze 13 `include`, 5 `review`, 2 `exclude` decisions, with per-claim source URLs. No new human labels were added.
+
+**Real model risk caught during research:** originally we described StartupYard only as an accelerator that might not invest. Its [FAQ](https://startupyard.com/faq/) explicitly discloses optional cash convertible-note funding and a follow-on investment fund. This falsifies any automatic rule 'accelerator means no equity investing'; decision set to `review` for mixed financing/legal structure.
+
+**Scope risk caught:** Garage Angels really invests the members' own money; its `exclude` is only a statement about the **VC-only pilot category**, not a 'not an investor' claim. A worldwide investor dataset must include its verified individual angels or an appropriately labeled group record if deduplicated. Miton, Rockaway, Pale Fire and former Czech Founders VC require parent/vehicle or current brand resolution, not hallucinated VC-only labels.
+
+**Validation plan:** a new GitHub Actions run must establish schema checks and unit tests on the atomic screening commit. Do not say tests passed until the run is complete. User manual audits are still seven; precision numerator and denominator have not changed.

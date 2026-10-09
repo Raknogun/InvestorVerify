@@ -6,3 +6,23 @@ czvc004,review,Historical investor but current N1 brand/entity and legal continu
 czvc005,include,"Official site lists investment offer, initial tickets and portfolio",E023;E024,2026-10-09,reviewed
 czneg001,exclude,Association represents investors rather than investing directly,E028,2026-10-09,reviewed
 czneg002,exclude,"Information portal, not a direct investor",E029,2026-10-09,reviewed
+cznew001,review,Company combines accelerator and investments; determine fund/legal owner before VC-only inclusion,E044;E064;E065,2026-10-09,not_reviewed
+cznew002,include,Official portfolio provides investor-level evidence,E045,2026-10-09,not_reviewed
+cznew003,include,Official VC strategy and portfolio,E046;E066;E067,2026-10-09,not_reviewed
+cznew004,include,Official site lists prior investing and tickets,E047;E068;E069;E070,2026-10-09,not_reviewed
+cznew005,review,Direct investing real but venture studio/VC fund unit ambiguous,E048,2026-10-09,not_reviewed
+cznew006,include,Primary portfolio site,E049;E086,2026-10-09,not_reviewed
+cznew007,review,Parent group vs VC subfund not one VC record; avoid double counting,E050,2026-10-09,not_reviewed
+cznew008,include,Official VC fund site and terms,E051;E071;E072;E073;E074,2026-10-09,not_reviewed
+cznew009,review,Must reconcile current manager and new brand before duplicate merging,E052;E075;E076,2026-10-09,not_reviewed
+cznew010,include,Issuer explicitly states early-stage minority equity stakes,E053;E077;E078,2026-10-09,not_reviewed
+cznew011,exclude,No independent proof of Starcube own VC investment vehicle; exclude VC-only sample pending contrary evidence,E054,2026-10-09,not_reviewed
+cznew012,review,"Confirmed investor, growth and private-equity mix not strict VC fund classification",E055,2026-10-09,not_reviewed
+cznew013,include,Corporate venture investments supported by direct testimonial,E056;E087,2026-10-09,not_reviewed
+cznew014,exclude,"Genuine angel investors; exclude VC-fund-only PILOT, not from future global angel population",E057,2026-10-09,not_reviewed
+cznew015,include,JIC official May 2026 transaction news,E058;E079,2026-10-09,not_reviewed
+cznew016,include,Government business portal republishes JIC investee news,E059,2026-10-09,not_reviewed
+cznew017,include,CzechStartups interview confirms active representative prospecting in Czechia,E060;E080,2026-10-09,not_reviewed
+cznew018,include,Official sector-specific VC site; Prague office by secondary/issuer,E061,2026-10-09,not_reviewed
+cznew019,include,Parent confirms direct minority holdings in startups,E062;E081;E082;E083,2026-10-09,not_reviewed
+cznew020,include,"Primary fund statement, investee portfolio and normal ticket published",E063;E084;E085,2026-10-09,not_reviewed

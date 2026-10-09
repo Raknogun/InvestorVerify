@@ -77,6 +77,32 @@ class ValidationTests(unittest.TestCase):
             path.write_text("\n".join(row for row in lines if not row.startswith("czvc001,"))+"\n",encoding="utf-8")
             self.assertTrue(any("missing predictions for screened candidates" in e for e in validate(target)))
 
+    def test_frozen_screening_batch_and_source_links(self):
+        from investorverify.discover import load_rows
+        candidates=load_rows(ROOT/"data"/"candidates.csv")
+        predictions=load_rows(ROOT/"data"/"ai_predictions.csv")
+        evidence=load_rows(ROOT/"data"/"evidence.csv")
+        new={row["investor_id"]:row for row in candidates if row["investor_id"].startswith("cznew")}
+        newer=[row for row in predictions if row["investor_id"].startswith("cznew")]
+        self.assertEqual(len(new),20)
+        self.assertEqual(len(newer),20)
+        self.assertEqual({label:sum(1 for r in newer if r["ai_prediction"]==label)
+                         for label in ["include","review","exclude"]},
+                         {"include":13,"review":5,"exclude":2})
+        self.assertTrue(all(r["status"]=="ai_screened_pending_human" for r in new.values()))
+        self.assertTrue(all(r["human_review_status"]=="not_reviewed" for r in newer))
+        owner={r["evidence_id"]:r["investor_id"] for r in evidence}
+        self.assertTrue(all(all(owner.get(x)==r["investor_id"] for x in
+                            r["supporting_evidence_ids"].split(";")) for r in newer))
+        self.assertEqual(len(evidence),87)
+
+    def test_mixed_type_angel_group_is_not_false_investor_label(self):
+        from investorverify.discover import load_rows
+        rows={r["investor_id"]:r for r in load_rows(ROOT/"data"/"ai_predictions.csv")}
+        self.assertEqual(rows["cznew014"]["ai_prediction"],"exclude")
+        self.assertIn("angel",rows["cznew014"]["reason"].lower())
+        self.assertEqual(rows["cznew001"]["ai_prediction"],"review")
+
     def test_bad_evidence_reference(self):
         with tempfile.TemporaryDirectory() as tmp:
             target=Path(tmp); self.copy_fixture(target)

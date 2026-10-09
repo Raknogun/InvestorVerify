@@ -34,3 +34,11 @@ Cost = candidate acquisition + pages parsed and tokens + manual review minutes Ã
 
 ## Limits
 The pilot is not a census. Old directory profiles may be stale. AUM and fund size are not cash available. No paywalled or non-public data.
+
+## Pilot screening stage and type handling (2026-10-09 update)
+
+This pilot is **VC/corporate-VC-manager only**, whereas the eventual world dataset must include angels, family offices and PE as separate types. Under a narrow VC pilot, an authentic **angel network** is excluded from this VC sample but is **not a fake investor**. Accelerator programs with direct equity notes and follow-on funds are **review**, not automatic non-investors. Broad investment groups and rebranded managers are reviewed at the proper manager/fund unit to prevent double counting.
+
+The original seven predictions and seven author labels are frozen. Twenty new names have received **provisional AI-only** decisions supported by sources in `data/evidence.csv`: include (13), exclude (2), review (5). No extra human results or precision improvements are claimed. Source publication dates are left empty if undated; access date is not a statement's as-of date.
+
+The methodology uses three buckets: `include` only for apparent direct VC/CVC managers, `exclude` for out-of-scope VC-only entities, `review` for type/identity/activity ambiguity. Manual labels must be decided **after** seeing these saved predictions. For the worldwide estimate, re-evaluate angel and PE exclusions under their proper dataset types.

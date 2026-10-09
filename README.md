@@ -11,13 +11,13 @@ Investor directories frequently mix actual funds with advisers, associations and
 ## Current deliverables (2026-10-09)
 
 - [Research design and inclusion/exclusion rules](docs/PLAN.md)
-- [Candidate registry](data/candidates.csv): 27 candidates: 7 previously audited entries and 20 newly discovered unverified organizations (not a census)
+- [Candidate registry](data/candidates.csv): 27 candidates: 7 previously manually audited entries and 20 AI-screened but **not human-reviewed** organizations (not a census)
 - [Reproducible discovery source sightings](data/discovery_sightings.csv): 25 sourced sightings, including 5 deliberate name/alias duplicates
 - [Discovery batch report](reports/DISCOVERY_BATCH_20261009.md) and [candidate intake script](src/investorverify/discover.py): source-driven expansion and deduplication; **not** automated proof of direct investing
-- [Claim-level evidence](data/evidence.csv): 43 claims with URLs, accessed date and verification stage
-- [Frozen preliminary AI predictions](data/ai_predictions.csv): 4 include, 2 exclude, 1 review
+- [Claim-level evidence](data/evidence.csv): 87 claims with URLs, accessed date and verification stage
+- [Frozen preliminary AI predictions](data/ai_predictions.csv): 27 total (20 newly AI-screened: 13 include, 2 exclude from **VC-only scope**, 5 review; original 7 predictions unchanged)
 - [Independent audit register](data/manual_audit.csv): 7 independently reviewed candidates: five historical or current direct VC investors (Credo, Tilia, DEPO, Tensor, Nation1) and two non-investors (CVCA, CzechStartups). Nation1 is an audited investor but the original AI prediction stays `review` due to brand ambiguity
-- [Initial screening report](reports/INITIAL_SCREENING.md)
+- [Screening of 20 new candidates](reports/SCREENING_BATCH_20261009.md), [first seven candidates](reports/INITIAL_SCREENING.md)
 - [AI collaboration log](ai-log/): source and code work, actual issues and corrections; uses ChatGPT **not Claude Code**
 - [Python data validator](src/investorverify/validate.py), [precision measurement](src/investorverify/quality.py) and [unit tests](tests/test_validate.py)
 
@@ -41,7 +41,7 @@ A clean run should show structural validation passing, tests passing and quality
 
 ## Data definitions
 
-- `candidates.csv`: discovered organizations and aliases, not final verified investors.
+- `candidates.csv`: sourced organizations and aliases; a screened row is not automatically a human-verified investor. The 20 new rows are marked `ai_screened_pending_human`.
 - `evidence.csv`: each field has its own URL, source type, publication date if known, access date, and verification status.
 - `ai_predictions.csv`: screening result, frozen before human review. `review` is intentionally unresolved.
 - `manual_audit.csv`: source-based independent human classifications with reviewer, date and time spent.
@@ -69,7 +69,7 @@ Precision is meaningful only for the **audited candidate sample**, not all inves
 - Some disclosed capital figures are historical; there is not enough public evidence to infer current available capital.
 - Nation1 → N1 brand rename was author-confirmed from a 2023 Newstream article, and current partner Jaroslav Trojan and Prague address match the historical profile. N1's self-reported USD 60m managed across two funds (AI and healthcare focus) was verified on its website on 2026-10-09. This figure is neither available capital nor the historical EUR 35m reported by CVCA. Current legal-entity/fund-vehicle continuity remains unverified; original AI decision stays `review`.
 - The pilot is not exhaustive and has not measured recall in a global universe.
-- Next: AI-screen the 20 discovery-only candidates, freeze those new predictions, independently audit a defined mixed sample, then compute real metrics and global cost model.
+- Next: independently audit the 20 new AI-screened candidates, preserving frozen predictions, then compute quality metrics and global cost model.
 
 ## AI use and transparency
 

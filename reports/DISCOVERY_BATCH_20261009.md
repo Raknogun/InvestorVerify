@@ -53,3 +53,6 @@ python -m investorverify.discover --fetch-czechstartups
 2. Audit both positive and negative predictions, including edge cases and at least one non-obvious false positive candidate.
 3. Count source-level field accuracy and coverage separately from investor classification.
 4. Estimate global reach and cost from actual extraction/review time.
+
+## Subsequent screening update
+A separate follow-up step produced [frozen AI screening for the 20 new records](SCREENING_BATCH_20261009.md) and 44 new evidence rows. The original values in this discovery snapshot are historical stage metrics, **not current screening totals**.
