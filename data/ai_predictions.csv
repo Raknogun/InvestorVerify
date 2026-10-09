@@ -19,7 +19,7 @@ cznew010,include,Issuer explicitly states early-stage minority equity stakes,E05
 cznew011,exclude,No independent proof of Starcube own VC investment vehicle; exclude VC-only sample pending contrary evidence,E054,2026-10-09,not_reviewed
 cznew012,review,"Confirmed investor, growth and private-equity mix not strict VC fund classification",E055,2026-10-09,not_reviewed
 cznew013,include,Corporate venture investments supported by direct testimonial,E056;E087,2026-10-09,not_reviewed
-cznew014,exclude,"Genuine angel investors; exclude VC-fund-only PILOT, not from future global angel population",E057,2026-10-09,not_reviewed
+cznew014,exclude,"Genuine angel investors; exclude VC-fund-only PILOT, not from future global angel population",E057,2026-10-09,reviewed
 cznew015,include,JIC official May 2026 transaction news,E058;E079,2026-10-09,reviewed
 cznew016,include,Government business portal republishes JIC investee news,E059,2026-10-09,not_reviewed
 cznew017,include,CzechStartups interview confirms active representative prospecting in Czechia,E060;E080,2026-10-09,not_reviewed
