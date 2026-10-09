@@ -22,10 +22,10 @@ def measure(data_dir: Path) -> dict:
         else:
             counts[mapping[pair]] += 1
     denom = counts["TP"] + counts["FP"]
-    return {"status":"measured" if denom else "insufficient_positive_predictions",
+    return {"status":("preliminary_small_sample" if len(audit) < 20 else "measured") if denom else "insufficient_positive_predictions",
             "audited":len(audit),"evaluated":sum(counts.values()),"ambiguous_or_deferred":deferred,
             **counts,"precision":counts["TP"]/denom if denom else None,
-            "scope_note":"Precision applies only to the manually audited candidate sample"}
+            "scope_note":"A small audited pilot cannot establish general accuracy; target is at least 20 reviews. Precision covers only reviewed candidates"}
 
 if __name__ == "__main__":
     print(json.dumps(measure(Path(__file__).resolve().parents[2]/"data"),indent=2))
