@@ -129,3 +129,15 @@ The author independently confirmed the association's self-description as represe
 Changes: record human-reviewed `exclude` in `manual_audit.csv` with blank duration (not measured); mark CVCA prediction reviewed; update E028 to a narrowly scoped description of the association and mark the confirmed text `human_verified`.
 
 Confusion-matrix state at this point: 4 TP, 0 FP, 0 FN, 1 TN in the **five author-audited records**. The sample is deliberately selected and far below the target of 20 audited records; not suitable to estimate population precision or recall. The separate `CzechStartups` negative control remains unaudited.
+
+## CzechStartups author screenshot: second independently reviewed negative control
+
+User opened [CzechStartups About Us](https://czechstartups.gov.cz/en/about/), submitted a screenshot showing **"CzechStartups is the official website of the Czech startup scene"**, and asked:
+
+> «Я так понимаю это вот?»
+
+The webpage says it gathers information on programmes, investment support providers, investor news, events and start-up resources. This provides evidence of an **information portal**, not evidence that the site directly invests its own capital. Its partner entities (CzechInvest, IBM, Rockaway Capital, etc.) must not be treated as direct investment activity by the portal.
+
+Human decision: `czneg002` = `exclude` under the direct VC investor inclusion rule. Only the observed portal purpose in E029 is marked `human_verified`; we do **not** claim proof the portal has never made investments. Review duration not measured and deliberately omitted.
+
+Current manual decision tally: **6 candidates (4 include, 2 exclude)**, yielding TP=4, TN=2 in this purposively assembled pilot. No false positives/negatives have yet been observed; the sample is too small and selected to justify population accuracy claims. The unresolved candidate Nation1/N1 remains to be audited.
