@@ -51,3 +51,15 @@ These are actual changes to the earlier repository state, **not invented example
 - Changed E006 to cite the specific Credo portfolio URL and added E030 for investee-side confirmation of the investment role.
 - Important control: the USD 2 million **total round** is not Credo's individual investment amount.
 - The user has **not** yet independently confirmed the ElevenLabs article. Therefore E006/E030 remain `ai_source_checked_pending_human` and `manual_audit.csv` stays empty.
+
+## Follow-up: human confirmation from project author
+
+Actual user reply after viewing the ElevenLabs investment announcement:
+
+> «Открой официальную статью ElevenLabs от 23 января 2023 года и найди фразу `led by Credo Ventures`. - да такое есть»
+
+The user had earlier submitted a screenshot of the Credo portfolio page showing ElevenLabs, stage Pre-seed, 2022, current. The user now confirmed the investee-side phrase independently.
+
+**Decision:** `czvc001` marked `include` in `data/manual_audit.csv`, reviewed by `project_author`. Evidence entries E006 and E030 marked `human_verified` for the specific portfolio and lead-investor assertions; other Credo attributes (including fund capital and quoted ticket size) remain AI-screened and not independently audited.
+
+**Missing measurement:** minutes spent on the review were not recorded, so `minutes_spent` is empty. The validator permits an unknown duration rather than making up a number. Any precision calculated from a single audited company is flagged as a very small preliminary sample, not claimed as reliable general accuracy.
