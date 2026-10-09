@@ -1,0 +1,15 @@
+investor_name,field,value,unit,source_url,source_published_date,accessed_date,verification_status,notes
+Credo Ventures,investment_activity,Leads pre-seed rounds,,https://www.credoventures.com/,,2026-10-09,pending_manual_review,Official website states it leads pre-seed rounds
+Credo Ventures,typical_ticket_min,1000000,USD,https://www.credoventures.com/,,2026-10-09,pending_manual_review,Publicly advertised check size
+Credo Ventures,typical_ticket_max,5000000,USD,https://www.credoventures.com/,,2026-10-09,pending_manual_review,Publicly advertised check size
+Credo Ventures,geographic_focus,CEE and diaspora,,https://www.credoventures.com/,,2026-10-09,pending_manual_review,Official statement
+DEPO Ventures,investment_activity,Venture capital investing,,https://cvca.cz/en/membership/,,2026-10-09,pending_manual_review,Association profile may be stale
+DEPO Ventures,typical_ticket_min,50000,EUR,https://cvca.cz/en/membership/,,2026-10-09,pending_manual_review,Association historical profile
+DEPO Ventures,typical_ticket_max,300000,EUR,https://cvca.cz/en/membership/,,2026-10-09,pending_manual_review,Association historical profile
+Tensor Ventures,investment_activity,Deeptech investments,,https://cvca.cz/en/membership/,,2026-10-09,pending_manual_review,Association profile
+Tensor Ventures,typical_ticket_min,250000,EUR,https://cvca.cz/en/membership/,,2026-10-09,pending_manual_review,Association historical profile
+Tensor Ventures,typical_ticket_max,1000000,EUR,https://cvca.cz/en/membership/,,2026-10-09,pending_manual_review,Association historical profile
+Nation1,investment_activity,Pre-seed and seed startup financing,,https://cvca.cz/en/membership/,,2026-10-09,pending_manual_review,Association historical profile
+Tilia Impact Ventures,investment_activity,Impact investing,,https://cvca.cz/en/membership/,,2026-10-09,pending_manual_review,Association profile
+Startupstart.cz,entity_type,Startup-investor matching platform,,https://czechstartups.gov.cz/en/startup-ecosystem/investors/,,2026-10-09,pending_manual_review,Negative control; verify whether it invests directly
+Czech Private Equity and Venture Capital Association,entity_type,Industry association,,https://czechstartups.gov.cz/en/startup-ecosystem/investors/,,2026-10-09,pending_manual_review,Negative control
