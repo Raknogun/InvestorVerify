@@ -71,3 +71,15 @@ User submitted a screenshot of Tilia's "Portfolio Impact" area, with "21 compani
 AI found a public [Delta Green company press release dated 2024-05-28](https://www.deltagreen.cz/press-releases/cesti-energeticti-inovatori-v-centru-zajmu-delta-green-ziskava-2-2-milionu-eur-od-tilia-impact-ventures-credo-ventures-a-purple-ventures) naming Tilia as lead among three VC investors in a total EUR 2.2m round. Added claim E031 as `ai_source_checked_pending_human`. No individual contribution was disclosed; no claim of Tilia contributing EUR 2.2m has been made.
 
 **Pending author action:** open the Delta Green article and confirm the relationship independently. The Tilia investor-level human audit remains unentered.
+
+## Follow-up: Tilia author confirmation
+
+The project author submitted a screenshot of a Delta Green press release dated **2024-05-28**, highlighting the exact phrase:
+
+> Tilia Impact Ventures jako lídr investice
+
+User's actual response: **«да, это есть»**.
+
+This confirms the **investee-side claim** that Tilia led the financing round with Credo Ventures and Purple Ventures. Earlier user-supplied Tilia portfolio screenshot showed **21 companies as of Q4 2025**. The model classified Tilia as `include`; author confirmed this investor-level decision.
+
+Actions: created `czvc005` independent human audit record with author as reviewer; marked only E027 (portfolio count) and E031 (named lead-investor role) `human_verified`; other claims about ticket size, sector and capital remain AI-screened. Duration was not measured and remains blank. EUR 2.2m is the **total financing round**, not Tilia's personal contribution. Two reviewed investors are too few for representative precision.
