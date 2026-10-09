@@ -89,10 +89,14 @@ def validate(data_dir: Path) -> list[str]:
         if not row["reviewer"] or not row["evidence_checked"] or not row["decision_reason"]:
             errors.append(f"manual_audit.csv:{line}: reviewer/evidence/reason missing")
         if not valid_date(row["review_date"]): errors.append(f"manual_audit.csv:{line}: invalid date")
-        try:
-            if float(row["minutes_spent"]) <= 0: raise ValueError()
-        except ValueError:
-            errors.append(f"manual_audit.csv:{line}: invalid minutes")
+        if row["minutes_spent"].strip():
+            try:
+                if float(row["minutes_spent"]) <= 0: raise ValueError()
+            except ValueError:
+                errors.append(f"manual_audit.csv:{line}: invalid minutes")
+        for link in row["evidence_checked"].split(";"):
+            if not is_public_url(link.strip()):
+                errors.append(f"manual_audit.csv:{line}: invalid evidence URL")
     return errors
 
 if __name__ == "__main__":
