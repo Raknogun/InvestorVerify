@@ -130,3 +130,19 @@ The first identifies an *informal group of individual investors* investing **exc
 **Model classification nuance:** this is evidence of legitimate angel-type investment activity as described by the group, not evidence of a pooled VC fund. Its original `exclude` decision remains unchanged as a VC-only exclusion, and `human_review_status` is now `reviewed`. This must NOT be marketed as an AI victory at detecting "fake investors" worldwide: angels are expressly included in the employer's original assignment. No named completed transaction, individual member funding or investable capital was established.
 
 Author's audit: `cznew014=exclude` for **VC pilot only**, dated 2026-10-09; review minutes unrecorded. E057 and E105–E107 checked against user's screenshots. The sample is now 11 reviewed for VC scope (8 included VC funds, 2 excluded non-investor entities, 1 excluded genuine angel group). Original Nation1 `review` prediction remains an abstention: among 10 determinate VC eligibility predictions TP=7 and TN=3, no observed FP or FN. Not representative of the global investor population.
+
+## JIC STARCUBE — author screenshot and historic programme equity check
+
+User supplied a screenshot of the footnotes of JIC's [2016 official accelerator article](https://www.jic.cz/en/o-nas/pro-media/jic-starcube-with-a-new-manager-and-new-topics-for-this-years-round) and asked verbatim:
+
+> «это?»
+
+Author-visible source: since 2010 the accelerator had supported 72 projects which collectively raised **almost USD 5m from private-sector investors**; it provided 3-month workshops and mentoring, service and prototype assistance, some financial reimbursements, and starting from the 7th accelerator cohort required **transfer of a 2% interest** for programme participation.
+
+**Model risk corrected:** the 2% ownership transfer is not to be ignored or described as proof of cash investment. Conversely, the USD 5m figure belongs to alumni funded by **third-party** private investors and is not a Starcube fund AUM or its direct check. Distinguish equity-for-services from a pooled VC-manager with investments.
+
+AI independently opened JIC's older [2 Jun 2015 benefits article](https://www.jic.cz/en/o-nas/pro-media/join-czech-accelerator-jic-starcube-and-enjoy-up-to-4100-worth-of-benefits), which explains assistance packages worth up to EUR 4,100 for the 2% programme share. Model also checked [JIC's current page](https://www.jic.cz/en/needs/looking-for-funding), which identifies JIC Ventures as a **different investment fund**. Those two follow-up sources were not independently checked by the author and are marked `ai_source_checked_pending_human`.
+
+**Audit:** `cznew011` = `exclude` for **VC-only fund-manager eligibility**, not proven incapable of taking equity. One project-author review dated 2026-10-09; minutes not measured and left blank. Original frozen AI `exclude` unchanged; human-review status updated. E054 and E108–E110 author verified; E111 and E112 remain AI-screened.
+
+Now 12 VC-scope reviews (8 included VC funds, 4 excluded: two non-investor portals/association, one angel group, one accelerator). Among 11 determinate frozen AI decisions: TP=7, TN=4, FP=0, FN=0, with one Nation1 abstention. This purposively assembled pilot cannot estimate true general investor authenticity accuracy.

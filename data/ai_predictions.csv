@@ -16,7 +16,7 @@ cznew007,review,Parent group vs VC subfund not one VC record; avoid double count
 cznew008,include,Official VC fund site and terms,E051;E071;E072;E073;E074,2026-10-09,not_reviewed
 cznew009,review,Must reconcile current manager and new brand before duplicate merging,E052;E075;E076,2026-10-09,not_reviewed
 cznew010,include,Issuer explicitly states early-stage minority equity stakes,E053;E077;E078,2026-10-09,reviewed
-cznew011,exclude,No independent proof of Starcube own VC investment vehicle; exclude VC-only sample pending contrary evidence,E054,2026-10-09,not_reviewed
+cznew011,exclude,No independent proof of Starcube own VC investment vehicle; exclude VC-only sample pending contrary evidence,E054,2026-10-09,reviewed
 cznew012,review,"Confirmed investor, growth and private-equity mix not strict VC fund classification",E055,2026-10-09,not_reviewed
 cznew013,include,Corporate venture investments supported by direct testimonial,E056;E087,2026-10-09,not_reviewed
 cznew014,exclude,"Genuine angel investors; exclude VC-fund-only PILOT, not from future global angel population",E057,2026-10-09,reviewed
