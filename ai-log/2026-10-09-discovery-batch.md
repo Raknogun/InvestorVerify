@@ -58,3 +58,15 @@ The screenshots clearly state:
 **Actual model attribution correction:** initial E065 (`follow_on_investment_ceiling`) lacked explicit attribution and could mislead a reader into treating the EUR 100k as StartupYard's own investing power. Replaced the field with `partner_follow_on_investment_ceiling`, added DEPO discretion details, and marked only the directly inspected FAQ assertions `human_verified`. Added separately typed in-kind value, equity target and conditional total note statements. E044 and E064 updated to distinguish in-kind services from cash. Added regression test for this misattribution.
 
 **Unresolved:** who holds/invests the optional EUR 25k note legally, and whether the accelerator counts as a VC manager under the narrow pilot. The model's frozen `review` prediction is left unchanged, and `human_review_status` remains `not_reviewed`. No invented manual audit, review duration, or investor classification result.
+
+## Purple Ventures — author-confirmed investing terms, investor audit pending
+
+The user supplied a screenshot of the Purple Ventures **official investment strategy** and asked verbatim:
+
+> «Это?»
+
+It shows direct **minority equity stakes**, **pre-seed and seed** stages, **EUR 250k–400k initial ticket**, **4–7 years investment horizon**, and co-investing with other VC funds/angels, sometimes leading **up to 50% of rounds**. The last figure is not a 50% equity ownership assertion. The screenshot doesn't state total fund capital.
+
+Updated E053, E077, E078 as `human_verified`; added E092–E095 as author-verified statements with links to the primary site. Independently consulted the [Delta Green 2024 investee announcement](https://www.deltagreen.cz/press-releases/cesti-energeticti-inovatori-v-centru-zajmu-delta-green-ziskava-2-2-milionu-eur-od-tilia-impact-ventures-credo-ventures-a-purple-ventures), which explicitly names Purple Ventures as a member of the **three-investor EUR 2.2m total round**; stored as E096, pending **specific user confirmation** of Purple's participation. None of EUR 2.2m should be attributed to Purple individually.
+
+No human investor-level label has been recorded for Purple, and its frozen AI decision remains `include` but `human_review_status=not_reviewed`. The seven previous independent investor classifications remain unchanged.
