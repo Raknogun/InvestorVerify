@@ -11,7 +11,7 @@ REQUIRED = {
  "ai_predictions.csv": {"investor_id","ai_prediction","reason","supporting_evidence_ids","prediction_date","human_review_status"},
  "manual_audit.csv": {"investor_id","human_label","reviewer","review_date","minutes_spent","evidence_checked","decision_reason"}
 }
-NUMERIC = {"typical_ticket_min","typical_ticket_max","typical_ticket_min_historical","typical_ticket_max_historical","funds_managed_historical","portfolio_company_count_2025q4"}
+NUMERIC = {"typical_ticket_min","typical_ticket_max","typical_ticket_min_historical","typical_ticket_max_historical","funds_managed_historical","portfolio_company_count_2025q4","managed_capital_reported","funds_managed_count"}
 SOURCE_TYPES = {"primary","association","press","government","regulatory","other"}
 EVIDENCE_STATUSES = {"pending_manual_review","ai_source_checked_pending_human","human_verified","rejected"}
 

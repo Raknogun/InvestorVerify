@@ -181,3 +181,17 @@ The user supplied a screenshot of the [Newstream article dated September 19 2023
 The article also mentions VRgineers and Snuggs, consistent with the earlier historic Nation1 portfolio. Thus E037 was changed to `human_verified` for the **brand rename claim only**. N1's current [official site](https://n1.rocks/) (AI-read, not author-audited yet) lists Jaroslav Trojan, Marek Moravec and the Prague address Národní 135/14, consistent with the old CVCA profile. This is useful entity corroboration, **not proof that the legal fund vehicle stayed the same**.
 
 The original AI prediction `review` is preserved to avoid hindsight changes. No new human investor classification row, precision change or invented audit duration was added. Do not conflate this fund with the unrelated n1invest.co.
+
+## Current N1 team and capital verified by author
+
+Author independently provided two screenshots from [N1's official site](https://n1.rocks/) and stated verbatim:
+
+> «есть»
+
+The team screenshot identifies **Jaroslav Trojan** and **Marek Moravec** as partners and the Prague office as **Národní 135/14, Prague 1**; Jaroslav and the address match the archived Nation1 CVCA entry. Another screenshot contains:
+
+> Today we manage $60M across two funds focused on AI and healthcare.
+
+Evidence E038–E043 capture these **separate** current-site claims, marked `human_verified`. The as-of/source publication date is unknown: access date 2026-10-09 is **not** evidence of when managed capital was calculated. The figure is *self-reported capital managed*, not free deployable cash or a guarantee of audited AUM. It must not be confused with the EUR 35 million listed in the historical CVCA profile.
+
+**Entity-resolution conclusion:** the 2023 press rebrand, common public-facing partner and Prague address together strongly corroborate brand/business continuity from Nation1 to N1. Legal-vehicle identity and current regulator filing still require separate evidence. Do not merge similarly named n1invest.co. Frozen prediction `review` and human investor inclusion already recorded remain unchanged; no extra positive prediction or new audit row was manufactured.

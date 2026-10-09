@@ -28,6 +28,14 @@ class ValidationTests(unittest.TestCase):
     def copy_fixture(self,target):
         for source in (ROOT/"data").glob("*.csv"):
             (target/source.name).write_bytes(source.read_bytes())
+    def test_n1_capital_claim_unit_is_validated(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            target=Path(tmp); self.copy_fixture(target)
+            source=(target/"evidence.csv").read_text(encoding="utf-8")
+            self.assertIn("E040,czvc004,managed_capital_reported,60000000,USD",source)
+            (target/"evidence.csv").write_text(source.replace("E040,czvc004,managed_capital_reported,60000000,USD","E040,czvc004,managed_capital_reported,60000000,"),encoding="utf-8")
+            self.assertTrue(any("missing numeric unit" in e for e in validate(target)))
+
     def test_bad_evidence_reference(self):
         with tempfile.TemporaryDirectory() as tmp:
             target=Path(tmp); self.copy_fixture(target)

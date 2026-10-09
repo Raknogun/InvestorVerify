@@ -12,7 +12,7 @@ Investor directories frequently mix actual funds with advisers, associations and
 
 - [Research design and inclusion/exclusion rules](docs/PLAN.md)
 - [Candidate registry](data/candidates.csv): 7 candidates, including negative controls (not a market census)
-- [Claim-level evidence](data/evidence.csv): 37 claims with URLs, accessed date and verification stage
+- [Claim-level evidence](data/evidence.csv): 43 claims with URLs, accessed date and verification stage
 - [Frozen preliminary AI predictions](data/ai_predictions.csv): 4 include, 2 exclude, 1 review
 - [Independent audit register](data/manual_audit.csv): 7 independently reviewed candidates: five historical or current direct VC investors (Credo, Tilia, DEPO, Tensor, Nation1) and two non-investors (CVCA, CzechStartups). Nation1 is an audited investor but the original AI prediction stays `review` due to brand ambiguity
 - [Initial screening report](reports/INITIAL_SCREENING.md)
@@ -62,7 +62,7 @@ Precision is meaningful only for the **audited candidate sample**, not all inves
 - Audit sample currently has 7 independently reviewed candidates (5 includes; 2 excludes), but the AI originally abstained on Nation1 and its prediction is not retroactively rewritten; other candidates are pending.
 - No empirically supported worldwide investor count or costs yet.
 - Some disclosed capital figures are historical; there is not enough public evidence to infer current available capital.
-- Nation1 → N1 brand rename was author-confirmed from a 2023 Newstream article. Current legal-entity/fund-vehicle continuity still requires checking; original AI decision remains `review`.
+- Nation1 → N1 brand rename was author-confirmed from a 2023 Newstream article, and current partner Jaroslav Trojan and Prague address match the historical profile. N1's self-reported USD 60m managed across two funds (AI and healthcare focus) was verified on its website on 2026-10-09. This figure is neither available capital nor the historical EUR 35m reported by CVCA. Current legal-entity/fund-vehicle continuity remains unverified; original AI decision stays `review`.
 - The pilot is not exhaustive and has not measured recall in a global universe.
 - Next: manual review, scale sample, compute real metrics and global cost model.
 
