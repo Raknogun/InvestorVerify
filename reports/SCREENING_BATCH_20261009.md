@@ -1,6 +1,6 @@
 # AI screening of 20 Czech-connected VC candidates — 2026-10-09
 
-**Status: original AI predictions frozen; six completed VC-scope reviews among these 20 (Purple, Presto, JIC Ventures and J&T Ventures `include`; Garage Angels and Starcube `exclude` from VC managers only).** The project author also checked individual StartupYard FAQ statements, but the StartupYard organization-level status remains unresolved.
+**Current follow-up status (2026-10-11): frozen original AI predictions; ten completed author eligibility reviews among these 20 (Reflex, Presto, Miton, J&T, Kaya, Czech Founders VC, Purple, JIC Ventures `include`; Garage Angels and Starcube `exclude` from VC/CVC group scope only).** Original AI `review` for Miton and Czech Founders VC is preserved. StartupYard FAQ claims have been checked, but its manager eligibility remains unresolved.
 
 | AI decision | Count |
 |---|---:|
@@ -73,3 +73,9 @@ The author checked only the banner on https://czechfounders.vc/ announcing **lau
 
 ## Czech Founders VC completed human audit (2026-10-10)
 The author independently viewed [Schalast's Every Health investment report](https://www.schalast.com/schalast-advises-czech-founders-vc.php). It says Czech Founders VC led an overall EUR 1.1m venture round involving other investors. The full sum does not belong to Czech Founders VC. The article describes support from the United Founders community, not a legal company name change. Manual VC eligibility `include`; original AI `review` preserved as a second abstention. Author has not reviewed the separate continuity statement on the official LinkedIn account. No individual ticket size or AUM proven.
+
+## Miton Bookbot investment — author-reviewed (2026-10-11)
+
+Project author inspected [EU-Startups Bookbot article](https://www.eu-startups.com/2024/08/prague-based-bookbot-gets-e4-million-to-expand-second-hand-online-bookstore-in-dach-market/) and independently confirmed existing equity shareholder **Miton** participated in the **EUR 4m total** 2024 Series A, led by Genesis Growth Equity Fund I, at a **company valuation above EUR 20m**. None of those totals is Miton's own cheque or investable capital. Miton's separate [About/strategy](https://www.miton.cz/en/about) describes **"VC our own way"**, investments using its **own capital**, stage pre-seed/seed/Series A, and a standard EUR 300k–2m initial ticket. Its historical timeline names specialist projects MitonC and Miton Psychonauts. In line with the original direct venture investment eligibility criterion, author classifies **Miton as eligible venture investment group**, subtype `venture_builder_investor`, not necessarily a traditional pooled VC fund with outside LPs. The originally frozen AI prediction remains `review`. [Genesis's own participating-investor announcement](https://growth.genesis.cz/en/news/knihobot-en) corroborates the transaction and is an AI-sourced additional claim E139; specialist-fund subunits E140 remain pending project-author source checks. No double counting as separate managers without legal evidence.
+
+New claim status: E136/E137 author-verified; E139/E140 staged; E138 sector list still staged. Human review date 2026-10-11; duration unknown.

@@ -190,3 +190,17 @@ E048 was marked human_verified for own-capital venture investments. E131-E135 we
 AI independently researched https://www.eu-startups.com/2024/08/prague-based-bookbot-gets-e4-million-to-expand-second-hand-online-bookstore-in-dach-market/ reporting that Miton invested in Bookbot in 2021 and participated as an existing shareholder in its EUR 4m 2024 Series A led by Genesis Growth Equity. E136 and E137 were staged as ai_source_checked_pending_human: user has NOT inspected this article. The EUR 4m is the **total round**, not Miton's own amount. Site investment sectors E138 similarly await author review.
 
 Original model decision remains review, human_review_status remains not_reviewed. No organization-level audit decision or measured review minutes were fabricated.
+
+## Follow-up 2026-10-11: user verified Miton participating in Bookbot financing
+
+The user uploaded a screenshot from [EU-Startups Bookbot report](https://www.eu-startups.com/2024/08/prague-based-bookbot-gets-e4-million-to-expand-second-hand-online-bookstore-in-dach-market/) highlighting "existing shareholder Miton" and said verbatim:
+
+> «Вот»
+
+The visible article paragraph explicitly states **EUR 4m overall Series A**, **valuation over EUR 20m**, **Genesis Growth Equity Fund I as new lead investor**, with **existing shareholder Miton participating**. This is direct financing participation by an equity shareholder, not consultancy. The company valuation is not company capital invested or Miton's managed assets, and EUR 4m is not Miton's individual check.
+
+Researcher additionally consulted [Genesis Growth's direct co-investor press release](https://growth.genesis.cz/en/news/knihobot-en) as corroboration (E139) and the Miton homepage for its specialist fund names (E140); these new fields are model-source-reviewed only, not independently checked by the author. The sector listing E138 also remains AI-checked only.
+
+The project author has now verified both strategic own-capital VC-style activity and concrete investment into external startup Bookbot. The original plan included direct venture investing managers as eligible; applying this rule while explicitly naming the type `venture_builder_investor`, the author classifies `cznew005=include`. This is **not a claim** that Miton manages traditional pooled third-party LP VC funds. Original model `review` remains frozen and counts as a **third AI abstention** after Nation1 and Czech Founders VC, not an AI true positive. E136/E137 marked `human_verified`. Actual review minutes were never measured and remain blank.
+
+Metrics now 17 manually reviewed VC-eligibility candidates: 13 included, 4 excluded (two non-investors and two out-of-VC-type organizations). AI determinate results remain 14 (TP=10, TN=4, FP=FN=0), and 3 human-positive abstentions. Purposively selected sample cannot establish global investor legitimacy or per-field coverage.
