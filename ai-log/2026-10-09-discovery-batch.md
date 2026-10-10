@@ -220,3 +220,11 @@ AI independently examined the [full article](https://cc.cz/brnensti-y-soft-ventu
 Original AI decision `include` was preserved for `cznew013`; project-author investor eligibility label recorded as `include` from independently observed historical deal, date 2026-10-11, duration not measured. E145 and E146 record the user-observed headline and platform amount (`human_verified`); E147 and E148 reflect the model's article-body interpretation (AI-sourced, pending separate author inspection). Original fund-site evidence E056 and E087 not backfilled as human-verified because the user did not inspect that site.
 
 Now 19 investor-type labels audited for VC pilot: 15 eligible, 4 outside narrowly defined scope. Three AI `review` abstentions remain, of 16 determinate AI decisions there are 12 TP and 4 TN, no observed FP/FN, not statistically representative. One final manual review targeted before global volume/cost and missing-field estimates.
+
+## 2026-10-11 final audit — INVEN Capital in Driivz
+
+The user provided a screenshot from the investee [Driivz's dated news release](https://driivz.com/news/inven-capital-invests-driivz/) and wrote verbatim "вот". The visible phrase explicitly says INVEN Capital (CEZ Group fund) invested in Driivz. The *whole* round was USD 12m, **led by Centrica plc**, alongside Ombu Group. The Driivz page dates the investment **14 January 2019**. Amount of INVEN's individual investment is not given and must not be invented. Historical investment proof does not establish continued deployment or 2026 current managed capital.
+
+Preserved original AI classification `cznew019=include`; updated human_review_status to `reviewed` and saved project-author manual `include` classification dated 2026-10-11, minutes unmeasured and blank. E149 confirms direct transaction, E150 total USD 12m round, E151 Centrica lead and E152 EV charging sector. Investor-site E062/E081/E082/E083 not retroactively marked human-verified because not shown to the user.
+
+The pilot manual sample target is met: 20 of 27 candidates with human classification; 16 include and 4 excluded for VC-only scope (including one real angel-group and an accelerator). Frozen AI predictions: 17 determinate decisions, TP=13 TN=4 FP=FN=0, and 3 abstentions. This is a purposively selected pilot, not a representative global precision estimate.
