@@ -17,7 +17,7 @@ class ValidationTests(unittest.TestCase):
         self.assertFalse(is_public_url("file:///etc/passwd"))
     def test_twenty_reviewed_three_ai_abstentions(self):
         result=measure(ROOT/"data")
-        self.assertEqual(result["status"],"preliminary_small_sample")
+        self.assertEqual(result["status"],"measured")
         self.assertEqual(result["audited"],20)
         self.assertEqual(result["evaluated"],17)
         self.assertEqual(result["ambiguous_or_deferred"],3)
