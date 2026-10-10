@@ -11,6 +11,7 @@ Investor directories frequently mix actual funds with advisers, associations and
 ## Current deliverables (2026-10-11)
 
 - [Research design and inclusion/exclusion rules](docs/PLAN.md)
+- [Global public-source coverage and worldwide scaling scenarios](reports/GLOBAL_SCALE_ESTIMATE_20261011.md), with [reproducible scenario cost calculator](src/investorverify/global_estimate.py), [human-reviewed field coverage calculator](src/investorverify/coverage.py), and [model tests](tests/test_global_estimate.py). These are estimates, not a worldwide investor census.
 - [Candidate registry](data/candidates.csv): 27 candidates: 20 manually audited for VC scope and 7 AI-screened candidates without classification audit (not a census)
 - [Reproducible discovery source sightings](data/discovery_sightings.csv): 25 sourced sightings, including 5 deliberate name/alias duplicates
 - [Discovery batch report](reports/DISCOVERY_BATCH_20261009.md) and [candidate intake script](src/investorverify/discover.py): source-driven expansion and deduplication; **not** automated proof of direct investing
@@ -33,6 +34,8 @@ python -m investorverify.discover --check
 python -m investorverify.validate
 python -m unittest discover -s tests -v
 python -m investorverify.quality
+python -m investorverify.coverage
+python -m investorverify.global_estimate
 ```
 
 To refresh candidates from curated public-source sightings, run `python -m investorverify.discover --write` and review the Git diff before committing. To collect fresh public HTML headings into an **unverified staging CSV only**, run `python -m investorverify.discover --fetch-czechstartups` (requires internet and the website layout may change). Avoid excessive requests and respect site terms.
