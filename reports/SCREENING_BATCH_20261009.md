@@ -1,6 +1,6 @@
 # AI screening of 20 Czech-connected VC candidates — 2026-10-09
 
-**Current follow-up status (2026-10-11): frozen original AI predictions; twelve completed author eligibility reviews among these 20 (Reflex, Lighthouse, Presto, Miton, J&T, Kaya, Czech Founders VC, Purple, JIC Ventures, Y Soft Ventures `include`; Garage Angels and Starcube `exclude` from VC/CVC group scope only).** Original AI `review` for Miton and Czech Founders VC is preserved. StartupYard FAQ claims have been checked, but its manager eligibility remains unresolved.
+**Current follow-up status (2026-10-11): frozen original AI predictions; thirteen completed author eligibility reviews among these 20 (Reflex, Lighthouse, Presto, Miton, J&T, Kaya, Czech Founders VC, Purple, JIC Ventures, Y Soft Ventures, INVEN Capital `include`; Garage Angels and Starcube `exclude` from VC/CVC group scope only).** Original AI `review` for Miton and Czech Founders VC is preserved. StartupYard FAQ claims have been checked, but its manager eligibility remains unresolved.
 
 | AI decision | Count |
 |---|---:|
@@ -87,3 +87,8 @@ The author supplied a screenshot of [CzechStartups PEKAT VISION report](https://
 ## Y Soft Ventures / NenoVision manual review (2026-10-11)
 
 Author screenshot of [CzechCrunch, 16 July 2019](https://cc.cz/brnensti-y-soft-ventures-spousti-novy-investicni-fond-do-startupu-nenovision-posilaji-20-milionu-korun/) confirms the historical Y Soft Ventures announcement of **CZK 20m into NenoVision** and launch of a new venture vehicle. The body describes Y Soft Ventures II funded together with partners, and reports **CZK 20m from the investment platform overall**. Therefore this is not unambiguously **CZK 20m from parent Y Soft alone**. E145 (transaction participation) and E146 (announced vehicle deployment) are author-verified, while E147 and E148 (vehicle partners and 2019 sector strategy) come from text researched by AI and remain pending human verification. The original frozen AI include remains unchanged, while human include status was added. No current fund capital is inferred.
+
+## INVEN Capital — last pilot audit (2026-10-11)
+The author checked the [Driivz investee announcement, 14 January 2019](https://driivz.com/news/inven-capital-invests-driivz/), identifying INVEN Capital as ČEZ Group's investment fund and explicitly confirming its direct investment in EV charging-management company Driivz. Driivz describes a **USD 12 million total financing round** led by Centrica plc, with Ombu Group also participating; the amount personally invested by INVEN is **not disclosed**. Source-backed E149–E152 were marked author-verified. Original AI decision `include` was preserved and human label `include` added. Self-described EUR 2m–30m typical tickets and EUR 500m total capital (E081–E083) were not shown in the user screenshot and remain AI-sourced pending author verification.
+
+**Pilot completion:** 20 of 27 candidates manually audited, comprising 16 investment organizations included for VC scope and four excluded for VC scope (of the excluded, two real non-investors, one genuine angel group, one accelerator). Three model abstentions were retained; on 17 determinate predictions, TP=13 and TN=4, with no observed FP/FN. Intentional sampling means 100% observed conditional precision is not a global accuracy measure.
