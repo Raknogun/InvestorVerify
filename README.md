@@ -21,7 +21,7 @@ Investor directories frequently mix actual funds with advisers, associations and
 - [AI collaboration log](ai-log/): source and code work, actual issues and corrections; uses ChatGPT **not Claude Code**
 - [Python data validator](src/investorverify/validate.py), [precision measurement](src/investorverify/quality.py) and [unit tests](tests/test_validate.py)
 
-**Sixteen venture-investor includes and four VC excludes are too few to estimate production accuracy; Garage Angels is a real angel group, and Starcube is an accelerator with historical equity participation, not established as a pooled VC manager.** The calculator currently returns `preliminary_small_sample` and displays sample size. Our target is about 30 candidates and at least 20 independently audited entries; these are targets, not achievements.
+**Sixteen venture-investor includes and four VC excludes are too few to estimate production accuracy; Garage Angels is a real angel group, and Starcube is an accelerator with historical equity participation, not established as a pooled VC manager.** The calculator now returns `measured` because the 20-manual-review target has been met, **not because the purposive sample is representative**. We reviewed 20 of 27 discovered candidates (16 in VC scope, 4 out of VC scope), of which 17 had definite original AI labels: TP=13, TN=4, FP=0, FN=0; three original AI `review` predictions are abstentions. Observed precision among 13 predicted positive reviewed examples is 13/13. Do not project this to all Czech investors, different investor types or the world.
 
 ## Setup and checks
 
