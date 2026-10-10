@@ -2,7 +2,7 @@
 
 A small, reproducible Python research pilot for **Assignment A: Reliable Investor Database**.
 
-**Pilot:** venture capital organizations with a Czech market or office connection (not necessarily Czech legal domicile). **Status:** first AI-assisted web screening, **nineteen candidates audited for VC scope (15 venture-capital investors, 2 non-investors, 1 out-of-scope angel group, 1 accelerator); N1 brand/entity continuity pending**.
+**Pilot:** venture capital organizations with a Czech market or office connection (not necessarily Czech legal domicile). **Status:** first AI-assisted web screening, **twenty candidates audited for VC scope (16 venture-capital investors, 2 non-investors, 1 out-of-scope angel group, 1 accelerator); N1 brand/entity continuity pending**.
 
 ## Why this project exists
 
@@ -11,17 +11,17 @@ Investor directories frequently mix actual funds with advisers, associations and
 ## Current deliverables (2026-10-11)
 
 - [Research design and inclusion/exclusion rules](docs/PLAN.md)
-- [Candidate registry](data/candidates.csv): 27 candidates: 19 manually audited for VC scope and 8 AI-screened candidates without classification audit (not a census)
+- [Candidate registry](data/candidates.csv): 27 candidates: 20 manually audited for VC scope and 7 AI-screened candidates without classification audit (not a census)
 - [Reproducible discovery source sightings](data/discovery_sightings.csv): 25 sourced sightings, including 5 deliberate name/alias duplicates
 - [Discovery batch report](reports/DISCOVERY_BATCH_20261009.md) and [candidate intake script](src/investorverify/discover.py): source-driven expansion and deduplication; **not** automated proof of direct investing
-- [Claim-level evidence](data/evidence.csv): 148 claims with URLs, accessed date and verification stage
+- [Claim-level evidence](data/evidence.csv): 152 claims with URLs, accessed date and verification stage
 - [Frozen preliminary AI predictions](data/ai_predictions.csv): 27 total (20 newly AI-screened: 13 include, 2 exclude from **VC-only scope**, 5 review; original 7 predictions unchanged)
-- [Independent audit register](data/manual_audit.csv): 19 VC-scope reviews: fifteen included venture-capital investors (Credo, Tilia, DEPO, Tensor, Nation1, Purple, Presto, JIC Ventures, J&T Ventures, Reflex Capital, Kaya VC, Czech Founders VC, Miton venture investment group, Lighthouse Ventures, Y Soft Ventures), two non-investors (CVCA, CzechStartups), one real angel group (Garage Angels) and one accelerator (JIC STARCUBE) excluded only from the VC-fund-manager pilot. Nation1 original AI decision remains `review`
+- [Independent audit register](data/manual_audit.csv): 20 VC-scope reviews: sixteen included venture-capital investors (Credo, Tilia, DEPO, Tensor, Nation1, Purple, Presto, JIC Ventures, J&T Ventures, Reflex Capital, Kaya VC, Czech Founders VC, Miton venture investment group, Lighthouse Ventures, Y Soft Ventures, INVEN Capital), two non-investors (CVCA, CzechStartups), one real angel group (Garage Angels) and one accelerator (JIC STARCUBE) excluded only from the VC-fund-manager pilot. Nation1 original AI decision remains `review`
 - [Screening of 20 new candidates](reports/SCREENING_BATCH_20261009.md), [first seven candidates](reports/INITIAL_SCREENING.md)
 - [AI collaboration log](ai-log/): source and code work, actual issues and corrections; uses ChatGPT **not Claude Code**
 - [Python data validator](src/investorverify/validate.py), [precision measurement](src/investorverify/quality.py) and [unit tests](tests/test_validate.py)
 
-**Fifteen venture-investor includes and four VC excludes are too few to estimate production accuracy; Garage Angels is a real angel group, and Starcube is an accelerator with historical equity participation, not established as a pooled VC manager.** The calculator currently returns `preliminary_small_sample` and displays sample size. Our target is about 30 candidates and at least 20 independently audited entries; these are targets, not achievements.
+**Sixteen venture-investor includes and four VC excludes are too few to estimate production accuracy; Garage Angels is a real angel group, and Starcube is an accelerator with historical equity participation, not established as a pooled VC manager.** The calculator currently returns `preliminary_small_sample` and displays sample size. Our target is about 30 candidates and at least 20 independently audited entries; these are targets, not achievements.
 
 ## Setup and checks
 
@@ -37,7 +37,7 @@ python -m investorverify.quality
 
 To refresh candidates from curated public-source sightings, run `python -m investorverify.discover --write` and review the Git diff before committing. To collect fresh public HTML headings into an **unverified staging CSV only**, run `python -m investorverify.discover --fetch-czechstartups` (requires internet and the website layout may change). Avoid excessive requests and respect site terms.
 
-A clean run should show structural validation passing, tests passing and quality status `preliminary_small_sample` (19 VC-scope reviews: TP=12, TN=4, 3 abstentions). GitHub Actions runs the same checks on push. **Passing code tests does not verify real-world investor assertions.**
+A clean run should show structural validation passing, tests passing and quality status `preliminary_small_sample` (20 VC-scope reviews: TP=13, TN=4, 3 abstentions). GitHub Actions runs the same checks on push. **Passing code tests does not verify real-world investor assertions.**
 
 ## Data definitions
 
@@ -64,7 +64,7 @@ Precision is meaningful only for the **audited candidate sample**, not all inves
 
 ## Known limitations and next work
 
-- Audit sample has 19 VC-scope reviews (15 venture investor includes; 4 VC excludes: two non-investors, one angel group, one accelerator). Twelve of the 20 new records have human reviews; three original AI abstentions are Nation1, Czech Founders VC and Miton. This is not accuracy for all global investor types.
+- Audit sample has 20 VC-scope reviews (16 venture investor includes; 4 VC excludes: two non-investors, one angel group, one accelerator). Thirteen of the 20 new records have human reviews; three original AI abstentions are Nation1, Czech Founders VC and Miton. This is not accuracy for all global investor types.
 - No empirically supported worldwide investor count or costs yet.
 - Some disclosed capital figures are historical; there is not enough public evidence to infer current available capital.
 - Nation1 → N1 brand rename was author-confirmed from a 2023 Newstream article, and current partner Jaroslav Trojan and Prague address match the historical profile. N1's self-reported USD 60m managed across two funds (AI and healthcare focus) was verified on its website on 2026-10-09. This figure is neither available capital nor the historical EUR 35m reported by CVCA. Current legal-entity/fund-vehicle continuity remains unverified; original AI decision stays `review`.
@@ -78,10 +78,11 @@ Precision is meaningful only for the **audited candidate sample**, not all inves
 - StartupYard FAQ's financing terms have been checked by the project author, but its investor eligibility label is still `review`. Its €45k in-kind note and optional €25k cash must not be confused with €100k follow-on investments controlled by partner DEPO Ventures.
 - Czech Founders VC author screenshot confirms launch announcement of United Founders, **not a legal rename**. Its own official social post says Czech Founders VC continues operations, and Schalast's 2025 deal-counsel statement names it as investor in Every Health's total EUR 1.1m seed financing. The deal-counsel transaction statement is now author verified and investor-level label is `include`; the separate social-media continuity claim is still AI-source-checked. Initial AI `review` remains frozen.
 - Kaya VC homepage checked by project author: USD 500m self-reported total AUM versus USD 85m current fund size (neither is known available capital); USD 1m–3m homepage tickets; 60+ backed companies; founded 2011; CEE pre-seed and seed focus. Contradictory ticket claims on another official page still require checking. Riptides investment was author-confirmed by co-investor Portfolion; Kaya's investor-level `include` audit is complete.
+- INVEN Capital: Driivz's January 2019 investee announcement confirmed by author states INVEN invested as part of a **USD 12m total round** led by Centrica, also involving Ombu Group. Do not attribute the whole round to INVEN. Current capital metrics E081–E083 remain AI-screened only.
 - Y Soft Ventures: CzechCrunch's 2019 report was manually checked. It identifies a CZK 20m **collective Y Soft Ventures II platform investment** into NenoVision, and the platform drew capital from multiple financial partners. Do not assign the full CZK 20m solely to parent Y Soft, or treat its historical platform as current AUM. Original AI `include` preserved; manual label `include`.
 - Lighthouse Ventures: author verified historical investment in AI quality-control startup PEKAT VISION (announced June 2019) with qualitative investment of higher hundreds of thousands of EUR. Dated 2019 reporting lists original fund size EUR 23m, *not* verified as present-day AUM; the 2019 fund-size claim awaits a separate author check. Original AI include frozen, human audit include.
 - Miton: screenshots from its official website verify use of its own capital, an initial EUR 300k–2m ticket, and pre-seed/seed/Series A investing. EU-Startups Bookbot article was author checked: Miton participated as an existing shareholder in EUR 4m total Series A. Under the pilot direct-venture-investor rule, Miton is included as a *venture investment group* using own capital, **not** misrepresented as an outside-LP pooled VC fund; original AI `review` remains an abstention. Fund AUM and Miton's individual contribution are unknown.
-- Next: finish the final one manual VC pilot review (target 20), preserving frozen predictions, then report honest quality with abstentions and unknown-field coverage and build a globally scoped volume/cost scenario.
+- Pilot manual classification target of 20 achieved. Next: calculate verifiable per-field completeness, a cautious global public-only investor coverage estimate and scenarios for scaling and human-review costs; keep abstentions and selection bias explicit.
 
 ## AI use and transparency
 
