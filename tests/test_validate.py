@@ -279,6 +279,15 @@ class ValidationTests(unittest.TestCase):
         self.assertEqual(a["cznew009"]["human_label"],"include")
         self.assertEqual(measure(ROOT/"data")["ambiguous_or_deferred"],2)
 
+    def test_miton_pending_investor_decision(self):
+        from investorverify.discover import load_rows
+        e={r["evidence_id"]:r for r in load_rows(ROOT/"data"/"evidence.csv")}
+        p={r["investor_id"]:r for r in load_rows(ROOT/"data"/"ai_predictions.csv")}
+        self.assertEqual(e["E131"]["value"],"300000")
+        self.assertEqual(e["E132"]["value"],"2000000")
+        self.assertEqual(e["E136"]["verification_status"],"ai_source_checked_pending_human")
+        self.assertEqual(p["cznew005"]["ai_prediction"],"review")
+
     def test_bad_evidence_reference(self):
         with tempfile.TemporaryDirectory() as tmp:
             target=Path(tmp); self.copy_fixture(target)
