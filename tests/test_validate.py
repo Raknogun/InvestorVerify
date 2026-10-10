@@ -15,13 +15,13 @@ class ValidationTests(unittest.TestCase):
         self.assertTrue(is_public_url("https://example.org/portfolio"))
         self.assertFalse(is_public_url("http://localhost/a"))
         self.assertFalse(is_public_url("file:///etc/passwd"))
-    def test_seventeen_reviewed_three_ai_abstentions(self):
+    def test_eighteen_reviewed_three_ai_abstentions(self):
         result=measure(ROOT/"data")
         self.assertEqual(result["status"],"preliminary_small_sample")
-        self.assertEqual(result["audited"],17)
-        self.assertEqual(result["evaluated"],14)
+        self.assertEqual(result["audited"],18)
+        self.assertEqual(result["evaluated"],15)
         self.assertEqual(result["ambiguous_or_deferred"],3)
-        self.assertEqual(result["TP"],10)
+        self.assertEqual(result["TP"],11)
         self.assertEqual(result["TN"],4)
         self.assertEqual(result["FP"],0)
         self.assertEqual(result["precision"],1.0)
@@ -90,12 +90,12 @@ class ValidationTests(unittest.TestCase):
                          for label in ["include","review","exclude"]},
                          {"include":13,"review":5,"exclude":2})
         self.assertTrue(all(r["status"]=="ai_screened_pending_human" for r in new.values()))
-        self.assertEqual([r["investor_id"] for r in newer if r["human_review_status"]=="reviewed"],["cznew002","cznew004","cznew005","cznew006","cznew008","cznew009","cznew010","cznew011","cznew014","cznew015"])
-        self.assertEqual(sum(r["human_review_status"]=="not_reviewed" for r in newer),10)
+        self.assertEqual([r["investor_id"] for r in newer if r["human_review_status"]=="reviewed"],["cznew002","cznew003","cznew004","cznew005","cznew006","cznew008","cznew009","cznew010","cznew011","cznew014","cznew015"])
+        self.assertEqual(sum(r["human_review_status"]=="not_reviewed" for r in newer),9)
         owner={r["evidence_id"]:r["investor_id"] for r in evidence}
         self.assertTrue(all(all(owner.get(x)==r["investor_id"] for x in
                             r["supporting_evidence_ids"].split(";")) for r in newer))
-        self.assertEqual(len(evidence),140)
+        self.assertEqual(len(evidence),144)
 
     def test_mixed_type_angel_group_is_not_false_investor_label(self):
         from investorverify.discover import load_rows
@@ -128,7 +128,7 @@ class ValidationTests(unittest.TestCase):
         predictions={r["investor_id"]:r for r in load_rows(ROOT/"data"/"ai_predictions.csv")}
         self.assertEqual(predictions["cznew010"]["ai_prediction"],"include")
         self.assertEqual(predictions["cznew010"]["human_review_status"],"reviewed")
-        self.assertEqual(measure(ROOT/"data")["audited"],17)
+        self.assertEqual(measure(ROOT/"data")["audited"],18)
 
     def test_presto_strategy_versus_total_round_and_independent_news(self):
         from investorverify.discover import load_rows
@@ -144,7 +144,7 @@ class ValidationTests(unittest.TestCase):
         predictions={r["investor_id"]:r for r in load_rows(ROOT/"data"/"ai_predictions.csv")}
         self.assertEqual(predictions["cznew004"]["ai_prediction"],"include")
         self.assertEqual(predictions["cznew004"]["human_review_status"],"reviewed")
-        self.assertEqual(measure(ROOT/"data")["audited"],17)
+        self.assertEqual(measure(ROOT/"data")["audited"],18)
 
     def test_jic_round_amount_separate_from_own_commitment(self):
         from investorverify.discover import load_rows
@@ -158,7 +158,7 @@ class ValidationTests(unittest.TestCase):
         self.assertEqual(evidence["E079"]["verification_status"],"ai_source_checked_pending_human")
         self.assertEqual(predictions["cznew015"]["ai_prediction"],"include")
         self.assertEqual(predictions["cznew015"]["human_review_status"],"reviewed")
-        self.assertEqual(measure(ROOT/"data")["audited"],17)
+        self.assertEqual(measure(ROOT/"data")["audited"],18)
 
     def test_angel_group_type_scope(self):
         from investorverify.discover import load_rows
@@ -224,7 +224,7 @@ class ValidationTests(unittest.TestCase):
         self.assertEqual(e["E120"]["value"],"3300000")
         self.assertEqual(e["E121"]["field"],"investment_ticket_conflicting_claims")
         self.assertEqual(p["cznew008"]["human_review_status"],"reviewed")
-        self.assertEqual(measure(ROOT/"data")["audited"],17)
+        self.assertEqual(measure(ROOT/"data")["audited"],18)
 
     def test_kaya_fund_capital_claims_and_verified_deal(self):
         from investorverify.discover import load_rows
@@ -240,7 +240,7 @@ class ValidationTests(unittest.TestCase):
             self.assertEqual(e[key]["verification_status"],"human_verified")
         self.assertEqual(e["E121"]["verification_status"],"ai_source_checked_pending_human")
         self.assertEqual(p["cznew008"]["human_review_status"],"reviewed")
-        self.assertEqual(measure(ROOT/"data")["audited"],17)
+        self.assertEqual(measure(ROOT/"data")["audited"],18)
 
     def test_kaya_other_investor_not_misattributed(self):
         from investorverify.discover import load_rows
@@ -264,7 +264,7 @@ class ValidationTests(unittest.TestCase):
         self.assertEqual(e["E129"]["value"],"1100000")
         self.assertEqual(p["cznew009"]["ai_prediction"],"review")
         self.assertEqual(p["cznew009"]["human_review_status"],"reviewed")
-        self.assertEqual(measure(ROOT/"data")["audited"],17)
+        self.assertEqual(measure(ROOT/"data")["audited"],18)
 
     def test_czech_founders_specific_investment_and_abstention(self):
         from investorverify.discover import load_rows
@@ -304,6 +304,23 @@ class ValidationTests(unittest.TestCase):
         self.assertIn("venture builder",a["cznew005"]["decision_reason"])
         self.assertEqual(p["cznew005"]["ai_prediction"],"review")
         self.assertEqual(p["cznew005"]["human_review_status"],"reviewed")
+
+    def test_lighthouse_2019_direct_deal_and_historic_capital_separation(self):
+        from investorverify.discover import load_rows
+        e={r["evidence_id"]:r for r in load_rows(ROOT/"data"/"evidence.csv")}
+        p={r["investor_id"]:r for r in load_rows(ROOT/"data"/"ai_predictions.csv")}
+        a={r["investor_id"]:r for r in load_rows(ROOT/"data"/"manual_audit.csv")}
+        self.assertEqual(e["E141"]["verification_status"],"human_verified")
+        self.assertEqual(e["E142"]["field"],"direct_investment_amount_qualitative")
+        self.assertEqual(e["E142"]["value"],"Higher hundreds of thousands of EUR")
+        self.assertEqual(e["E143"]["field"],"historical_fund_size_reported")
+        self.assertEqual(e["E143"]["value"],"23000000")
+        self.assertEqual(e["E143"]["verification_status"],"ai_source_checked_pending_human")
+        self.assertEqual(e["E144"]["verification_status"],"human_verified")
+        self.assertEqual(p["cznew003"]["ai_prediction"],"include")
+        self.assertEqual(p["cznew003"]["human_review_status"],"reviewed")
+        self.assertEqual(a["cznew003"]["human_label"],"include")
+        self.assertEqual(measure(ROOT/"data")["audited"],18)
 
     def test_bad_evidence_reference(self):
         with tempfile.TemporaryDirectory() as tmp:
