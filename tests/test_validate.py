@@ -277,7 +277,7 @@ class ValidationTests(unittest.TestCase):
         self.assertEqual(p["cznew009"]["ai_prediction"],"review")
         self.assertEqual(p["cznew009"]["human_review_status"],"reviewed")
         self.assertEqual(a["cznew009"]["human_label"],"include")
-        self.assertEqual(measure(ROOT/"data")["ambiguous_or_deferred"],2)
+        self.assertEqual(measure(ROOT/"data")["ambiguous_or_deferred"],3)
 
     def test_miton_pending_investor_decision(self):
         from investorverify.discover import load_rows
