@@ -14,7 +14,7 @@ Investor directories frequently mix actual funds with advisers, associations and
 - [Candidate registry](data/candidates.csv): 27 candidates: 16 manually audited for VC scope and 11 AI-screened candidates without classification audit (not a census)
 - [Reproducible discovery source sightings](data/discovery_sightings.csv): 25 sourced sightings, including 5 deliberate name/alias duplicates
 - [Discovery batch report](reports/DISCOVERY_BATCH_20261009.md) and [candidate intake script](src/investorverify/discover.py): source-driven expansion and deduplication; **not** automated proof of direct investing
-- [Claim-level evidence](data/evidence.csv): 130 claims with URLs, accessed date and verification stage
+- [Claim-level evidence](data/evidence.csv): 138 claims with URLs, accessed date and verification stage
 - [Frozen preliminary AI predictions](data/ai_predictions.csv): 27 total (20 newly AI-screened: 13 include, 2 exclude from **VC-only scope**, 5 review; original 7 predictions unchanged)
 - [Independent audit register](data/manual_audit.csv): 16 VC-scope reviews: twelve included VC investors (Credo, Tilia, DEPO, Tensor, Nation1, Purple, Presto, JIC Ventures, J&T Ventures, Reflex Capital, Kaya VC, Czech Founders VC), two non-investors (CVCA, CzechStartups), one real angel group (Garage Angels) and one accelerator (JIC STARCUBE) excluded only from the VC-fund-manager pilot. Nation1 original AI decision remains `review`
 - [Screening of 20 new candidates](reports/SCREENING_BATCH_20261009.md), [first seven candidates](reports/INITIAL_SCREENING.md)
@@ -78,6 +78,7 @@ Precision is meaningful only for the **audited candidate sample**, not all inves
 - StartupYard FAQ's financing terms have been checked by the project author, but its investor eligibility label is still `review`. Its €45k in-kind note and optional €25k cash must not be confused with €100k follow-on investments controlled by partner DEPO Ventures.
 - Czech Founders VC author screenshot confirms launch announcement of United Founders, **not a legal rename**. Its own official social post says Czech Founders VC continues operations, and Schalast's 2025 deal-counsel statement names it as investor in Every Health's total EUR 1.1m seed financing. The deal-counsel transaction statement is now author verified and investor-level label is `include`; the separate social-media continuity claim is still AI-source-checked. Initial AI `review` remains frozen.
 - Kaya VC homepage checked by project author: USD 500m self-reported total AUM versus USD 85m current fund size (neither is known available capital); USD 1m–3m homepage tickets; 60+ backed companies; founded 2011; CEE pre-seed and seed focus. Contradictory ticket claims on another official page still require checking. Riptides investment was author-confirmed by co-investor Portfolion; Kaya's investor-level `include` audit is complete.
+- Miton: screenshots from its official website verify use of its own capital, an initial EUR 300k–2m ticket, and pre-seed/seed/Series A investing. EU-Startups names Miton as Bookbot investor in a EUR 4m total Series A, awaiting author source check; original AI `review` and unreviewed entity status remain unchanged.
 - Next: independently audit the 20 new AI-screened candidates, preserving frozen predictions, then compute quality metrics and global cost model.
 
 ## AI use and transparency
