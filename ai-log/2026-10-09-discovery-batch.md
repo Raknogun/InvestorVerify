@@ -180,3 +180,13 @@ The project author shared a screenshot from [Schalast's report on Every Health](
 Correction and attribution: EUR 1.1m is the *overall round*, not Czech Founders VC's individual cheque. The screenshot does not establish a legal renaming, merger or continuity of fund vehicle. Author has not separately checked the external Czech Founders social statement (E127).
 
 The manual investor-type decision is now `cznew009=include`, dated 2026-10-10, review minutes unknown and blank. E128 and E129 moved to `human_verified`; new E130 records the community relationship. Original AI `review` remained unchanged, with human status updated to `reviewed`. This is a second abstention alongside Nation1, not a new AI true positive. Of 16 human VC-scope reviews, 14 original definitive AI predictions were evaluated (TP=10, TN=4), but this purpose-selected sample cannot establish production precision.
+
+## Miton strategy screenshots — 2026-10-11
+
+The project author uploaded two screenshots from https://www.miton.cz/en/about and asked "Это?". First screenshot says **We invest our own capital**. Second states initial ticket **EUR 300k-2m**, stages **Pre-seed, Seed and Series A**, with follow-on investments in a similar range or higher.
+
+E048 was marked human_verified for own-capital venture investments. E131-E135 were added as separately human-confirmed capital source, ticket bounds, stage, and follow-on terms. None establishes the presence of external limited partners, current amount of capital under management, or available cash.
+
+AI independently researched https://www.eu-startups.com/2024/08/prague-based-bookbot-gets-e4-million-to-expand-second-hand-online-bookstore-in-dach-market/ reporting that Miton invested in Bookbot in 2021 and participated as an existing shareholder in its EUR 4m 2024 Series A led by Genesis Growth Equity. E136 and E137 were staged as ai_source_checked_pending_human: user has NOT inspected this article. The EUR 4m is the **total round**, not Miton's own amount. Site investment sectors E138 similarly await author review.
+
+Original model decision remains review, human_review_status remains not_reviewed. No organization-level audit decision or measured review minutes were fabricated.
