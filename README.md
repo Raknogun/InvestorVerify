@@ -10,6 +10,7 @@ Investor directories frequently mix actual funds with advisers, associations and
 
 ## Current deliverables (2026-10-11)
 
+- [Final submission-readiness review and open limitations](reports/SUBMISSION_READINESS_20261011.md)
 - [Research design and inclusion/exclusion rules](docs/PLAN.md)
 - [Global public-source coverage and worldwide scaling scenarios](reports/GLOBAL_SCALE_ESTIMATE_20261011.md), with [reproducible scenario cost calculator](src/investorverify/global_estimate.py), [human-reviewed field coverage calculator](src/investorverify/coverage.py), and [model tests](tests/test_global_estimate.py). These are estimates, not a worldwide investor census.
 - [Candidate registry](data/candidates.csv): 27 candidates: 20 manually audited for VC scope and 7 AI-screened candidates without classification audit (not a census)
@@ -85,7 +86,7 @@ Precision is meaningful only for the **audited candidate sample**, not all inves
 - Y Soft Ventures: CzechCrunch's 2019 report was manually checked. It identifies a CZK 20m **collective Y Soft Ventures II platform investment** into NenoVision, and the platform drew capital from multiple financial partners. Do not assign the full CZK 20m solely to parent Y Soft, or treat its historical platform as current AUM. Original AI `include` preserved; manual label `include`.
 - Lighthouse Ventures: author verified historical investment in AI quality-control startup PEKAT VISION (announced June 2019) with qualitative investment of higher hundreds of thousands of EUR. Dated 2019 reporting lists original fund size EUR 23m, *not* verified as present-day AUM; the 2019 fund-size claim awaits a separate author check. Original AI include frozen, human audit include.
 - Miton: screenshots from its official website verify use of its own capital, an initial EUR 300k–2m ticket, and pre-seed/seed/Series A investing. EU-Startups Bookbot article was author checked: Miton participated as an existing shareholder in EUR 4m total Series A. Under the pilot direct-venture-investor rule, Miton is included as a *venture investment group* using own capital, **not** misrepresented as an outside-LP pooled VC fund; original AI `review` remains an abstention. Fund AUM and Miton's individual contribution are unknown.
-- Pilot manual classification target of 20 achieved. Next: calculate verifiable per-field completeness, a cautious global public-only investor coverage estimate and scenarios for scaling and human-review costs; keep abstentions and selection bias explicit.
+- Pilot target of 20 independent investor-classification reviews achieved; the [attribute coverage calculator](src/investorverify/coverage.py) and [worldwide scenario report](reports/GLOBAL_SCALE_ESTIMATE_20261011.md) are now published. Before submission, the [final readiness review](reports/SUBMISSION_READINESS_20261011.md) lists remaining source/completeness limitations and the format difference between ChatGPT logs and Claude Code `/export`.
 
 ## AI use and transparency
 
