@@ -44,10 +44,10 @@ A clean run should show validation and tests passing, with quality status `measu
 
 ## Data definitions
 
-- `candidates.csv`: sourced organizations and aliases; a screened row is not automatically a human-verified investor. The 20 new rows are marked `ai_screened_pending_human`.
+- `candidates.csv`: sourced organizations and aliases. The 20 new rows retain their **frozen intake-stage marker** `ai_screened_pending_human`; current review status is in `ai_predictions.csv` and the final human label is in `manual_audit.csv`.
 - `evidence.csv`: each field has its own URL, source type, publication date if known, access date, and verification status.
 - `ai_predictions.csv`: screening result, frozen before human review. `review` is intentionally unresolved.
-- `manual_audit.csv`: source-based independent human classifications with reviewer, date and time spent.
+- `manual_audit.csv`: source-based independent human classifications with reviewer and date; `minutes_spent` is blank because review time **was not measured** in this pilot.
 - `*_historical`: historical association-directory figures. Do not treat as current AUM, available money, fund size or investment ticket.
 - `country_focus=CZ`: Czech-connected pilot, not a claim that all legal entities are domiciled in Czechia.
 
@@ -68,7 +68,7 @@ Precision is meaningful only for the **audited candidate sample**, not all inves
 ## Known limitations and next work
 
 - Audit sample has 20 VC-scope reviews (16 venture investor includes; 4 VC excludes: two non-investors, one angel group, one accelerator). Thirteen of the 20 new records have human reviews; three original AI abstentions are Nation1, Czech Founders VC and Miton. This is not accuracy for all global investor types.
-- No empirically supported worldwide investor count or costs yet.
+- Worldwide [volume and cost scenarios](reports/GLOBAL_SCALE_ESTIMATE_20261011.md) have been published, but they are **planning assumptions**, not a global census or empirical production costs.
 - Some disclosed capital figures are historical; there is not enough public evidence to infer current available capital.
 - Nation1 → N1 brand rename was author-confirmed from a 2023 Newstream article, and current partner Jaroslav Trojan and Prague address match the historical profile. N1's self-reported USD 60m managed across two funds (AI and healthcare focus) was verified on its website on 2026-10-09. This figure is neither available capital nor the historical EUR 35m reported by CVCA. Current legal-entity/fund-vehicle continuity remains unverified; original AI decision stays `review`.
 - The pilot is not exhaustive and has not measured recall in a global universe.
