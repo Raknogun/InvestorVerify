@@ -40,7 +40,7 @@ python -m investorverify.global_estimate
 
 To refresh candidates from curated public-source sightings, run `python -m investorverify.discover --write` and review the Git diff before committing. To collect fresh public HTML headings into an **unverified staging CSV only**, run `python -m investorverify.discover --fetch-czechstartups` (requires internet and the website layout may change). Avoid excessive requests and respect site terms.
 
-A clean run should show structural validation passing, tests passing and quality status `preliminary_small_sample` (20 VC-scope reviews: TP=13, TN=4, 3 abstentions). GitHub Actions runs the same checks on push. **Passing code tests does not verify real-world investor assertions.**
+A clean run should show validation and tests passing, with quality status `measured` (20 VC-scope reviews: TP=13, TN=4, 3 original AI abstentions). This reports a measured pilot metric, not a statistically representative accuracy estimate. GitHub Actions runs the same checks on push. **Passing code tests does not verify real-world investor assertions.**
 
 ## Data definitions
 
