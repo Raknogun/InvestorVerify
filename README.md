@@ -36,7 +36,7 @@ python -m investorverify.global_estimate
 
 No API token is needed. Source verification was performed separately through ChatGPT-assisted research and author inspection. **A passing test suite demonstrates consistency of the submitted files, not independently proven investor-market accuracy.**
 
-## Current deliverables (2026-10-11)
+## Current deliverables (2026-10-14)
 
 - [Final submission-readiness review and open limitations](reports/SUBMISSION_READINESS_20261011.md)
 - [Research design and inclusion/exclusion rules](docs/PLAN.md)
