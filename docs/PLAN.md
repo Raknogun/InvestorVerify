@@ -1,4 +1,10 @@
-# Research plan — InvestorVerify (draft 0.1)
+# Research plan — InvestorVerify
+
+> Initial plan was drafted **before** manual auditing. Sections below preserve original methodological choices and subsequent type clarifications. This note records the **as-built status on 2026-10-14** so that old targets are not mistaken for current outcomes.
+>
+> **Actual pilot:** 27 Czech-connected candidates, 20 independently assigned VC-eligibility labels, 16 includes and 4 VC-scope exclusions. There are 3 abstentions among the original model predictions. The observed 13 TP / 4 TN / 0 FP / 0 FN are valid only for this deliberately selected pilot, not for all investors. No review durations were recorded. The published global candidate estimates and costs are hypothetical scenarios, **not** bottom-up measurements from a worldwide census or timed reviewer workload. Several investor capital figures remain unknown.
+>
+> The original VC/CVC eligibility sample deliberately excludes angel-group **entities as VC managers**; in the worldwide plan the same angel individuals/groups can qualify in the **angel** category, after their own source verification. The distinction must not be interpreted as evidence that they are fake investors.
 
 ## Objective and scope
 Build a reproducible, evidence-backed directory of actual investors. Pilot: Czech-connected VC managers, ~30 candidates, manually verify at least 20 where practical. Targets are not measured achievements.
