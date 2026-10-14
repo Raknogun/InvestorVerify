@@ -353,6 +353,23 @@ class ValidationTests(unittest.TestCase):
             path=target/"ai_predictions.csv"
             path.write_text(path.read_text().replace("E001;E006","E999;E006"))
             self.assertTrue(any("cross-investor evidence" in e for e in validate(target)))
+    def test_review_flag_must_match_manual_audit(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            target=Path(tmp); self.copy_fixture(target)
+            path=target/"ai_predictions.csv"
+            with path.open("r",encoding="utf-8",newline="") as f:
+                rows=list(csv.DictReader(f))
+                fields=list(rows[0])
+            reviewed_row=next(r for r in rows if r["investor_id"]=="czvc001")
+            self.assertEqual(reviewed_row["human_review_status"],"reviewed")
+            reviewed_row["human_review_status"]="not_reviewed"
+            with path.open("w",encoding="utf-8",newline="") as f:
+                writer=csv.DictWriter(f,fieldnames=fields)
+                writer.writeheader()
+                writer.writerows(rows)
+            self.assertTrue(any("human review status / manual audit mismatch" in e
+                                for e in validate(target)))
+
     def test_quality_math_synthetic_labels(self):
         with tempfile.TemporaryDirectory() as tmp:
             target=Path(tmp); self.copy_fixture(target)
@@ -366,6 +383,18 @@ class ValidationTests(unittest.TestCase):
                   ("czvc004","unclear","https://cvca.cz/en/nation1-2/")
                 ]:
                     w.writerow([ident,label,"test_fixture","2026-10-09","5",url,"synthetic test only"])
+            # The fixture replaces the audit labels; keep mutable reviewed flags in sync.
+            pred_path=target/"ai_predictions.csv"
+            with pred_path.open("r",encoding="utf-8",newline="") as f:
+                rows=list(csv.DictReader(f))
+                keys=list(rows[0])
+            fixture_audited={"czvc001","czvc002","czneg001","czvc004"}
+            for row in rows:
+                row["human_review_status"]="reviewed" if row["investor_id"] in fixture_audited else "not_reviewed"
+            with pred_path.open("w",encoding="utf-8",newline="") as f:
+                writer=csv.DictWriter(f,fieldnames=keys)
+                writer.writeheader()
+                writer.writerows(rows)
             result=measure(target)
             self.assertEqual((result["TP"],result["FP"],result["TN"],result["ambiguous_or_deferred"]),(1,1,1,1))
             self.assertEqual(result["precision"],0.5)
