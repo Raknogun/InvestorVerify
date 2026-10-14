@@ -2,7 +2,7 @@
 
 ## Executive check
 
-Status: **research pilot completed; final submission preparation in progress**. Deadline from Clientelo assignment: **16 October 2026**. The public GitHub repository is [Raknogun/InvestorVerify](https://github.com/Raknogun/InvestorVerify).
+Status as of **14 October 2026**: **research pilot completed; final documentation and email hand-off pending**. Deadline from Clientelo assignment: **16 October 2026**. The public GitHub repository is [Raknogun/InvestorVerify](https://github.com/Raknogun/InvestorVerify).
 
 | Required deliverable | Status | Grounded location / remaining condition |
 |---|---|---|
@@ -35,15 +35,15 @@ Status: **research pilot completed; final submission preparation in progress**. 
 ## Remaining limitations and decisions before sending
 
 **High priority:**
-- The task explicitly asks for a Claude Code conversation `/export` in `ai-log`, while the work was performed in ChatGPT. Do **not** fabricate Claude exports. Ask Clientelo whether plain-text ChatGPT-assisted research logs are acceptable as the permitted “similar tool,” or include a candid explanation in the submission.
+- The assignment explicitly **permits Claude Code or a similar tool**. The chosen tool was ChatGPT. The requested Claude Code `/export` file cannot exist for these sessions, so the `ai-log/` directory contains **dated ChatGPT research/development summaries with actual selected excerpts, not a full transcript or a fictitious Claude export**. Disclose that difference explicitly in the submission, rather than requesting separate permission to use a tool the assignment already permits.
 - Capital/AUM/current deployable money is **not publicly disclosed for most sampled investors**. Among 16 included entities, only 2 have manually confirmed *some* published total capital/AUM/fund-size statement; none has independently established free deployable capital. Preserve `unknown` rather than inventing values. Employer should see this as a quantified data limitation.
 - Audit sample is deliberately selected, **not random**. 13/13 observed positive-class precision applies only to 13 definite AI-positive audited rows. Three AI abstentions were manually verified and are not false negatives.
 
 **Recommended polish:**
-- Add one clear final report section mapping the user-facing take-home assignment to repository artifacts (this file already does this).
+- Use the concise [README evaluation summary](../README.md) as the starting point; it now maps the task to key outputs and explains what is and is not automated.
 - If time permits, check a stratified random sample from *both* originally included and rejected pool; the small Czech pilot cannot estimate general recall.
 - Review public source status and the dated/undated distinction in evidence; a 2019 investment establishes historical authenticity, not 2026 active investment.
-- Use the last days before 16 October for README clarity, checking that CI is green, and drafting the actual submission email.
+- Confirm the final GitHub Actions run is green **after the last change**, then reply to the original Matej Lörinc email with the public repository link before 16 October. **The recipient email address is not present in the copied assignment; reply within the original email thread.**
 
 ## Evidence-backed source benchmark sanity checks
 
