@@ -106,6 +106,17 @@ def validate(data_dir: Path) -> list[str]:
         for link in row["evidence_checked"].split(";"):
             if not is_public_url(link.strip()):
                 errors.append(f"manual_audit.csv:{line}: invalid evidence URL")
+    # Human-review state is mutable workflow metadata; AI decisions themselves remain frozen.
+    # A reviewed flag without a corresponding audit row (or the reverse) is a data-integrity error.
+    for line, row in enumerate(predictions, 2):
+        status = row["human_review_status"]
+        ident = row["investor_id"]
+        if status not in {"reviewed", "not_reviewed"}:
+            errors.append(f"ai_predictions.csv:{line}: invalid human_review_status")
+        elif (ident in reviewed) != (status == "reviewed"):
+            errors.append(f"ai_predictions.csv:{line}: human review status / manual audit mismatch")
+    for ident in reviewed - seen:
+        errors.append(f"manual_audit.csv: no AI prediction for audited candidate {ident}")
     return errors
 
 if __name__ == "__main__":
