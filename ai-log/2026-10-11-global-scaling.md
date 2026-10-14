@@ -27,7 +27,7 @@ For the **16 included** investors, the code `python -m investorverify.coverage` 
 - `src/investorverify/global_estimate.py`: three cost/volume scenarios and formulas.
 - `src/investorverify/coverage.py`: coverage among human-confirmed VC-scope investors.
 - `tests/test_global_estimate.py`: repeatable scenario and coverage assertions.
-- Updated README links. This is a manually written AI collaboration log, **not** a fabricated Claude Code `/export` transcript.
+- Updated README links. This is an **AI-authored retrospective collaboration summary** based on the actual project work, **not** a verbatim ChatGPT export or a fabricated Claude Code `/export` transcript.
 
 ## Remaining risks before submitting
 
