@@ -8,6 +8,34 @@ A small, reproducible Python research pilot for **Assignment A: Reliable Investo
 
 Investor directories frequently mix actual funds with advisers, associations and information portals. An AI-generated list can also confuse fund size, assets under management, typical investment amount and capital raised by investee companies. InvestorVerify keeps every material claim attached to a source, and separates machine predictions from independent human decisions.
 
+## Evaluation summary
+
+| Output | Pilot result |
+|---|---|
+| Scope | Czech-connected VC, CVC and direct venture investing groups |
+| Candidate organizations | **27** sourced, **20** reviewed by the project author |
+| VC-pilot human labels | **16 include**, **4 exclude** (including one real angel group outside the **VC-only** scope) |
+| Original AI predictions on audited subset | **13 TP**, **4 TN**, **0 observed FP/FN** and **3 abstentions** (`review`) |
+| Evidence | **152** claim-level source records with field-specific verification status |
+| Published capital evidence | Incomplete; only **2/16** included investors have author-checked *some reported* fund/AUM metric, not available cash |
+| Worldwide assessment | Explicit low/base/high **planning scenarios**, not measured global counts |
+
+**What is automated:** reproducible source-sighting deduplication, CSV structural validation, analysis of already recorded AI predictions against human audit, field-coverage reporting and cost-model calculations. The optional directory-page fetch writes **unverified staging data only**. **What is not automated:** ongoing worldwide crawling, calling an LLM through an API, factual confirmation of source claims or full real-time financial due diligence.
+
+### Reviewer quick start
+
+```bash
+python -m pip install -e .
+python -m investorverify.discover --check
+python -m investorverify.validate
+python -m unittest discover -s tests -v
+python -m investorverify.quality
+python -m investorverify.coverage
+python -m investorverify.global_estimate
+```
+
+No API token is needed. Source verification was performed separately through ChatGPT-assisted research and author inspection. **A passing test suite demonstrates consistency of the submitted files, not independently proven investor-market accuracy.**
+
 ## Current deliverables (2026-10-11)
 
 - [Final submission-readiness review and open limitations](reports/SUBMISSION_READINESS_20261011.md)
@@ -90,7 +118,7 @@ Precision is meaningful only for the **audited candidate sample**, not all inves
 
 ## AI use and transparency
 
-Work was completed with OpenAI ChatGPT and public-web research. `ai-log/` documents prompts, actual source-screening choices and model mistakes. This is **not** a genuine Claude Code `/export`; we do not pretend otherwise. The take-home permits similar tooling but the alternate logging format may require employer confirmation.
+Work was completed with **OpenAI ChatGPT**, a permitted alternative AI tool under the assignment wording *"Claude Code alebo v podobnom nástroji"*. The [`ai-log/`](ai-log/) directory contains dated research/engineering session summaries and genuine short user excerpts. **It is not a full, verbatim chat transcript or a Claude Code `/export` file.** This difference is openly disclosed; no Claude session or AI-independent work has been fabricated.
 
 **Public sources only**. No paywalled datasets, private investor contact databases or personal credentials are committed.
 
