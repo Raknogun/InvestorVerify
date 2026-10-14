@@ -2,7 +2,7 @@
 
 **AI tool used:** OpenAI ChatGPT with connected GitHub tooling and public-web source research. Assignment A explicitly permits **"Claude Code alebo v podobnom nástroji"** (Claude Code or a comparable tool).
 
-**Log format:** dated **human-written/AI-assisted summaries of actual ChatGPT sessions**, containing selected **verbatim user excerpts** where captured. These documents are **not a full verbatim conversation export**, nor are they Claude Code `/export` transcripts. No Claude Code sessions, commands, or fictional prompts have been represented as real.
+**Log format:** dated **AI-authored retrospective summaries of actual ChatGPT-assisted work**, containing **selected verbatim user excerpts** where recorded. The project author independently inspected specific public source pages during the sessions; those checks are described in the notes. These files are **not a full verbatim conversation export**, nor are they Claude Code `/export` transcripts. We do not claim that a coding agent ran unattended or that reconstructed work instructions were original verbatim prompts.
 
 ## Index
 
@@ -13,6 +13,20 @@
 | [2026-10-09-reflex.md](2026-10-09-reflex.md) | Direct investment verification and attribution of individual versus whole-round amounts |
 | [2026-10-09-kaya-final-audit.md](2026-10-09-kaya-final-audit.md) | Specific Riptides deal, fund-vs-AUM handling and conflicting ticket claims |
 | [2026-10-11-global-scaling.md](2026-10-11-global-scaling.md) | Worldwide public-investor sources and explicitly hypothetical candidate and cost estimates |
+
+## Instructions, verification and corrections — quick evidence map
+
+The following are **retrospective paraphrases of the tasks given to ChatGPT**, **not** a recovered literal prompt sequence. ChatGPT was used conversationally with connected GitHub access; no persistent Claude Code agents were run.
+
+| Task instructions to AI (paraphrased) | How the author controlled the result | Concrete errors/limitations found |
+|---|---|---|
+| Find Czech-connected VC investors using only public sources. Do **not** classify a directory entry as proof of investing. | Opened fund portfolio websites and investee/co-investor announcements; checked that named funds really financed a company. | The first dataset included a weakly supported entity (`Startupstart.cz`); removed and replaced it with a separately identified information portal, rather than claiming it was an investor. |
+| Record the fund's sector, typical check, capital and a claim-specific URL; do not fill unavailable numbers. | Verified screenshots of Kaya's funding terms, Nation1/N1's stated managed capital and other fund disclosures. | AUM, whole financing round, fund size and an investor-specific cheque are **different fields**. E.g., Kaya's co-led $3.3m Riptides round was **not** Kaya's personal check. |
+| Treat reorganizations, accelerators and angel groups carefully; retain ambiguous preliminary judgments. | Used the Czech Founders VC–United Founders announcements and the investment in Every Health; checked Garage Angels' self-funded angel investing, and StartupYard's conditional financing terms. | A launch of United Founders does **not** prove a legal name change; `exclude` from this narrow VC-manager pilot does not mean the angel group is fake. |
+| Write validators, quality metrics and tests; keep original model predictions separate from the human audit. | Re-ran GitHub Actions, reviewed failures, inspected CSV references and kept `review` cases as abstentions. | Tests initially held outdated expected row counts/review statuses; corrected. Passing Python tests **cannot** certify public claims are economically accurate. |
+| Estimate worldwide data coverage and operating costs transparently from published statistics. | Compared published source populations and exposed every scenario input in Python rather than treating a model projection as measured data. | No representative global census or reviewer-time measurements exist; $/record and 10k–35k candidate figures remain assumptions. |
+
+Specific dated checks and source links are in the five logs below. The recorded **user excerpts are genuine snippets**, but the tasks in the table are **paraphrased**, not literal user or agent prompt exports.
 
 ## What the AI actually did
 
